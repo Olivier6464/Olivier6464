@@ -137,6 +137,10 @@ rel="stylesheet">
         padding: 0px;
     }
 
+    .majuscule {
+        text-transform: capitalize;
+    }
+    
     .dolor {
         padding: 10px;
         border-radius: 5px 5px 0 0;
@@ -255,12 +259,12 @@ rel="stylesheet">
                     <option value="Mademoiselle">Mademoiselle</option>
                 </select><br><br><label class="donnees" for="nom">Nom</label>
                 <br>
-                <input id="nom"
+                <input id="nom" class="majuscule"
                 name="nom" type="text" required="true"
                 size="15" maxlength="30"><br><br><label class="donnees"
                 for="prenom">Prénom</label>
                 <br>
-                <input id="prenom" name="prenom" type="text" required="true"
+                <input id="prenom" class="majuscule" name="prenom" type="text" required="true"
                 size="15" maxlength="30"><br><br><label class="donnees"
                 for="entrée">Date d'entrée</label><input type="date"
                 id="entree"
@@ -327,9 +331,10 @@ rel="stylesheet">
                     <option value="attelle d'immobilisation coude au
                     corps">attelle
                 d'immobilisation coude au corps</option>
-                <option value="gilet orhopédique du Dr Berrhail">gilet
+                <option value="gilet orthopédique du Dr Berrhail">gilet
                 orthopédique du Dr Berrhail</option>
                 <option value="attelle Dujarrier">attelle Dujarrier</option>
+                <option value="attelle de Zimmer">attelle de Zimmer</option>
                 <option value="attelle de poignet et/ou de la main">attelle
                 de poignet et/ou de la main</option>
                 <option value="attelle de synthèse prête à
@@ -433,7 +438,7 @@ de genou avec fermeture a scratchs
 <br><br>
 <fieldset>
     <legend class="dolor" align="center">
-        <strong>Cotation de la douleur EVA</strong>
+        <strong>Cotation de la douleur EN</strong>
     </legend>
 
     <label class='dolor' for="auRepos">Au Repos</label><br><select
@@ -920,7 +925,7 @@ avec des stries rouges</option>
                                             bil += rtl + "Appui ( total/limité/sans appui ): " + document.getElementById('appui').value;}
                                             if (document.getElementById('immobilisation').value !== ""){
                                                 bil += rtl + "Immobilisation (plâtre/attelle...): " + document.getElementById('immobilisation').value;}
-                                                bil += rtl + spacer.box(" Cotation de la Douleur EVA", egal);
+                                                bil += rtl + spacer.box(" Cotation de la Douleur EN", egal);
                                                 bil += rtl + "Échelle de 0 à 10.";
                                                 bil += rtl + " 0 = pas de douleur,";
                                                 bil += rtl + "10 = douleur maximale imaginable." + rtl;
@@ -1086,7 +1091,22 @@ avec des stries rouges</option>
         }
 
         setInterval(refreshTime, 1000)
-                
+        
+        function openFullscreen(elem) {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (
+                elem.mozRequestFullScreen) { /* Firefox */
+                elem.mozRequestFullScreen();
+            } else if (
+                elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                elem.webkitRequestFullscreen();
+            } else if (
+                elem.msRequestFullscreen) { /* IE/Edge */
+                elem.msRequestFullscreen();
+            }
+        }
+        
 
     </script>
 </body>
