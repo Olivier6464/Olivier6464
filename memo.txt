@@ -1,0 +1,1 @@
+1. lancer bash pour utiliser git
