@@ -1,1 +1,3 @@
 1. lancer bash pour utiliser git
+
+site is published at https://olivier6464.github.io/Olivier6464/
