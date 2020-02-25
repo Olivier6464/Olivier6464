@@ -1019,6 +1019,8 @@ muco-purulents. "
         var moins = "-";
         var plus = "+";
         var egal = "=";
+        var nom = document.getElementById("nom").value;
+        var prenom = document.getElementById("prenom").value;
         /* les chaines les plus longues de chaque rubrique expl: fonctionnelle */
         var marche = "Marche (périmètre, aides techniques ...): ";
         var lplfonc = marche.length;
@@ -1047,9 +1049,11 @@ muco-purulents. "
         bil +=
           document.getElementById("civilite").value +
           esp +
-          document.getElementById("nom").value +
+          nom.charAt(0).toUpperCase() +
+          nom.substring(1).toLowerCase() +
           esp +
-          document.getElementById("prenom").value;
+          prenom.charAt(0).toUpperCase() +
+          prenom.substring(1).toLowerCase();
         bil +=
           rtl +
           "Date de l'admission: " +
