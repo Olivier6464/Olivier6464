@@ -1,3 +1,5 @@
 1. lancer bash pour utiliser git
+2. aller dans le rep Olivier6464
+3. faire un git pull avant de coder
 
 site is published at https://olivier6464.github.io/Olivier6464/
