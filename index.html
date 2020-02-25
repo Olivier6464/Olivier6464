@@ -1,77 +1,80 @@
 <!DOCTYPE html>
 <html id="fen" lang="fr">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv='X-UA-Compatible' content='IE=Edge'>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script
-    src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
-</script>
-<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
-rel="stylesheet">
-<link
-href="https://fonts.googleapis.com/css?family=Contrail+One&display=swap"
-rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Kalam&display=swap"
-rel="stylesheet">
-<!-- <script type = "text/javascript" src = "JS/frenchdate.js"></script> -->
-<title>bilan MK</title>
-<style>
-    * {
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Contrail+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Kalam&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <script type = "text/javascript" src = "JS/frenchdate.js"></script> -->
+    <title>bilan MK</title>
+    <style>
+      * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-    }
+      }
 
-    a {
+      a {
         text-decoration: none;
         color: black;
-    }
+      }
 
-    body {
-        font-family: 'Roboto', sans-serif;
+      body {
+        font-family: "Roboto", sans-serif;
         color: #444;
-    }
+      }
 
-    li:hover {
+      li:hover {
         cursor: pointer;
         background-color: purple;
-    }
+      }
 
-    p {
+      p {
         font-family: "Times New Roman", Times;
-    }
+      }
 
-    h1 {
+      h1 {
         font-family: "Times New Roman", Times;
         background-color: #80ced6;
-    }
+      }
 
-    span {
+      span {
         margin-left: 30px;
-    }
+      }
 
-    label {
+      label {
         text-transform: uppercase;
         font-weight: bold;
         margin: 0 15px 0 0;
         margin-left: 10%;
         text-align: center;
-    }
+      }
 
-    option:hover {
-        background:  rgb(156, 214, 195);
+      option:hover {
+        background: rgb(156, 214, 195);
         color: black;
-    }
+      }
 
-    #temps {
+      #temps {
         color: orange;
-    }
+      }
 
-    textarea, input, select {
-
-        font-family:  'Contrail One';
+      textarea,
+      input,
+      select {
+        font-family: "Contrail One";
         width: 80%;
         margin-left: 10%;
         padding: 5px;
@@ -80,30 +83,30 @@ rel="stylesheet">
         border-radius: 10px;
 
         /*background-color: #bbb;*/
-    }
+      }
 
-    fieldset {
-        font-family: 'Kalam', cursive;
+      fieldset {
+        font-family: "Kalam", cursive;
         font-size: 1.5em;
         position: relative;
         padding: 15px 0;
         border: 0;
-    }
+      }
 
-    legend {
+      legend {
         text-decoration: underline;
-    }
+      }
 
-    body {
+      body {
         border-color: #dbe4bc;
         background-color: #d5dbc8;
         /* background-color: #a9f775; */
 
         /* background-color :rgb(236, 206, 150); */
-    }
+      }
 
-    nav {
-        font-family: 'Contrail One', cursive;
+      nav {
+        font-family: "Contrail One", cursive;
         background-color: rgb(8, 15, 121);
         padding: 10px 0px;
         text-align: center;
@@ -111,9 +114,9 @@ rel="stylesheet">
         width: 100%;
         position: fixed;
         z-index: 1;
-    }
+      }
 
-    nav li {
+      nav li {
         list-style-type: none;
         display: inline-block;
         padding: 10px 10px;
@@ -121,978 +124,1263 @@ rel="stylesheet">
         border-left: 1px solid white;
         color: rgb(216, 238, 138);
         font-size: 1.1em;
-    }
+      }
 
-    nav a {
+      nav a {
         color: rgb(225, 231, 164);
-    }
+      }
 
-    .head {
+      .head {
         width: 100%;
+      }
 
-    }
-
-    .logo {
+      .logo {
         margin: 0px;
         padding: 0px;
-    }
+      }
 
-    .majuscule {
+      .majuscule {
         text-transform: capitalize;
-    }
-    
-    .dolor {
+      }
+
+      .dolor {
         padding: 10px;
         border-radius: 5px 5px 0 0;
         background-color: #e791d4;
         /* background-color: #c7dd9f; */
         /* background-color: #10d419; */
-    }
+      }
 
-    .donnees {
+      .donnees {
         padding: 10px;
         border-radius: 5px 5px 0 0;
         background-color: #39e9e0;
         /* background-color: #02eeff; */
 
         /* background-color: #c7dd9f; */
-    }
+      }
 
-    .fonctionnel {
+      .fonctionnel {
         padding: 10px;
         border-radius: 5px 5px 0 0;
         background-color: #c7dd9f;
         /* background-color: #a9f775; */
         /* background-color: #cdd82f; */
         /* background-color: #c7dd9f; */
-    }
+      }
 
-    .trophique {
+      .trophique {
         padding: 10px;
         border-radius: 5px 5px 0 0;
         background-color: #c7dd9f;
         /* background-color: #a9f775; */
         /* background-color: #f19f40; */
         /* background-color: #c7dd9f; */
-    }
+      }
 
-    .articulaire {
+      .articulaire {
         padding: 10px;
         border-radius: 5px 5px 0 0;
         background-color: #c7dd9f;
         /* background-color: #93d5da; */
         /* background-color: #c7dd9f; */
         /* background-color: #a9f775; */
-    }
+      }
 
-    .musculaire {
+      .musculaire {
         padding: 10px;
         border-radius: 5px 5px 0 0;
         background-color: #c7dd9f;
         /* background-color: #f1d063; */
         /* background-color: #c7dd9f; */
         /* background-color: #a9f775; */
-    }
+      }
 
-    .titi {
+      .titi {
         padding: 10px;
         border-radius: 5px 5px 0 0;
         /* background-color: #f0e54b; */
         background-color: #c7dd9f;
         /* background-color: #a9f775; */
-    }
+      }
 
-    .respicogito {
+      .respicogito {
         padding: 10px;
         border-radius: 5px 5px 0 0;
         /* background-color: #a9f775; */
         background-color: #c9dd9f;
-    }
+      }
 
-    .pe {
-        font-size: 2.0em;
+      .pe {
+        font-size: 2em;
         color: coral;
         font-weight: bold;
-    }
+      }
+    </style>
+  </head>
 
-    
-</style>
-</head>
-
-<body>
-
-
+  <body>
     <div id="top"></div>
 
-
     <nav class="nav">
-
-        <ul>
-                <!-- <li><img display="left" id="logo" height="80px"
+      <ul>
+        <!-- <li><img display="left" id="logo" height="80px"
                     src="data:image/jpeg;base64,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"alt="logo
                     ugecam"></li> -->
-                    <li id="temps"></li>
-                    <li id="copier" onclick="affichage()">Copier</li>
-                    <!-- on affiche les numeros internes -->
-                    <li><a href="http://55.245.70.92/" target=_blank>Libertempo</a></li>
-                    <li><a href="https://www.google.fr" target= _blank>Google</a></li>
-                    <li><a href="#top">Haut de la page</a></li>
-                    <li id="reinitialise">Réinitialiser</li>
+        <li id="temps"></li>
+        <li id="copier" onclick="affichage()">Copier</li>
+        <!-- on affiche les numeros internes -->
+        <li><a href="http://55.245.70.92/" target="_blank">Libertempo</a></li>
+        <li><a href="https://www.google.fr" target="_blank">Google</a></li>
+        <li><a href="#top">Haut de la page</a></li>
+        <li id="reinitialise">Réinitialiser</li>
+      </ul>
+    </nav>
+    ⬜ <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
-                </ul>
-            </nav>⬜
-            <br><br><br><br><br><br><br><br><br><br><br><br>
+    <div>
+      <fieldset>
+        <br /><br />
+        <legend align="center">
+          <span class="donnees"><strong>Dossier médical</strong></span>
+        </legend>
 
+        <label class="donnees" for="civilite">Civilité</label>
+        <br />
+        <select id="civilite" name="civilite">
+          <option value="Madame" selected="selected">Madame</option>
+          <option value="Monsieur">Monsieur</option>
+          <option value="Mademoiselle">Mademoiselle</option> </select
+        ><br /><br /><label class="donnees" for="nom">Nom</label>
+        <br />
+        <input
+          id="nom"
+          class="majuscule"
+          name="nom"
+          type="text"
+          required="true"
+          size="15"
+          maxlength="30"
+        /><br /><br /><label class="donnees" for="prenom">Prénom</label>
+        <br />
+        <input
+          id="prenom"
+          class="majuscule"
+          name="prenom"
+          type="text"
+          required="true"
+          size="15"
+          maxlength="30"
+        /><br /><br /><label class="donnees" for="entrée">Date d'entrée</label
+        ><input
+          type="date"
+          id="entree"
+          name="entree"
+          class="date"
+          type="text"
+          required="true"
+          size="18"
+        /><br /><br />
 
+        <label class="donnees">
+          <strong>ANAMNESE Motif du Séjour</strong> </label
+        ><br />
 
-            <div>
-                <fieldset><br><br>
-                    <legend align="center"><span class="donnees"><strong>Dossier
-                    médical</strong></span>
-                </legend>
+        <textarea
+          class="champ"
+          id="anamnese"
+          name="anamnese"
+          rows="5"
+          cols="80"
+        ></textarea>
 
-                <label class="donnees" for="civilite">Civilité</label>
-                <br>
-                <select id="civilite" name="civilite">
-                    <option value="Madame" selected="selected">Madame</option>
-                    <option value="Monsieur">Monsieur</option>
-                    <option value="Mademoiselle">Mademoiselle</option>
-                </select><br><br><label class="donnees" for="nom">Nom</label>
-                <br>
-                <input id="nom" class="majuscule"
-                name="nom" type="text" required="true"
-                size="15" maxlength="30"><br><br><label class="donnees"
-                for="prenom">Prénom</label>
-                <br>
-                <input id="prenom" class="majuscule" name="prenom" type="text" required="true"
-                size="15" maxlength="30"><br><br><label class="donnees"
-                for="entrée">Date d'entrée</label><input type="date"
-                id="entree"
-                name="entree" class="date" type="text" required="true"
-                size="18"><br><br>
+        <br /><br />
 
+        <label class="donnees"> <strong>HISTOIRE DE LA MALADIE</strong> </label
+        ><br />
+        <textarea
+          class="champ"
+          id="histoire"
+          name="histoire"
+          rows="5"
+          cols="80"
+        ></textarea>
+        <br /><br />
 
-                <label class="donnees">
-                    <strong>ANAMNESE Motif du Séjour</strong>
-                </label><br>
+        <label class="donnees"> <strong>Antécédents</strong> </label><br />
+        <textarea id="atcd" name="atcd" rows="5" cols="80"></textarea>
+        <br /><br />
+        <label class="donnees">
+          <strong>Antécédents Chirurgicaux</strong> </label
+        ><br />
+        <textarea id="atcdChir" name="atcdChir" rows="5" cols="80"></textarea>
+        <br /><br />
 
-                <textarea class="champ" id="anamnese" name="anamnese"
-                rows="5"
-                cols="80"></textarea>
+        <label class="donnees"> <strong>Mode de vie</strong> </label><br />
+        <textarea id="modeDeVie" name="modeDeVie" rows="5" cols="80"></textarea>
+        <br /><br />
 
-                <br><br>
+        <label class="donnees"> <strong>Date de l'opération</strong> </label
+        ><br />
+        <input
+          id="operation"
+          name="operation"
+          class="date"
+          type="date"
+          size="18"
+        />
+        <br /><br /><br /><br />
 
-                <label class="donnees">
-                    <strong>HISTOIRE DE LA MALADIE</strong>
-                </label><br>
-                <textarea class="champ" id="histoire" name="histoire"
-                rows="5"
-                cols="80"></textarea>
-                <br><br>
+        <label class="donnees" for="appui"
+          ><strong>Appui (total/limité/sans appui) </strong></label
+        ><br /><input
+          id="appui"
+          name="appui"
+          type="text"
+          size="15"
+          maxlength="30"
+        /><br /><br /><br /><br />
 
-
-                <label class="donnees">
-                    <strong>Antécédents</strong>
-                </label><br>
-                <textarea id="atcd" name="atcd" rows="5" cols="80"></textarea>
-                <br><br>
-                <label class="donnees">
-                    <strong>Antécédents Chirurgicaux</strong>
-                </label><br>
-                <textarea id="atcdChir" name="atcdChir" rows="5" cols="80"></textarea>
-                <br><br>
-
-                <label class="donnees">
-                    <strong>Mode de vie</strong>
-                </label><br>
-                <textarea id="modeDeVie" name="modeDeVie" rows="5" cols="80"></textarea>
-                <br><br>
-
-                <label class="donnees">
-                    <strong>Date de l'opération</strong>
-                </label><br>
-                <input id="operation" name="operation" class="date"
-                type="date"
-                size="18">
-                <br><br><br><br>
-
-                <label class="donnees" for="appui"><strong>Appui
-                (total/limité/sans appui) </strong></label><br><input
-                id="appui" name="appui" type="text"
-                size="15" maxlength="30"><br><br><br><br>
-
-                <label class="donnees" for="nom"><strong>Immobilisation
-                (plâtre/attelle...) </strong></label><br><select
-                id="immobilisation"
-                name="immobilisation" type="text"
-                onfocus="this.style.color='darkgreen'">
-                <option value=""></option>
-                <optgroup label="Attelles, écharpes">
-                    <option value="attelle d'immobilisation coude au
-                    corps">attelle
-                d'immobilisation coude au corps</option>
-                <option value="gilet orthopédique du Dr Berrhail">gilet
-                orthopédique du Dr Berrhail</option>
-                <option value="attelle Dujarrier">attelle Dujarrier</option>
-                <option value="attelle de Zimmer">attelle de Zimmer</option>
-                <option value="attelle de poignet et/ou de la main">attelle
-                de poignet et/ou de la main</option>
-                <option value="attelle de synthèse prête à
-                l'emploi">attelle
-            de synthèse prête à l'emploi</option>
-            <option value="attelle de synthèse résine">attelle
-                de
-            synthèse résine</option>
-            <option value="atelle de genou monobaleine">atelle
-                de
-                genou
-            monobaleine</option>
+        <label class="donnees" for="nom"
+          ><strong>Immobilisation (plâtre/attelle...) </strong></label
+        ><br /><select
+          id="immobilisation"
+          name="immobilisation"
+          type="text"
+          onfocus="this.style.color='darkgreen'"
+        >
+          <option value=""></option>
+          <optgroup label="Attelles, écharpes">
+            <option
+              value="attelle d'immobilisation coude au
+                    corps"
+              >attelle d'immobilisation coude au corps</option
+            >
+            <option value="gilet orthopédique du Dr Berrhail"
+              >gilet orthopédique du Dr Berrhail</option
+            >
+            <option value="attelle Dujarrier">attelle Dujarrier</option>
+            <option value="attelle de Zimmer">attelle de Zimmer</option>
+            <option value="attelle de poignet et/ou de la main"
+              >attelle de poignet et/ou de la main</option
+            >
+            <option
+              value="attelle de synthèse prête à
+                l'emploi"
+              >attelle de synthèse prête à l'emploi</option
+            >
+            <option value="attelle de synthèse résine"
+              >attelle de synthèse résine</option
+            >
+            <option value="atelle de genou monobaleine"
+              >atelle de genou monobaleine</option
+            >
             <option value="attelle platrée">attelle platrée</option>
-            <option value="écharpe d'immobilisation de
-            l'epaule">écharpe
-        d'immobilisation de l'epaule</option>
-        <option value="écharpe d'immobilisation coude au
-        corps">écharpe
-    d'immobilisation coude au corps</option>
-</optgroup>
+            <option
+              value="écharpe d'immobilisation de
+            l'epaule"
+              >écharpe d'immobilisation de l'epaule</option
+            >
+            <option
+              value="écharpe d'immobilisation coude au
+        corps"
+              >écharpe d'immobilisation coude au corps</option
+            >
+          </optgroup>
 
-<optgroup label="Releveurs, bottes, chaussures">
-    <option value="releveur standard">releveur standard</option>
-    <option value="releveur de pied dynamique">releveur
-        de
-        pied
-    dynamique</option>
-    <option value="releveur Liberté">releveur Liberté</option>
-    <option value="releveur Thuasne">releveur Thuasne</option>
-    <option value="releveur sur moulage">releveur sur
-    moulage</option>
-    <option value="botte de marche">botte de marche</option>
-    <option value="botte de marche avec coussins d'air
-    gonflables">botte de marche avec coussins d'air
-gonflables</option>
-<option value="chaussure de décharge du talon">chaussure
+          <optgroup label="Releveurs, bottes, chaussures">
+            <option value="releveur standard">releveur standard</option>
+            <option value="releveur de pied dynamique"
+              >releveur de pied dynamique</option
+            >
+            <option value="releveur Liberté">releveur Liberté</option>
+            <option value="releveur Thuasne">releveur Thuasne</option>
+            <option value="releveur sur moulage">releveur sur moulage</option>
+            <option value="botte de marche">botte de marche</option>
+            <option
+              value="botte de marche avec coussins d'air
+    gonflables"
+              >botte de marche avec coussins d'air gonflables</option
+            >
+            <option value="chaussure de décharge du talon"
+              >chaussure de décharge du talon</option
+            >
+            <option
+              value="chaussure de décharge de l'avant
+pied"
+              >chaussure de décharge de l'avant pied</option
+            >
+          </optgroup>
+          <optgroup label="Ceintures">
+            <option value="ceinture de soutient abdominal"
+              >ceinture de soutient abdominal</option
+            >
+            <option value="ceinture thoracique">ceinture thoracique</option>
+            <option value="ceinture lombaire">ceinture lombaire</option>
+            <option
+              value="ceinture lombaire à double renforts
     de
-décharge du talon</option>
-<option value="chaussure de décharge de l'avant
-pied">chaussure
-de décharge de l'avant pied</option>
-</optgroup>
-<optgroup label="Ceintures">
-    <option value="ceinture de soutient abdominal">ceinture
-        de
-    soutient abdominal</option>
-    <option value="ceinture thoracique">ceinture
-    thoracique</option>
-    <option value="ceinture lombaire">ceinture lombaire</option>
-    <option value="ceinture lombaire à double renforts
-    de
-    contention">ceinture lombaire à double renforts
-    de
-contention</option>
-</optgroup>
+    contention"
+              >ceinture lombaire à double renforts de contention</option
+            >
+          </optgroup>
 
-<optgroup label="Colliers cervicals">
-    <option value="collier cervical">collier cervical</option>
-    <option value="collier cervical en mousse">collier
-        cervical
-    en mousse</option>
-    <option value="collier cervical Philadelphie">collier
-    cervical Philadelphie</option>
-</optgroup>
-<optgroup label="Orthèses">
-    <option value="orthèse de cheville">orthèse de
-    cheville</option>
-    <option value="orthèse de cheville fonctionelle avec
-    coussins d'air">orthèse de cheville fonctionelle
-avec coussins d'air</option>
-<option value="orthèse du genou de Zimmer
-gonflables">orthèse
-du genou de Zimmer gonflables</option>
-<option value="orthèse d'immobilisation du poignet">orthèse
-d'immobilisation du poignet</option>
-<option value="orthèse pour l'arthrose du pouce">orthèse
-pour l'arthrose du pouce</option>
-<option value="orthèse de genou articulée">orthèse
-    de
-    genou
-articulée</option>
-<option value="orthèse de genou avec fermeture a
-clips">orthèse
-de genou avec fermeture a clips</option>
-<option value="orthèse de genou avec fermeture a
-scratchs">orthèse
-de genou avec fermeture a scratchs
-</option>
-</optgroup>
-<optgroup label="Autres">
-    <option value="jersey">jersey</option>
-    <option value="bandes platrées">bandes platrées</option>
-    <option value="sangle acromio claviculaire">sangle
-    acromio claviculaire</option>
-    <option value="coudière">coudière</option>
-    <option value="genouillère">genouillère</option>
-</optgroup>
+          <optgroup label="Colliers cervicals">
+            <option value="collier cervical">collier cervical</option>
+            <option value="collier cervical en mousse"
+              >collier cervical en mousse</option
+            >
+            <option value="collier cervical Philadelphie"
+              >collier cervical Philadelphie</option
+            >
+          </optgroup>
+          <optgroup label="Orthèses">
+            <option value="orthèse de cheville">orthèse de cheville</option>
+            <option
+              value="orthèse de cheville fonctionelle avec
+    coussins d'air"
+              >orthèse de cheville fonctionelle avec coussins d'air</option
+            >
+            <option
+              value="orthèse du genou de Zimmer
+gonflables"
+              >orthèse du genou de Zimmer gonflables</option
+            >
+            <option value="orthèse d'immobilisation du poignet"
+              >orthèse d'immobilisation du poignet</option
+            >
+            <option value="orthèse pour l'arthrose du pouce"
+              >orthèse pour l'arthrose du pouce</option
+            >
+            <option value="orthèse de genou articulée"
+              >orthèse de genou articulée</option
+            >
+            <option
+              value="orthèse de genou avec fermeture a
+clips"
+              >orthèse de genou avec fermeture a clips</option
+            >
+            <option
+              value="orthèse de genou avec fermeture a
+scratchs"
+              >orthèse de genou avec fermeture a scratchs
+            </option>
+          </optgroup>
+          <optgroup label="Autres">
+            <option value="jersey">jersey</option>
+            <option value="bandes platrées">bandes platrées</option>
+            <option value="sangle acromio claviculaire"
+              >sangle acromio claviculaire</option
+            >
+            <option value="coudière">coudière</option>
+            <option value="genouillère">genouillère</option>
+          </optgroup>
+        </select>
+      </fieldset>
+      <br /><br />
+      <fieldset>
+        <legend class="dolor" align="center">
+          <strong>Cotation de la douleur EVS</strong>
+        </legend>
 
-</select>
-</fieldset>
-<br><br>
-<fieldset>
-    <legend class="dolor" align="center">
-        <strong>Cotation de la douleur EN</strong>
-    </legend>
+        <label class="dolor" for="auRepos">Au Repos</label><br /><select
+          id="douleurRepos"
+          name="douleurRepos"
+        >
+          <option value="0" selected="selected">pas de douleur</option>
+          <option value="1">faible</option>
+          <option value="2">moyenne</option>
+          <option value="3">forte</option>
+          <option value="4">très forte</option>
+        </select>
+        <br /><br /><label class="dolor" for="aLaMobilisation"
+          >A la mobilisation</label
+        ><select id="douleurMob" name="douleurMob">
+          <option value="0" selected="selected">pas de douleur</option>
+          <option value="1">faible</option>
+          <option value="2">moyenne</option>
+          <option value="3">forte</option>
+          <option value="4">très forte</option> </select
+        ><br /><br /><label class="dolor" for="caracteristique"
+          >Caractéristiques:</label
+        ><select multiple id="typeDouleur" name="typeDouleur">
+          <option value=""></option>
+          <option value="mécanique">Mécanique</option>
+          <option value="inflammatoire">inflammatoire</option>
+          <option value="élancements">Elancements</option>
+          <option value="pénétrante">Pénétrante</option>
+          <option value="décharges électriques">Décharges électriques</option>
+          <option value="coups de poignard">Coups de poignard</option>
+          <option value="en étau">En étau</option>
+          <option value="tiraillement">Tiraillement</option>
+          <option value="brûlure">Brûlure</option>
+          <option value="fourmillements">Fourmillements</option>
+          <option value="lourdeur">Lourdeur</option>
+          <option value="épuisante">Epuisante</option>
+          <option value="angoissante">Angoissante</option>
+          <option value="obsédante">Obsédante</option> </select
+        ><br /><br />
+        <label class="dolor" for="typeRepos">autre type</label
+        ><input id="typeRepos" name="typeRepos" type="text" /><br /><br />
+        <label class="dolor" for="localisation">localisation </label
+        ><input id="localisation" name="localisation" type="text" /><br />
+      </fieldset>
+      <br /><br />
 
-    <label class='dolor' for="auRepos">Au Repos</label><br><select
-    id="douleurRepos"
-    name="douleurRepos">
-    <option value="0" selected="selected">0</option>
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-    <option value="6">6</option>
-    <option value="7">7</option>
-    <option value="8">8</option>
-    <option value="9">9</option>
-    <option value="10">10</option>
-</select><br><br><label class='dolor' for="aLaMobilisation">A
-    la
-mobilisation</label><select
-id="douleurMob" name="douleurMob">
-<option value="0" selected="selected">0</option>
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-<option value="6">6</option>
-<option value="7">7</option>
-<option value="8">8</option>
-<option value="9">9</option>
-<option value="10">10</option>
-</select><br><br><label class='dolor' for="caracteristique">Caractéristiques:</label><select
-multiple id="typeDouleur"
-name="typeDouleur">
-<option value=""></option>
-<option value="mécanique">Mécanique</option>
-<option value="inflammatoire">inflammatoire</option>
-<option value="élancements">Elancements</option>
-<option value="pénétrante">Pénétrante</option>
-<option value="décharges électriques">Décharges
-électriques</option>
-<option value="coups de poignard">Coups de poignard</option>
-<option value="en étau">En étau</option>
-<option value="tiraillement">Tiraillement</option>
-<option value="brûlure">Brûlure</option>
-<option value="fourmillements">Fourmillements</option>
-<option value="lourdeur">Lourdeur</option>
-<option value="épuisante">Epuisante</option>
-<option value="qngoissante">Angoissante</option>
-<option value="obsédante">Obsédante</option>
+      <fieldset>
+        <legend align="center">
+          <span class="fonctionnel"><strong>FONCTIONNEL</strong></span>
+        </legend>
 
-</select><br><br>
-<label class='dolor' for="typeRepos">autre type</label><input
-id="typeRepos" name="typeRepos"
-type="text"><br><br>
-<label class='dolor' for="localisation">localisation
-</label><input
-id="localisation" name="localisation" type="text"><br>
-</fieldset><br><br>
+        <label class="fonctionnel" for="assis">Equilibre assis</label>
+        <select id="assis">
+          <option id="oui" value="oui">oui</option>
+          <option id="non" value="non">non</option>
+        </select>
+        <br /><br />
+        <label class="fonctionnel">Équilibre debout </label>
+        <select id="debout">
+          <option id="oui" value="oui">oui</option>
+          <option id="non" value="non">non</option> </select
+        ><br /><br />
+        <label class="fonctionnel">Transferts (lit vers fauteuil) </label>
+        <select id="transferts">
+          <option id="oui" value="oui">oui</option>
+          <option id="non" value="non">non</option> </select
+        ><br /><br /><br />
+        <label class="fonctionnel">Double tâche </label>
+        <select id="doubleTache">
+          <option id="oui" value="oui">oui</option>
+          <option id="non" value="non">non</option> </select
+        ><br /><br />
+        <label class="fonctionnel">Autonomie AVJ</label>
+        <textarea id="autonomie" name="autonomie" rows="2" cols="80"></textarea>
+        <select
+          open
+          id="phrautonomie"
+          onchange="replaceSelection('autonomie',this.id)"
+          ;
+          onfocus="this.selectedIndex= 0;"
+        >
+          <option value="">phrases</option>
+          <option
+            value="nécessite aide à la marche et aux transferts,
+    "
+            >aide marche + transferts</option
+          >
+          <option value="nécessite aide pour les AVQ, ">aide AVQ</option>
+        </select>
+        <br /><br />
 
+        <label class="fonctionnel"
+          >Marche (périmètre, aides techniques ...)</label
+        >
 
-<fieldset>
-    <legend align="center">
-        <span class="fonctionnel"><strong>FONCTIONNEL</strong></span>
-    </legend>
+        <textarea id="marche" name="marche" rows="2" cols="80"></textarea>
+        <select
+          open
+          id="phrmarche"
+          onchange="replaceSelection('marche',this.id)"
+          ;
+          onfocus="this.selectedIndex= 0;"
+        >
+          <option value="">phrases</option>
+          <option value="marche avec déambulateur"
+            >marche avec déambulateur</option
+          >
+          <option value="marche avec une canne simple"
+            >marche avec une canne simple</option
+          >
+          <option value="marche sans aide technique"
+            >marche sans aide technique</option
+          >
+          <option value="marche avec D2R, ">marche avec D2R</option>
+          <option value="marche avec D3R, ">marche avec D3R</option>
+          <option value="marche avec R4R, ">marche avec R4R</option>
+          <option value="marche avec des cannes anglaises, "
+            >marche avec cannes anglaises</option
+          >
+          <option value="et aide humaine, ">et aide humaine</option>
+          <option value="1/2 couloir aller retour "
+            >1/2 couloir aller retour</option
+          >
+          <option value="un couloir aller retour "
+            >un couloir aller retour</option
+          >
+          <option value=" avec pauses. ">avec pauses.</option>
+          <option value=" sans pause. ">sans pause.</option>
+          <option value="Bon équilibre. ">bon équilibre</option>
+          <option value="Equilibre moyen. ">équilibre moyen</option>
+          <option
+            value="Equilibre précaire avec risques de chute
+importants. "
+            >Équilibre précaire avec risque de chute important</option
+          >
+        </select>
+      </fieldset>
+      <br /><br />
 
-    <label class="fonctionnel" for="assis">Equilibre assis</label>
-    <select id="assis">
-        <option id="oui" value="oui">oui</option>
-        <option id="non" value="non">non</option>
-    </select>
-    <br><br>
-    <label class="fonctionnel">Équilibre debout </label>
-    <select id="debout">
-        <option id="oui" value="oui">oui</option>
-        <option id="non" value="non">non</option>
-    </select><br><br>
-    <label class="fonctionnel">Transferts (lit vers fauteuil)
-    </label>
-    <select id="transferts">
-        <option id="oui" value="oui">oui</option>
-        <option id="non" value="non">non</option>
-    </select><br><br><br>
-    <label class="fonctionnel">Double tâche </label>
-    <select id="doubleTache">
-        <option id="oui" value="oui">oui</option>
-        <option id="non" value="non">non</option>
-    </select><br><br>
-    <label class="fonctionnel">Autonomie AVJ</label>
-    <textarea id="autonomie" name="autonomie" rows="2" cols="80"></textarea>
-    <select open id="phrautonomie"
-    onchange="replaceSelection('autonomie',this.id)" ;
-    onfocus="this.selectedIndex= 0;">
-    <option value="">phrases</option>
-    <option value='nécessite aide à la marche et aux transferts,
-    '>aide marche + transferts</option>
-    <option value='nécessite aide pour les AVQ, '>aide AVQ</option>
-</select>
-<br><br>
+      <fieldset>
+        <legend align="center">
+          <span class="trophique"><strong>TROPHICITE</strong></span>
+        </legend>
+        <br /><br />
 
-<label class="fonctionnel">Marche (périmètre, aides
-    techniques
-...)</label>
+        <label class="trophique">Oedème </label>
+        <select id="oedeme">
+          <option id="non" value="non">non</option>
+          <option id="oui" value="oui">oui</option> </select
+        ><br /><br />
+        <label class="trophique">Hématome </label>
+        <select id="hematome">
+          <option id="non" value="non">non</option>
+          <option id="oui" value="oui">oui</option> </select
+        ><br /><br />
+        <label class="trophique">Amyotrophie </label>
+        <select id="amyotrophie">
+          <option id="non" value="non">non</option>
+          <option id="oui" value="oui">oui</option> </select
+        ><br /><br />
+        <label class="trophique">Inflammation </label>
+        <select id="inflamation">
+          <option id="non" value="non">non</option>
+          <option id="oui" value="oui">oui</option> </select
+        ><br /><br />
 
-<textarea id="marche" name="marche" rows="2" cols="80"></textarea>
-<select open id="phrmarche"
-onchange="replaceSelection('marche',this.id)" ;
-onfocus="this.selectedIndex= 0;">
-<option value="">phrases</option>
-<option value="marche avec déambulateur">marche avec déambulateur</option>
-<option value="marche avec une canne simple">marche avec une canne simple</option>
-<option value="marche sans aide technique">marche sans aide technique</option>
-<option value='marche avec D2R, '>marche avec D2R</option>
-<option value='marche avec D3R, '>marche avec D3R</option>
-<option value='marche avec R4R, '>marche avec R4R</option>
-<option value='marche avec des cannes anglaises, '>marche
-    avec
-cannes anglaises</option>
-<option value='et aide humaine, '>et aide humaine</option>
-<option value='1/2 couloir aller retour '>1/2 couloir aller
-retour</option>
-<option value='un couloir aller retour '>un couloir aller
-retour</option>
-<option value=' avec pauses. '>avec pauses.</option>
-<option value=' sans pause. '>sans pause.</option>
-<option value= 'Bon équilibre. '>bon équilibre</option>
-<option value= 'Equilibre moyen. '>équilibre moyen</option>
-<option value='Equilibre précaire avec risques de chute
-importants. '>Équilibre précaire avec risque de chute important</option>
-</select>
-</fieldset>
-<br><br>
+        <label class="trophique"><strong>Remarques</strong></label>
+        <textarea id="remarques" name="remarques" rows="4" cols="80"></textarea>
+        <select
+          id="phrremarques"
+          onchange="replaceSelection('remarques',this.id)"
+        >
+          <option value="">phrases</option>
+          <option value="présence du pansement">présence du pansement</option>
+          <option value="présence des agraphes">présence des agraphes</option>
+          <option value="présence des fils">présence des fils</option>
+          <option value="a des bandes biflex">a des bandes biflex</option>
+          <option value="hématomes MS">hématomes MS</option>
+          <option value="hématomes MI">hématomes MI</option>
+        </select>
+      </fieldset>
+      <br /><br /><br /><br />
 
-<fieldset>
+      <fieldset>
+        <legend align="center">
+          <span class="articulaire"><strong>ARTICULAIRE</strong></span>
+        </legend>
+        <br /><br />
+        <label class="articulaire"><stong>Amplitude</stong></label>
+        <textarea id="amplitude" name="amplitude" rows="4" cols="80"></textarea>
+        <select
+          id="phramplitude"
+          onchange="replaceSelection('amplitude',this.id)"
+        >
+          <option value="">phrases</option>
+          <option value="++ Amplitudes de l'épaule en passif. ++"
+            >épaule en passif</option
+          >
+          <option value="++ Amplitudes de l'épaule en actif. ++"
+            >épaule en actif</option
+          >
+          <option value="++ Amplitudes du coude en passif. ++"
+            >coude en passif</option
+          >
+          <option value="++ Amplitudes du coude en actif. ++"
+            >coude en actif</option
+          >
+          <option value="++ Amplitudes du genou en passif. ++"
+            >genou en passif</option
+          >
+          <option value="++ Amplitudes du genou en actif. ++"
+            >genou en actif</option
+          >
+          <option value="flexion: ">flexion: </option>
+          <option value="extension: ">extension: </option>
+          <option value="abduction: ">abduction: </option>
+          <option value="adduction: ">adduction: </option>
+          <option value="rotation externe: ">rotation externe:</option>
+          <option value="rotation interne: ">rotation interne:</option>
+          <option value="main bouche: ">main bouche:</option>
+          <option value="main tête: ">main tête:</option>
+          <option value="main dos: ">main dos:</option>
+          <option value="flexum des genoux">flexum des genoux</option>
+          <option value="flexum du genou D">flexum du genou D</option>
+          <option value="flexum du genou G">flexum du genou G</option>
+          <option value="non réductible">non réductible</option>
+          <option value="réductible">réductible</option>
+        </select>
 
-    <legend align="center"><span class="trophique"><strong>TROPHICITE</strong></span>
-    </legend><br><br>
+        <br /><br />
 
-    <label class="trophique">Oedème </label>
-    <select id="oedeme">
-        <option id="oui" value="oui">oui</option>
-        <option id="non" value="non">non</option>
-    </select><br><br>
-    <label class="trophique">Hématome </label>
-    <select id="hematome">
-        <option id="oui" value="oui">oui</option>
-        <option id="non" value="non">non</option>
-    </select><br><br>
-    <label class="trophique">Amyotrophie </label>
-    <select id="amyotrophie">
-        <option id="oui" value="oui">oui</option>
-        <option id="non" value="non">non</option>
-    </select><br><br>
-    <label class="trophique">Inflammation </label>
-    <select id="inflamation">
-        <option id="oui" value="oui">oui</option>
-        <option id="non" value="non">non</option>
-    </select><br><br>
+        <label class="articulaire">
+          Attitude vicieuse
+        </label>
+        <textarea
+          id="attitudeVicieuse"
+          name="attitudeVicieuse"
+          rows="4"
+          cols="80"
+        ></textarea>
+        <select
+          id="phrattitudeVicieuse"
+          onchange="replaceSelection('attitudeVicieuse',this.id)"
+        >
+          <option value="">phrases</option>
+          <option value="en flexum des hanches">en flexum des hanches</option>
+          <option value="attitude cyphotique">attitude cyphotique</option>
+          <option value="flexum des genoux">flexum des genoux</option>
+          <option value="flexum du genou D">flexum du genou D</option>
+          <option value="flexum du genou G">flexum du genou G</option>
+          <option value="non réductible">non réductible</option>
+          <option value="réductible">réductible</option>
+        </select>
+        <br /><br />
+      </fieldset>
 
+      <fieldset>
+        <legend align="center">
+          <span class="musculaire"><strong>MUSCULAIRE</strong></span>
+        </legend>
+        <br /><br />
+        <label class="musculaire">
+          Verrouillage quadriceps
+        </label>
 
-    <label class="trophique"><strong>Remarques</strong></label>
-    <textarea id="remarques" name="remarques" rows="4"
-    cols="80"></textarea>
-    <select id="phrremarques"
-    onchange="replaceSelection('remarques',this.id)">
-    <option value="">phrases</option>
-    <option value="présence du pansement">présence du
-    pansement</option>
-    <option value="présence des agraphes">présence des agraphes</option>
-    <option value="présence des fils">présence des fils</option>
-    <option value="a des bandes biflex">a des bandes biflex</option>
-    <option value="hématomes MS">hématomes MS</option>
-    <option value="hématomes MI">hématomes MI</option>
+        <textarea id="verrouillage" rows="4" cols="80"></textarea>
+        <select
+          id="phrverrouillage"
+          onchange="replaceSelection('verrouillage',this.id)"
+        >
+          <option value="">phrases</option>
+          <option value="verrouillage incomplet à droite"
+            >verrouillage incomplet à droite</option
+          >
+          <option value="verrouillage incomplet à gauche"
+            >verrouillage incomplet à gauche</option
+          >
+          <option value="EMFM quadriceps D (DANIELS ET WORTHINGHAM): "
+            >EMFM quadriceps D</option
+          >
+          <option value="EMFM quadriceps G (DANIELS ET WORTHINGHAM): "
+            >EMFM quadriceps G</option
+          >
+        </select>
 
-</select>
-</fieldset>
-<br><br><br><br>
+        <br /><br />
+        <label class="musculaire">
+          Autres groupes musculaires
+        </label>
 
+        <textarea id="autres" rows="4" cols="80"></textarea>
+        <select id="phrautres" onchange="replaceSelection('autres',this.id)">
+          <option value="">phrases</option>
+          <option value="déficit global de force musculaire"
+            >déficit global de force musculaire</option
+          >
+          <option
+            value="bonne conservation de la force
+musculaire"
+            >bonne conservation de la force musculaire</option
+          >
+        </select>
+      </fieldset>
+      <br /><br />
 
-<fieldset>
-    <legend align="center">
-        <span class="articulaire"><strong>ARTICULAIRE</strong></span>
-    </legend>
-    <br><br>
-    <label class="articulaire"><stong>Amplitude</stong></label>
-    <textarea id="amplitude" name="amplitude" rows="4"
-    cols="80"></textarea>
-    <select id="phramplitude"
-    onchange="replaceSelection('amplitude',this.id)">
-    <option value="">phrases</option>
-    <option value="++ Amplitudes de l'épaule en passif. ++">épaule en passif</option>
-    <option value="++ Amplitudes de l'épaule en actif. ++">épaule en actif</option>
-    <option value="++ Amplitudes du coude en passif. ++">coude en passif</option>
-    <option value="++ Amplitudes du coude en actif. ++">coude en actif</option>
-    <option value="++ Amplitudes du genou en passif. ++">genou en passif</option>
-    <option value="++ Amplitudes du genou en actif. ++">genou en actif</option>
-    <option value="flexion: ">flexion: </option>
-    <option value="extension: ">extension: </option>
-    <option value="abduction: ">abduction: </option>
-    <option value="adduction: ">adduction: </option>
-    <option value="rotation externe: ">rotation externe:</option>
-    <option value="rotation interne: ">rotation interne:</option>
-    <option value="main bouche: ">main bouche:</option>
-    <option value="main tête: ">main tête:</option>
-    <option value="main dos: ">main dos:</option>
-    <option value="flexum des genoux">flexum des genoux</option>
-    <option value="flexum du genou D">flexum du genou D</option>
-    <option value="flexum du genou G">flexum du genou G</option>
-    <option value="non réductible">non réductible</option>
-    <option value="réductible">réductible</option>
-</select>
+      <fieldset>
+        <legend align="center">
+          <span class="respicogito">AUTRES</span>
+        </legend>
+        <br /><br />
+        <label class="respicogito">
+          Fonctions supérieures
+        </label>
+        <textarea id="fonctionsSuperieures" rows="4" cols="80"></textarea>
+        <select
+          id="phrfonctionsSuperieures"
+          onchange="replaceSelection('fonctionsSuperieures',this.id)"
+        >
+          <option value="">phrases</option>
+          <option value="bonne compréhension des consignes"
+            >bonne compréhension des consignes</option
+          >
+          <option value="Troubles cognitifs légers"
+            >Troubles cognitifs légers</option
+          >
+          <option value="troubles cognitifs sévères"
+            >troubles cognitifs sévères</option
+          >
+        </select>
+        <br /><br />
+        <label class="respicogito">
+          Fonctions respiratoires
+        </label>
+        <textarea id="fonctionsRespiratoires" rows="4" cols="120"></textarea>
+        <select
+          id="phrfonctionsRespiratoires"
+          onchange="replaceSelection('fonctionsRespiratoires',this.id)"
+        >
+          <option value="">phrases</option>
+          <option value="Sous O2 en chambre à ">O2 en chambre</option>
+          <option value="SatO2/pouls au repos= ">SatO2/pouls =</option>
+          <option
+            value="Dyspnée: stade V essoufflé au repos (Sadoul
+et Polu). "
+            >dyspnée au repos</option
+          >
+          <option
+            value="Dyspnée: stade IV essoufflé à la marche lente (Sadoul et Polu). "
+            >dyspnée à la marche lente</option
+          >
+          <option
+            value="Dyspnée: stade III essoufflé à la marche normale en terrain plat (Sadoul et Polu). "
+            >dyspnée à la marche normale</option
+          >
+          <option
+            value="Dyspnée: stade II essoufflé au 1er étage ou à la marche rapide ou en pente (Sadoul et Polu). "
+            >dyspnée à la marche rapide</option
+          >
+          <option
+            value="Dyspnée: stade I essoufflé pour des efforts importants ou au-delà du 2eme étage (Sadoul et Polu). "
+            >dyspnée à l'effort</option
+          >
+          <option value="Expectoration: crachats muqueux. "
+            >blanc ou translucide</option
+          >
+          <option value="Expectoration: crachats purulents. "
+            >jaune ou verdâtre</option
+          >
+          <option
+            value="Expectoration: crachats
+muco-purulents. "
+            >blanc avec stries jaunâtres</option
+          >
+          <option value="Expectoration: crachats hémoptoïques. "
+            >blanc avec des stries rouges</option
+          >
+          <option value="Expectoration: crachats hémorragiques. "
+            >rouges</option
+          >
+        </select>
+      </fieldset>
+      <br /><br />
+      <hr />
+      <br /><br />
 
-<br><br>
+      <fieldset>
+        <label class="titi">
+          <strong>PROJET KINÉ DU PATIENT</strong>
+        </label>
+        <textarea
+          name="projetKine"
+          id="projetKine"
+          rows="3"
+          cols="80"
+        ></textarea>
+        <select
+          id="phrprojetkine"
+          onchange="replaceSelection('projetKine',this.id)"
+        >
+          <option value="">phrases</option>
+          <option value="souhaite améliorer son périmètre de marche."
+            >améliorer périmètre de marche</option
+          >
+          <option value="retour à domicile.">RAD</option>
+        </select>
+      </fieldset>
 
-<label class="articulaire">
-    Attitude vicieuse
-</label>
-<textarea id="attitudeVicieuse" name="attitudeVicieuse"
-rows="4"
-cols="80"></textarea>
-<select id="phrattitudeVicieuse"
-onchange="replaceSelection('attitudeVicieuse',this.id)">
-<option value="">phrases</option>
-<option value="en flexum des hanches">en flexum des hanches</option>
-<option value="attitude cyphotique">attitude cyphotique</option>
-<option value="flexum des genoux">flexum des genoux</option>
-<option value="flexum du genou D">flexum du genou D</option>
-<option value="flexum du genou G">flexum du genou G</option>
-<option value="non réductible">non réductible</option>
-<option value="réductible">réductible</option>
-</select>
-<br><br>
-</fieldset>
+      <fieldset>
+        <label class="titi">
+          <strong>OBJECTIF DE PRISE EN CHARGE DU PATIENT</strong>
+        </label>
+        <textarea name="pec" id="pec" rows="3" cols="80"></textarea>
+        <select id="phrpec" onchange="replaceSelection('pec',this.id)">
+          <option value="">phrases</option>
+          <option value="Rééducation à la marche"
+            >Rééducation à la marche</option
+          >
+          <option value="Reprise progressive de la marche"
+            >Reprise progressive de la marche</option
+          >
+          <option value="réautonomisation">réautonomisation</option>
+        </select>
+      </fieldset>
 
-<fieldset>
-    <legend align="center">
-        <span class="musculaire"><strong>MUSCULAIRE</strong></span>
-    </legend>
-    <br><br>
-    <label class="musculaire">
+      <fieldset>
+        <label class="titi">
+          <strong>PRISE EN CHARGE PRÉVISIONNELLE</strong>
+        </label>
+        <textarea
+          name="priseEnChargePrev"
+          id="priseEnChargePrev"
+          rows="3"
+          cols="80"
+        ></textarea>
+        <select
+          id="phrpecPrev"
+          onchange="replaceSelection('priseEnChargePrev',this.id)"
+        >
+          <option value="">phrases</option>
+          <option value="A court terme: ">A court terme: </option>
+          <option value="A long terme: ">A long terme: </option>
+          <option value="- rééducation à la marche"
+            >Rééducation à la marche</option
+          >
+          <option value="- reprise progressive de la marche"
+            >Reprise progressive de la marche</option
+          >
+          <option
+            value="- amélioration de l'endurance et de la qualité de la marche"
+            >amélioration de l'endurance et de la qualité de la marche</option
+          >
+          <option value="- travail individuel de l'équilibre"
+            >Travaille de l'équilibre</option
+          >
+          <option value="- travaille des transferts"
+            >Travaille des transferts</option
+          >
+          <option value="- renforcement musculaire"
+            >renforcement musculaire</option
+          >
+          <option value="- prise en charge collective"
+            >prise en charge collective</option
+          >
+          <option value="- gymnastique médicale adaptée"
+            >gymnastique médicale adaptée</option
+          >
+          <option value="- éducation thérapeutique"
+            >éducation thérapeutique</option
+          >
+          <option value="- gymnastique adaptée">gymnastique adaptée</option>
+          <option value="- désencombrement bronchique"
+            >désencombrement bronchique</option
+          >
+          <option value="- rééducation respiratoire"
+            >rééducation respiratoire</option
+          >
+          <option value="- ré-entrainement à l'effort (ergocycle)"
+            >ré-entrainement à l'effort (ergocycle)</option
+          >
+          <option value="- séances collectives de rééducation à la marche"
+            >séances collectives de rééducation à la marche</option
+          >
+          <option value="- séances collectives de gymnastique douce"
+            >séances collectives de gymnastique douce</option
+          >
+          <option value="- séances collectives de gymnastique soutenue"
+            >séances collectives de gymnastique soutenues</option
+          >
+          <option value="- séances collectives de rééducation respiratoire"
+            >séances collectives de rééducation respiratoire</option
+          >
+          <option value="- séances collectives de rééducation de l'équilibre"
+            >séances collectives de rééducation de l'équilibre</option
+          >
+          <option value="- séances collectives de relaxation"
+            >séances collectives de relaxation</option
+          >
+        </select>
+      </fieldset>
+      <!--     pour copier du text dans le clipboqrd-->
+      <textarea
+        class="element-a-cacher"
+        id="to-copy"
+        rows="80"
+        cols="80"
+      ></textarea>
+    </div>
 
-        Verrouillage quadriceps
-    </label>
+    <!-- DEBUT DU JAVASCRIPT -->
 
-    <textarea id="verrouillage" rows="4" cols="80"></textarea>
-    <select id="phrverrouillage"
-    onchange="replaceSelection('verrouillage',this.id)">
-    <option value="">phrases</option>
-    <option value="verrouillage incomplet à droite">verrouillage
-    incomplet à droite</option>
-    <option value="verrouillage incomplet à gauche">verrouillage
-    incomplet à gauche</option>
-    <option value="EMFM quadriceps D (DANIELS ET WORTHINGHAM): ">EMFM quadriceps D</option>
-    <option value="EMFM quadriceps G (DANIELS ET WORTHINGHAM): ">EMFM quadriceps G</option>
-    
-</select>
-
-<br><br>
-<label class="musculaire">
-    Autres groupes musculaires
-</label>
-
-<textarea id="autres" rows="4" cols="80"></textarea>
-<select id="phrautres"
-onchange="replaceSelection('autres',this.id)">
-<option value="">phrases</option>
-<option value="déficit global de force musculaire">déficit
-global de force musculaire</option>
-<option value="bonne conservation de la force
-musculaire">bonne
-conservation de la force musculaire</option>
-</select>
-</fieldset>
-<br><br>
-
-
-<fieldset>
-    <legend align="center">
-        <span class="respicogito">AUTRES</span>
-    </legend>
-    <br><br>
-    <label class="respicogito">
-        Fonctions supérieures
-    </label>
-    <textarea id="fonctionsSuperieures" rows="4" cols="80"></textarea>
-    <select id="phrfonctionsSuperieures"
-    onchange="replaceSelection('fonctionsSuperieures',this.id)">
-    <option value="">phrases</option>
-    <option value="bonne compréhension des consignes">bonne
-    compréhension des consignes</option>
-    <option value="Troubles cognitifs légers">Troubles cognitifs légers</option>
-    <option value="troubles cognitifs sévères">troubles cognitifs sévères</option>
-</select>
-<br><br>
-<label class="respicogito">
-
-    Fonctions respiratoires
-</label>
-<textarea id="fonctionsRespiratoires" rows="4" cols="120"></textarea>
-<select id="phrfonctionsRespiratoires"
-onchange="replaceSelection('fonctionsRespiratoires',this.id)">
-<option value="">phrases</option>
-<option value='Sous O2 en chambre à '>O2 en chambre</option>
-<option value='SatO2/pouls au repos= '>SatO2/pouls =</option>
-<option value='Dyspnée: stade V essoufflé au repos (Sadoul
-et Polu). '>dyspnée
-au repos</option>
-<option
-value='Dyspnée: stade IV essoufflé à la marche lente (Sadoul et Polu). '>dyspnée
-à la marche lente</option>
-<option
-value='Dyspnée: stade III essoufflé à la marche normale en terrain plat (Sadoul et Polu). '>dyspnée à la marche
-normale</option>
-<option
-value='Dyspnée: stade II essoufflé au 1er étage ou à la marche rapide ou en pente (Sadoul et Polu). '>dyspnée à la marche rapide</option>
-<option value='Dyspnée: stade I essoufflé pour des efforts importants ou au-delà du 2eme étage (Sadoul et Polu). '>dyspnée
-à
-l'effort</option>
-<option
-value='Expectoration: crachats muqueux. '>blanc ou
-translucide</option>
-<option value='Expectoration: crachats purulents. '>jaune
-    ou
-verdâtre</option>
-<option value='Expectoration: crachats
-muco-purulents. '>blanc
-avec stries jaunâtres</option>
-<option value='Expectoration: crachats hémoptoïques. '>blanc
-avec des stries rouges</option>
-<option value='Expectoration: crachats hémorragiques. '>rouges</option>
-</select>
-
-</fieldset>
-<br><br>
-<hr>
-<br><br>
-
-<fieldset>
-    <label class="titi">
-        <strong>PROJET KINÉ DU PATIENT</strong>
-    </label>
-    <textarea name="projetKine" id="projetKine" rows="3"
-    cols="80"></textarea>
-    <select id="phrprojetkine"
-    onchange="replaceSelection('projetKine',this.id)">
-    <option value="">phrases</option>
-    <option value="souhaite améliorer son périmètre de marche.">améliorer
-    périmètre de marche</option>
-    <option value="retour à domicile.">RAD</option>
-</select>
-</fieldset>
-
-<fieldset>
-    <label class="titi">
-        <strong>OBJECTIF DE PRISE EN CHARGE DU PATIENT</strong>
-    </label>
-    <textarea name="pec" id="pec" rows="3" cols="80"></textarea>
-    <select id="phrpec"
-    onchange="replaceSelection('pec',this.id)">
-    <option value="">phrases</option>
-    <option value="Rééducation à la marche">Rééducation à la
-    marche</option>
-    <option value="Reprise progressive de la marche">Reprise
-    progressive de la marche</option>
-    <option value="réautonomisation">réautonomisation</option>
-</select>
-</fieldset>
-
-<fieldset>
-    <label class="titi">
-        <strong>PRISE EN CHARGE PRÉVISIONNELLE</strong>
-    </label>
-    <textarea name="priseEnChargePrev" id="priseEnChargePrev"
-    rows="3"
-    cols="80"></textarea>
-    <select id="phrpecPrev"
-    onchange="replaceSelection('priseEnChargePrev',this.id)">
-    <option value="">phrases</option>
-    <option value="A court terme: ">A court terme: </option>
-    <option value="A long terme: ">A long terme: </option>
-    <option value="- rééducation à la marche">Rééducation à la
-    marche</option>
-    <option value="- reprise progressive de la marche">Reprise
-    progressive de la marche</option>
-    <option value="- amélioration de l'endurance et de la qualité de la marche">amélioration de l'endurance et de la qualité de la marche</option>
-    <option value="- travail individuel de l'équilibre">Travaille de l'équilibre</option>
-    <option value="- travaille des transferts">Travaille des transferts</option>
-    <option value="- renforcement musculaire">renforcement musculaire</option>
-    <option value="- prise en charge collective">prise en charge collective</option>
-    <option value="- gymnastique médicale adaptée">gymnastique médicale adaptée</option>
-    <option value="- éducation thérapeutique">éducation thérapeutique</option>
-    <option value="- gymnastique adaptée">gymnastique adaptée</option>
-    <option value="- désencombrement bronchique">désencombrement bronchique</option>
-    <option value="- rééducation respiratoire">rééducation respiratoire</option>
-    <option value="- ré-entrainement à l'effort (ergocycle)">ré-entrainement à l'effort (ergocycle)</option>
-    <option value="- séances collectives de rééducation à la marche">séances collectives de rééducation à la marche</option>
-    <option value="- séances collectives de gymnastique douce">séances collectives de gymnastique douce</option>
-    <option value="- séances collectives de gymnastique soutenue">séances collectives de gymnastique soutenues</option>
-    <option value="- séances collectives de rééducation respiratoire">séances collectives de rééducation respiratoire</option>
-    <option value="- séances collectives de rééducation de l'équilibre">séances collectives de rééducation de l'équilibre</option>
-    <option value="- séances collectives de relaxation">séances collectives de relaxation</option>
-</select>
-</fieldset>
-<!--     pour copier du text dans le clipboqrd-->
-<textarea class="element-a-cacher" id="to-copy" rows=80 cols=80></textarea>
-</div>
-
-<!-- DEBUT DU JAVASCRIPT -->
-
-<script>
-    function getSelectionsListe(id)
-    {
+    <script>
+      function getSelectionsListe(id) {
         var liste = document.getElementById(id);
-        options = liste.getElementsByTagName('option');
+        options = liste.getElementsByTagName("option");
         var lsSelections = "";
-        for(var i=0; i<liste.options.length; i++)
-        {
-            if(liste.options[i].selected)
-            {
-                lsSelections += liste.options[i].value + ", ";
-            }
+        for (var i = 0; i < liste.options.length; i++) {
+          if (liste.options[i].selected) {
+            lsSelections += liste.options[i].value + ", ";
+          }
         }
         return lsSelections;
-    }
-</script>
-<script>
-
-
-    window.onload = function () {
-        $('.element-a-cacher').each(function () {
-            $(this).hide();
-        })};
-        
-        function affichage() {
-            var bil = "";
-            var esp = " ";
-            var rtl = "\n";
-            var fois = "*";
-            var moins = "-";
-            var plus = "+";
-            var egal = "=";
-            /* les chaines les plus longues de chaque rubrique expl: fonctionnelle */
-            var marche = "Marche (périmètre, aides techniques ...): ";
-            var lplfonc = marche.length;
-            var assis = "Équilibre assis: ";
-            var debout = "Équilibre debout: ";
-            var transferts = "Transferts (lit vers fauteuil): ";
-            var doubletache = "Double tâche: ";
-            var oedeme = "Oedème: ";
-            var hematome = "Hématome: ";
-            var inflamation = "Inflammation: ";
-            var amyotrophie = "Amyotrophie: ";
-            var lpltroph = inflamation.length;
-            var mobilisation = "A la mobilisation: ";
-            var repos = "Au repos:";
-            var lpldoul = mobilisation.length;
-            var douleurRepos = parseInt(document.getElementById('douleurRepos').value, 10);
-            var douleurMob = parseInt(document.getElementById('douleurMob').value, 10);
-
-                    //bil += spacer.box("Bilan Kinésithérapique",fois);
-                    bil += document.getElementById('civilite').value + esp + document.getElementById('nom').value + esp + document.getElementById('prenom').value;
-                    bil += rtl + "Date de l'admission: " + frenchdate(document.getElementById('entree').value);
-                    if (document.getElementById('anamnese').value !== "")
-                    {
-                        bil += rtl + spacer.box("ANAMNÈSE", egal);
-                        bil += rtl + document.getElementById('anamnese').value;
-                    }
-                    
-                    if (document.getElementById('histoire').value !== ""){    
-                        bil += rtl + spacer.box("HISTOIRE DE LA MALADIE", egal);
-                        bil += rtl + document.getElementById('histoire').value;}
-                        if (document.getElementById('atcd').value !== ""){
-                            bil += rtl + spacer.box("Antécédents", egal);
-                            bil += rtl + document.getElementById('atcd').value;}
-                            if (document.getElementById('atcdChir').value !== ""){
-                                bil += rtl + spacer.box(" Antécédents Chirurgicaux", egal);
-                                bil += rtl + document.getElementById('atcdChir').value;}
-                                if (document.getElementById('modeDeVie').value !== ""){
-                                    bil += rtl + spacer.box(" Mode de vie", egal);
-                                    bil += rtl + document.getElementById('modeDeVie').value;}
-                                    if (document.getElementById('operation').value !== ""){
-                                        bil += rtl + rtl + "Date de l'opération: " + frenchdate(document.getElementById('operation').value);}
-                                        if (document.getElementById('appui').value !== ""){
-                                            bil += rtl + "Appui ( total/limité/sans appui ): " + document.getElementById('appui').value;}
-                                            if (document.getElementById('immobilisation').value !== ""){
-                                                bil += rtl + "Immobilisation (plâtre/attelle...): " + document.getElementById('immobilisation').value;}
-                                                bil += rtl + spacer.box(" Cotation de la Douleur EN", egal);
-                                                bil += rtl + "Échelle de 0 à 10.";
-                                                bil += rtl + " 0 = pas de douleur,";
-                                                bil += rtl + "10 = douleur maximale imaginable." + rtl;
-                                                bil += rtl + repos + spacer.line((lpldoul - repos.length + 3), ".") + " " + document.getElementById('douleurRepos').value + "/10";
-                                                bil += rtl + mobilisation + " " + document.getElementById('douleurMob').value + "/10";
-                                                bil += rtl + "Type: " + getSelectionsListe('typeDouleur') + document.getElementById('typeRepos').value;
-                                                bil += rtl + "Localisation: " + document.getElementById('localisation').value;
-                                                bil += rtl + spacer.box("FONCTIONNEL", egal);
-                                                bil += rtl + assis + spacer.line((lplfonc - assis.length + 5), ".") + " " + document.getElementById('assis').value;
-                                                bil += rtl + debout + spacer.line((lplfonc - debout.length), ".") + spacer.line(2, ".") + " " + document.getElementById('debout').value;
-                                                bil += rtl + transferts + spacer.line((lplfonc - transferts.length), ".") + " " + document.getElementById('transferts').value;
-                                                bil += rtl + doubletache + spacer.line((lplfonc - doubletache.length + 1), ".") + spacer.line(3, ".") + " " + document.getElementById('doubleTache').value;
-                                                bil += rtl + rtl + "Autonomie AVJ: " + document.getElementById('autonomie').value;
-                                                bil += rtl + rtl + marche + document.getElementById('marche').value;
-                                                bil += rtl + spacer.box("TROPHICITÉ", egal);
-                                                bil += rtl + oedeme + spacer.line((lplfonc - oedeme.length + 4), ".") + " " + document.getElementById('oedeme').value;
-                                                bil += rtl + hematome + spacer.line((lplfonc - hematome.length), ".") + spacer.line(2, ".") + " " + document.getElementById('hematome').value;
-                                                bil += rtl + amyotrophie + spacer.line((lplfonc - amyotrophie.length + 1), ".") + " " + document.getElementById('amyotrophie').value;
-                                                bil += rtl + inflamation + spacer.line((lplfonc - inflamation.length + 1), ".") + " " + document.getElementById('inflamation').value;
-                                                if (document.getElementById('attitudeVicieuse').value !== ""){
-                                                    bil += rtl + spacer.box("ARTICULAIRE", egal);
-                                                    bil += rtl + "Attitude vicieuse: " + document.getElementById('attitudeVicieuse').value;
-                                                    bil += rtl + "Amplitude: " + document.getElementById('amplitude').value;}
-                                                    bil += rtl + spacer.box("MUSCULAIRE", egal);
-                                                    bil += rtl + "Verrouillage quadriceps: " + document.getElementById('verrouillage').value;
-                                                    bil += rtl + rtl + "Autres groupes musculaires: " + document.getElementById('autres').value;
-                                                    bil += rtl + spacer.box(" Fonctions Supérieures", egal) + rtl + document.getElementById('fonctionsSuperieures').value;
-                                                    bil += rtl + spacer.box(" Fonctions Respiratoires", egal) + rtl + document.getElementById('fonctionsRespiratoires').value;
-                                                    bil += rtl + spacer.box(" Projet kiné du patient", egal) + rtl + document.getElementById('projetKine').value;
-                                                    bil += rtl + spacer.box(" Objectif de prise en charge du patient", egal) + rtl + document.getElementById('pec').value;
-                                                    bil += rtl + spacer.box(" Prise en charge prévisionnelle", egal) + rtl + document.getElementById('priseEnChargePrev').value;
-                                                    $('.element-a-cacher').each(function () {$(this).show();});
-                                                    var toCopy = document.getElementById('to-copy');
-                                                    toCopy.value = "";
-                                                    toCopy.value += '' + bil;
-                                                    toCopy.select();
-                                                    document.execCommand('copy');
-                                                    return false;
-                                                }
-                                            </script>
-                                            <script>
-                                                var spacer = {
-                                                    blank: function () {
-                                                        return "";
-                                                    },
-
-                                                    newline: function () {
-                                                        return "\n";
-                                                    },
-
-                                                    line: function (length, character) {
-                                                        s = "";
-                                                        for (var i = 0; i < length; i++) {
-                                                            s += character;
-                                                        }
-                                                        return s;
-                                                    },
-
-                                                    wrap: function (text, length, character) {
-                                                        var padLength = (length - text.length) / 2 - 1;
-                                                        var wrapText = character + spacer.line(padLength, " ") + text;
-                                                        wrapText += spacer.line(padLength, " ");
-                                                        return wrapText;
-                                                    },
-
-                                                    box: function (text, character) {
-                                                        var boxText = spacer.newline();
-                                                        length = text.length + 38;
-                                                        if (character === "=") length = 25;
-                                                        if (character === "*") length = 40;
-
-
-                                                        boxText += spacer.line(length, character) + spacer.newline();
-                //boxText += character + spacer.newline();
-                boxText += spacer.wrap(text, length, character) + spacer.newline();
-                //boxText += character + spacer.newline();
-                boxText += spacer.line(length, character) + spacer.newline();
-                return boxText;
-            },
-        };
-
-        
-        function replaceSelection(idfield,idoption){
-            let d = document.getElementById(idoption); 
-            var elem = document.getElementById(idfield);
-            d.addEventListener('keyup', (e) => {
-                e.preventDefault
-                    // e.stopPropagation
-                    
-                    if (e.code === 'Space' || e.code === 'Enter') {
-                        var word = d.options[d.selectedIndex].value;
-                        document.getElementById(idoption).size = 1
-                        word = word.replace(/\s\s+/g, ' ');
-                        let from = elem.selectionStart, to = elem.selectionEnd;
-                        elem.value = elem.value.slice(0, from) + word + elem.value.slice(to)
-                        elem.selectionStart = from + word.length
-                        elem.selectionEnd = from + word.length
-                        document.getElementById(idoption).selectedIndex = 0
-                        elem.focus() 
-                    }})
-
-            d.addEventListener('click', (e) => {
-                e.preventDefault
-                var word = d.options[d.selectedIndex].value;
-                document.getElementById(idoption).size = 1
-                word = word.replace(/\s\s+/g, ' ');
-                let from = elem.selectionStart, to = elem.selectionEnd;
-                elem.value = elem.value.slice(0, from) + word + elem.value.slice(to)
-                elem.selectionStart = from + word.length
-                elem.selectionEnd = from + word.length
-                document.getElementById(idoption).selectedIndex = 0
-                elem.focus() 
-            })
-        }
-        
-        function frenchdate(strDate) {
-            var ch = strDate.split("-").reverse().join("/");
-            return ch;
-        }
-
-        const efface = document.getElementById("reinitialise")
-        efface.addEventListener("click", (e) => location.reload(true))
-
-        function ouvreListe(obj)
-        {
-            obj.size = 5;
-        }
-
-        function fermeListe(obj)
-        {
-            obj.size = 1;
-        }
-
-        var chtext = document.querySelectorAll('textarea');
-        var tab = Array.from(chtext);
-        tab.forEach(elem => elem.addEventListener('focus', (event) => {
-            event.target.style.backgroundColor = "#EEEEEE"; 
-            event.target.style.borderColor = "green";
-        }, true));
-
-        tab.forEach(elem => elem.addEventListener('blur', (event) => {
-            event.target.style.backgroundColor = '';
-            event.target.style.borderColor = "#dbe4bc" ;
-        }, true));
-
-        // select on focus on deroule
-        var chselect = document.querySelectorAll('select');
-        var seltab = Array.from(chselect);
-        seltab.forEach(elem => elem.addEventListener('focus', function (event) {
-            event.target.size = 10;
-        }))
-
-        seltab.forEach(elem => elem.addEventListener('blur', function (event) {
-            event.target.size = 1;
-        }))
-        function refreshTime(){
-            var temps = document.getElementById("temps")
-            var h = new Date()
-            
-            temps.innerHTML = ((h.getHours() < 10)? ("0" + h.getHours()) : h.getHours()) +
-            ":" + ((h.getMinutes() < 10)? ("0" + h.getMinutes()) : h.getMinutes()) + ":" +
-            ((h.getSeconds() < 10)? ("0" + h.getSeconds()) : h.getSeconds())
-        }
-
-        setInterval(refreshTime, 1000)
-        
+      }
     </script>
-</body>
+    <script>
+      window.onload = function() {
+        $(".element-a-cacher").each(function() {
+          $(this).hide();
+        });
+      };
 
+      function affichage() {
+        var bil = "";
+        var esp = " ";
+        var rtl = "\n";
+        var fois = "*";
+        var moins = "-";
+        var plus = "+";
+        var egal = "=";
+        /* les chaines les plus longues de chaque rubrique expl: fonctionnelle */
+        var marche = "Marche (périmètre, aides techniques ...): ";
+        var lplfonc = marche.length;
+        var assis = "Équilibre assis: ";
+        var debout = "Équilibre debout: ";
+        var transferts = "Transferts (lit vers fauteuil): ";
+        var doubletache = "Double tâche: ";
+        var oedeme = "Oedème: ";
+        var hematome = "Hématome: ";
+        var inflamation = "Inflammation: ";
+        var amyotrophie = "Amyotrophie: ";
+        var lpltroph = inflamation.length;
+        var mobilisation = "A la mobilisation: ";
+        var repos = "Au repos:";
+        var lpldoul = mobilisation.length;
+        var douleurRepos = parseInt(
+          document.getElementById("douleurRepos").value,
+          10
+        );
+        var douleurMob = parseInt(
+          document.getElementById("douleurMob").value,
+          10
+        );
+
+        //bil += spacer.box("Bilan Kinésithérapique",fois);
+        bil +=
+          document.getElementById("civilite").value +
+          esp +
+          document.getElementById("nom").value +
+          esp +
+          document.getElementById("prenom").value;
+        bil +=
+          rtl +
+          "Date de l'admission: " +
+          frenchdate(document.getElementById("entree").value);
+        if (document.getElementById("anamnese").value !== "") {
+          bil += rtl + spacer.box("ANAMNÈSE", egal);
+          bil += rtl + document.getElementById("anamnese").value;
+        }
+
+        if (document.getElementById("histoire").value !== "") {
+          bil += rtl + spacer.box("HISTOIRE DE LA MALADIE", egal);
+          bil += rtl + document.getElementById("histoire").value;
+        }
+        if (document.getElementById("atcd").value !== "") {
+          bil += rtl + spacer.box("Antécédents", egal);
+          bil += rtl + document.getElementById("atcd").value;
+        }
+        if (document.getElementById("atcdChir").value !== "") {
+          bil += rtl + spacer.box(" Antécédents Chirurgicaux", egal);
+          bil += rtl + document.getElementById("atcdChir").value;
+        }
+        if (document.getElementById("modeDeVie").value !== "") {
+          bil += rtl + spacer.box(" Mode de vie", egal);
+          bil += rtl + document.getElementById("modeDeVie").value;
+        }
+        if (document.getElementById("operation").value !== "") {
+          bil +=
+            rtl +
+            rtl +
+            "Date de l'opération: " +
+            frenchdate(document.getElementById("operation").value);
+        }
+        if (document.getElementById("appui").value !== "") {
+          bil +=
+            rtl +
+            "Appui ( total/limité/sans appui ): " +
+            document.getElementById("appui").value;
+        }
+        if (document.getElementById("immobilisation").value !== "") {
+          bil +=
+            rtl +
+            "Immobilisation (plâtre/attelle...): " +
+            document.getElementById("immobilisation").value;
+        }
+        bil += rtl + spacer.box(" Cotation de la Douleur EVS", egal);
+        bil += rtl + "Échelle de 0 à 4.";
+        bil += rtl + " 0 = pas de douleur, 1 = faible";
+        bil += rtl + " 2 = moyenne, 3 = forte, 4 = très forte." + rtl;
+        bil +=
+          rtl +
+          repos +
+          spacer.line(lpldoul - repos.length + 3, ".") +
+          " " +
+          document.getElementById("douleurRepos").value +
+          "/10";
+        bil +=
+          rtl +
+          mobilisation +
+          " " +
+          document.getElementById("douleurMob").value +
+          "/10";
+        bil +=
+          rtl +
+          "Type: " +
+          getSelectionsListe("typeDouleur") +
+          document.getElementById("typeRepos").value;
+        bil +=
+          rtl +
+          "Localisation: " +
+          document.getElementById("localisation").value;
+        bil += rtl + spacer.box("FONCTIONNEL", egal);
+        bil +=
+          rtl +
+          assis +
+          spacer.line(lplfonc - assis.length + 5, ".") +
+          " " +
+          document.getElementById("assis").value;
+        bil +=
+          rtl +
+          debout +
+          spacer.line(lplfonc - debout.length, ".") +
+          spacer.line(2, ".") +
+          " " +
+          document.getElementById("debout").value;
+        bil +=
+          rtl +
+          transferts +
+          spacer.line(lplfonc - transferts.length, ".") +
+          " " +
+          document.getElementById("transferts").value;
+        bil +=
+          rtl +
+          doubletache +
+          spacer.line(lplfonc - doubletache.length + 1, ".") +
+          spacer.line(3, ".") +
+          " " +
+          document.getElementById("doubleTache").value;
+        bil +=
+          rtl +
+          rtl +
+          "Autonomie AVJ: " +
+          document.getElementById("autonomie").value;
+        bil += rtl + rtl + marche + document.getElementById("marche").value;
+        bil += rtl + spacer.box("TROPHICITÉ", egal);
+        bil +=
+          rtl +
+          oedeme +
+          spacer.line(lplfonc - oedeme.length + 4, ".") +
+          " " +
+          document.getElementById("oedeme").value;
+        bil +=
+          rtl +
+          hematome +
+          spacer.line(lplfonc - hematome.length, ".") +
+          spacer.line(2, ".") +
+          " " +
+          document.getElementById("hematome").value;
+        bil +=
+          rtl +
+          amyotrophie +
+          spacer.line(lplfonc - amyotrophie.length + 1, ".") +
+          " " +
+          document.getElementById("amyotrophie").value;
+        bil +=
+          rtl +
+          inflamation +
+          spacer.line(lplfonc - inflamation.length + 1, ".") +
+          " " +
+          document.getElementById("inflamation").value;
+        if (document.getElementById("attitudeVicieuse").value !== "") {
+          bil += rtl + spacer.box("ARTICULAIRE", egal);
+          bil +=
+            rtl +
+            "Attitude vicieuse: " +
+            document.getElementById("attitudeVicieuse").value;
+          bil +=
+            rtl + "Amplitude: " + document.getElementById("amplitude").value;
+        }
+        bil += rtl + spacer.box("MUSCULAIRE", egal);
+        bil +=
+          rtl +
+          "Verrouillage quadriceps: " +
+          document.getElementById("verrouillage").value;
+        bil +=
+          rtl +
+          rtl +
+          "Autres groupes musculaires: " +
+          document.getElementById("autres").value;
+        bil +=
+          rtl +
+          spacer.box(" Fonctions Supérieures", egal) +
+          rtl +
+          document.getElementById("fonctionsSuperieures").value;
+        bil +=
+          rtl +
+          spacer.box(" Fonctions Respiratoires", egal) +
+          rtl +
+          document.getElementById("fonctionsRespiratoires").value;
+        bil +=
+          rtl +
+          spacer.box(" Projet kiné du patient", egal) +
+          rtl +
+          document.getElementById("projetKine").value;
+        bil +=
+          rtl +
+          spacer.box(" Objectif de prise en charge du patient", egal) +
+          rtl +
+          document.getElementById("pec").value;
+        bil +=
+          rtl +
+          spacer.box(" Prise en charge prévisionnelle", egal) +
+          rtl +
+          document.getElementById("priseEnChargePrev").value;
+        $(".element-a-cacher").each(function() {
+          $(this).show();
+        });
+        var toCopy = document.getElementById("to-copy");
+        toCopy.value = "";
+        toCopy.value += "" + bil;
+        toCopy.select();
+        document.execCommand("copy");
+        return false;
+      }
+    </script>
+    <script>
+      var spacer = {
+        blank: function() {
+          return "";
+        },
+
+        newline: function() {
+          return "\n";
+        },
+
+        line: function(length, character) {
+          s = "";
+          for (var i = 0; i < length; i++) {
+            s += character;
+          }
+          return s;
+        },
+
+        wrap: function(text, length, character) {
+          var padLength = (length - text.length) / 2 - 1;
+          var wrapText = character + spacer.line(padLength, " ") + text;
+          wrapText += spacer.line(padLength, " ");
+          return wrapText;
+        },
+
+        box: function(text, character) {
+          var boxText = spacer.newline();
+          length = text.length + 38;
+          if (character === "=") length = 25;
+          if (character === "*") length = 40;
+
+          boxText += spacer.line(length, character) + spacer.newline();
+          //boxText += character + spacer.newline();
+          boxText += spacer.wrap(text, length, character) + spacer.newline();
+          //boxText += character + spacer.newline();
+          boxText += spacer.line(length, character) + spacer.newline();
+          return boxText;
+        }
+      };
+
+      function replaceSelection(idfield, idoption) {
+        let d = document.getElementById(idoption);
+        var elem = document.getElementById(idfield);
+        d.addEventListener("keyup", e => {
+          e.preventDefault;
+          // e.stopPropagation
+
+          if (e.code === "Space" || e.code === "Enter") {
+            var word = d.options[d.selectedIndex].value;
+            document.getElementById(idoption).size = 1;
+            word = word.replace(/\s\s+/g, " ");
+            let from = elem.selectionStart,
+              to = elem.selectionEnd;
+            elem.value =
+              elem.value.slice(0, from) + word + elem.value.slice(to);
+            elem.selectionStart = from + word.length;
+            elem.selectionEnd = from + word.length;
+            document.getElementById(idoption).selectedIndex = 0;
+            elem.focus();
+          }
+        });
+
+        d.addEventListener("click", e => {
+          e.preventDefault;
+          var word = d.options[d.selectedIndex].value;
+          document.getElementById(idoption).size = 1;
+          word = word.replace(/\s\s+/g, " ");
+          let from = elem.selectionStart,
+            to = elem.selectionEnd;
+          elem.value = elem.value.slice(0, from) + word + elem.value.slice(to);
+          elem.selectionStart = from + word.length;
+          elem.selectionEnd = from + word.length;
+          document.getElementById(idoption).selectedIndex = 0;
+          elem.focus();
+        });
+      }
+
+      function frenchdate(strDate) {
+        var ch = strDate
+          .split("-")
+          .reverse()
+          .join("/");
+        return ch;
+      }
+
+      const efface = document.getElementById("reinitialise");
+      efface.addEventListener("click", e => location.reload(true));
+
+      function ouvreListe(obj) {
+        obj.size = 5;
+      }
+
+      function fermeListe(obj) {
+        obj.size = 1;
+      }
+
+      var chtext = document.querySelectorAll("textarea");
+      var tab = Array.from(chtext);
+      tab.forEach(elem =>
+        elem.addEventListener(
+          "focus",
+          event => {
+            event.target.style.backgroundColor = "#EEEEEE";
+            event.target.style.borderColor = "green";
+          },
+          true
+        )
+      );
+
+      tab.forEach(elem =>
+        elem.addEventListener(
+          "blur",
+          event => {
+            event.target.style.backgroundColor = "";
+            event.target.style.borderColor = "#dbe4bc";
+          },
+          true
+        )
+      );
+
+      // select on focus on deroule
+      var chselect = document.querySelectorAll("select");
+      var seltab = Array.from(chselect);
+      seltab.forEach(elem =>
+        elem.addEventListener("focus", function(event) {
+          event.target.size = 10;
+        })
+      );
+
+      seltab.forEach(elem =>
+        elem.addEventListener("blur", function(event) {
+          event.target.size = 1;
+        })
+      );
+      function refreshTime() {
+        var temps = document.getElementById("temps");
+        var h = new Date();
+
+        temps.innerHTML =
+          (h.getHours() < 10 ? "0" + h.getHours() : h.getHours()) +
+          ":" +
+          (h.getMinutes() < 10 ? "0" + h.getMinutes() : h.getMinutes()) +
+          ":" +
+          (h.getSeconds() < 10 ? "0" + h.getSeconds() : h.getSeconds());
+      }
+
+      setInterval(refreshTime, 1000);
+    </script>
+  </body>
 </html>
