@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
@@ -541,7 +541,19 @@ scratchs"
         <label class="fonctionnel">Équilibre debout </label>
         <select id="debout">
           <option id="oui" value="oui">oui</option>
-          <option id="non" value="non">non</option> </select
+          <option id="non" value="non">non</option>
+          <option value="risque élevé de chute grave, limitation sévère"
+            >unipodal < 5 SECONDES</option
+          >
+          <option value="risque modéré de chute, limitation modérée"
+            >DE 5 À 15 SECONDES</option
+          >
+          <option value="risque limité de chute, limitation minime"
+            >DE 15 À 30 SECONDES</option
+          >
+          <option value="très faible risque de chute, pas de limitation"
+            >> 30 S</option
+          > </select
         ><br /><br />
         <label class="fonctionnel">Transferts (lit vers fauteuil) </label>
         <select id="transferts">
@@ -606,6 +618,18 @@ scratchs"
           >
           <option value="un couloir aller retour "
             >un couloir aller retour</option
+          >
+          <option value=" → risque élevé de chute grave, limitation sévère"
+            >unipodal < 5 SECONDES</option
+          >
+          <option value=" → risque modéré de chute, limitation modérée"
+            >DE 5 À 15 SECONDES</option
+          >
+          <option value=" → risque limité de chute, limitation minime"
+            >DE 15 À 30 SECONDES</option
+          >
+          <option value=" → très faible risque de chute, pas de limitation"
+            >> 30 S</option
           >
           <option value=" avec pauses. ">avec pauses.</option>
           <option value=" sans pause. ">sans pause.</option>
@@ -777,9 +801,7 @@ importants. "
           <option value="déficit global de force musculaire"
             >déficit global de force musculaire</option
           >
-          <option
-            value="bonne conservation de la force
-musculaire"
+          <option value="bonne conservation de la force musculaire"
             >bonne conservation de la force musculaire</option
           >
         </select>
