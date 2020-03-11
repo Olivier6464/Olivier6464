@@ -20,6 +20,10 @@
     <!-- <script type = "text/javascript" src = "JS/frenchdate.js"></script> -->
     <title>bilan MK</title>
     <style>
+      :root {
+        --main-bg-color: rgb(187, 235, 178);
+        --main-lb-color: #faeda1fa;
+      }
       * {
         padding: 0;
         margin: 0;
@@ -38,7 +42,7 @@
 
       li:hover {
         cursor: pointer;
-        background-color: purple;
+        background-color: rgb(224, 247, 126);
       }
 
       p {
@@ -68,7 +72,7 @@
       }
 
       #temps {
-        color: orange;
+        color: rgb(233, 99, 10);
       }
 
       textarea,
@@ -99,15 +103,14 @@
 
       body {
         border-color: #dbe4bc;
-        background-color: #d5dbc8;
-        /* background-color: #a9f775; */
-
-        /* background-color :rgb(236, 206, 150); */
+        /* background-color: #d5dbc8; */
+        background-color: var(--main-bg-color);
       }
 
       nav {
         font-family: "Contrail One", cursive;
-        background-color: rgb(8, 15, 121);
+        /* background-color: rgb(8, 15, 121); */
+        background-color: var(--main-bg-color);
         padding: 10px 0px;
         text-align: center;
         position: absolute;
@@ -121,13 +124,13 @@
         display: inline-block;
         padding: 10px 10px;
         text-align: center;
-        border-left: 1px solid white;
-        color: rgb(216, 238, 138);
+        /* border-left: 1px solid white; */
+        color: rgb(16, 17, 12);
         font-size: 1.1em;
       }
 
       nav a {
-        color: rgb(225, 231, 164);
+        color: rgb(9, 3, 10);
       }
 
       .head {
@@ -146,7 +149,7 @@
       .dolor {
         padding: 10px;
         border-radius: 5px 5px 0 0;
-        background-color: #e791d4;
+        background-color: var(--main-lb-color);
         /* background-color: #c7dd9f; */
         /* background-color: #10d419; */
       }
@@ -154,7 +157,8 @@
       .donnees {
         padding: 10px;
         border-radius: 5px 5px 0 0;
-        background-color: #39e9e0;
+        background-color: var(--main-lb-color);
+        /* background-color: #39e9e0; */
         /* background-color: #02eeff; */
 
         /* background-color: #c7dd9f; */
@@ -163,7 +167,8 @@
       .fonctionnel {
         padding: 10px;
         border-radius: 5px 5px 0 0;
-        background-color: #c7dd9f;
+        background-color: var(--main-lb-color);
+        /* background-color: #c7dd9f; */
         /* background-color: #a9f775; */
         /* background-color: #cdd82f; */
         /* background-color: #c7dd9f; */
@@ -172,7 +177,8 @@
       .trophique {
         padding: 10px;
         border-radius: 5px 5px 0 0;
-        background-color: #c7dd9f;
+        background-color: var(--main-lb-color);
+        /* background-color: #c7dd9f; */
         /* background-color: #a9f775; */
         /* background-color: #f19f40; */
         /* background-color: #c7dd9f; */
@@ -181,16 +187,15 @@
       .articulaire {
         padding: 10px;
         border-radius: 5px 5px 0 0;
-        background-color: #c7dd9f;
-        /* background-color: #93d5da; */
+        background-color: var(--main-lb-color);
         /* background-color: #c7dd9f; */
-        /* background-color: #a9f775; */
       }
 
       .musculaire {
         padding: 10px;
         border-radius: 5px 5px 0 0;
-        background-color: #c7dd9f;
+        background-color: var(--main-lb-color);
+        /* background-color: #c7dd9f; */
         /* background-color: #f1d063; */
         /* background-color: #c7dd9f; */
         /* background-color: #a9f775; */
@@ -199,16 +204,17 @@
       .titi {
         padding: 10px;
         border-radius: 5px 5px 0 0;
-        /* background-color: #f0e54b; */
-        background-color: #c7dd9f;
+        background-color: var(--main-lb-color);
+        /* background-color: #c7dd9f; */
         /* background-color: #a9f775; */
       }
 
       .respicogito {
         padding: 10px;
         border-radius: 5px 5px 0 0;
+        background-color: var(--main-lb-color);
         /* background-color: #a9f775; */
-        background-color: #c9dd9f;
+        /* background-color: #c9dd9f; */
       }
 
       .pe {
@@ -235,7 +241,7 @@
         <li id="reinitialise">Réinitialiser</li>
       </ul>
     </nav>
-    ⬜ <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
 
     <div>
       <fieldset>
@@ -328,7 +334,7 @@
           type="date"
           size="18"
         />
-        <br /><br /><br /><br />
+        <br /><br />
 
         <label class="donnees" for="appui"
           ><strong>Appui (total/limité/sans appui) </strong></label
@@ -338,7 +344,7 @@
           type="text"
           size="15"
           maxlength="30"
-        /><br /><br /><br /><br />
+        /><br /><br />
 
         <label class="donnees" for="nom"
           ><strong>Immobilisation (plâtre/attelle...) </strong></label
@@ -558,7 +564,7 @@ scratchs"
         <select id="transferts">
           <option id="oui" value="oui">oui</option>
           <option id="non" value="non">non</option> </select
-        ><br /><br /><br />
+        ><br /><br />
         <label class="fonctionnel">Double tâche </label>
         <select id="doubleTache">
           <option id="oui" value="oui">oui</option>
@@ -647,7 +653,6 @@ importants. "
         <legend align="center">
           <span class="trophique"><strong>TROPHICITE</strong></span>
         </legend>
-        <br /><br />
 
         <label class="trophique">Oedème </label>
         <select id="oedeme">
@@ -685,13 +690,13 @@ importants. "
           <option value="hématomes MI">hématomes MI</option>
         </select>
       </fieldset>
-      <br /><br /><br /><br />
+      <br /><br />
 
       <fieldset>
         <legend align="center">
           <span class="articulaire"><strong>ARTICULAIRE</strong></span>
         </legend>
-        <br /><br />
+
         <label class="articulaire"><stong>Amplitude</stong></label>
         <textarea id="amplitude" name="amplitude" rows="4" cols="80"></textarea>
         <select
@@ -764,7 +769,7 @@ importants. "
         <legend align="center">
           <span class="musculaire"><strong>MUSCULAIRE</strong></span>
         </legend>
-        <br /><br />
+
         <label class="musculaire">
           Verrouillage quadriceps
         </label>
@@ -811,7 +816,7 @@ importants. "
         <legend align="center">
           <span class="respicogito">AUTRES</span>
         </legend>
-        <br /><br />
+
         <label class="respicogito">
           Fonctions supérieures
         </label>
