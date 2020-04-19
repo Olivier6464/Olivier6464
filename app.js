@@ -11,15 +11,15 @@ function getSelectionsListe(id) {
 }
 
 var spacer = {
-  blank: function() {
+  blank: function () {
     return "";
   },
 
-  newline: function() {
+  newline: function () {
     return "\n";
   },
 
-  line: function(length, character) {
+  line: function (length, character) {
     s = "";
     for (var i = 0; i < length; i++) {
       s += character;
@@ -27,14 +27,14 @@ var spacer = {
     return s;
   },
 
-  wrap: function(text, length, character) {
+  wrap: function (text, length, character) {
     var padLength = (length - text.length) / 2 - 1;
     var wrapText = character + spacer.line(padLength, " ") + text;
     wrapText += spacer.line(padLength, " ");
     return wrapText;
   },
 
-  box: function(text, character) {
+  box: function (text, character) {
     var boxText = spacer.newline();
     length = text.length + 38;
     if (character === "=") length = 25;
@@ -46,11 +46,11 @@ var spacer = {
     //boxText += character + spacer.newline();
     boxText += spacer.line(length, character) + spacer.newline();
     return boxText;
-  }
+  },
 };
 
-window.onload = function() {
-  $(".element-a-cacher").each(function() {
+window.onload = function () {
+  $(".element-a-cacher").each(function () {
     $(this).hide();
   });
 };
@@ -263,7 +263,7 @@ function affichage() {
     spacer.box(" Prise en charge prévisionnelle", egal) +
     rtl +
     document.getElementById("priseEnChargePrev").value;
-  $(".element-a-cacher").each(function() {
+  $(".element-a-cacher").each(function () {
     $(this).show();
   });
   var toCopy = document.getElementById("to-copy");
@@ -277,7 +277,7 @@ function affichage() {
 function replaceSelection(idfield, idoption) {
   let d = document.getElementById(idoption);
   var elem = document.getElementById(idfield);
-  d.addEventListener("keyup", e => {
+  d.addEventListener("keyup", (e) => {
     e.preventDefault;
     // e.stopPropagation
 
@@ -295,7 +295,7 @@ function replaceSelection(idfield, idoption) {
     }
   });
 
-  d.addEventListener("click", e => {
+  d.addEventListener("click", (e) => {
     e.preventDefault;
     var word = d.options[d.selectedIndex].value;
     document.getElementById(idoption).size = 1;
@@ -311,15 +311,12 @@ function replaceSelection(idfield, idoption) {
 }
 
 function frenchdate(strDate) {
-  var ch = strDate
-    .split("-")
-    .reverse()
-    .join("/");
+  var ch = strDate.split("-").reverse().join("/");
   return ch;
 }
 
 const efface = document.getElementById("reinitialise");
-efface.addEventListener("click", e => location.reload(true));
+efface.addEventListener("click", (e) => location.reload(true));
 
 function ouvreListe(obj) {
   obj.size = 5;
@@ -331,10 +328,10 @@ function fermeListe(obj) {
 
 var chtext = document.querySelectorAll("textarea");
 var tab = Array.from(chtext);
-tab.forEach(elem =>
+tab.forEach((elem) =>
   elem.addEventListener(
     "focus",
-    event => {
+    (event) => {
       event.target.style.backgroundColor = "#EEEEEE";
       event.target.style.borderColor = "green";
     },
@@ -342,10 +339,10 @@ tab.forEach(elem =>
   )
 );
 
-tab.forEach(elem =>
+tab.forEach((elem) =>
   elem.addEventListener(
     "blur",
-    event => {
+    (event) => {
       event.target.style.backgroundColor = "";
       event.target.style.borderColor = "#dbe4bc";
     },
@@ -356,14 +353,14 @@ tab.forEach(elem =>
 // select on focus on deroule
 var chselect = document.querySelectorAll("select");
 var seltab = Array.from(chselect);
-seltab.forEach(elem =>
-  elem.addEventListener("focus", function(event) {
+seltab.forEach((elem) =>
+  elem.addEventListener("focus", function (event) {
     event.target.size = 10;
   })
 );
 
-seltab.forEach(elem =>
-  elem.addEventListener("blur", function(event) {
+seltab.forEach((elem) =>
+  elem.addEventListener("blur", function (event) {
     event.target.size = 1;
   })
 );
@@ -380,3 +377,17 @@ function heure() {
 }
 
 heure();
+
+function date() {
+  var date = new Date();
+  var nday = date.getDate() + 1 < 10 ? "0" + date.getDate() : date.getDate();
+  var month =
+    date.getMonth() + 1 < 10
+      ? "0" + (date.getMonth() + 1)
+      : date.getMonth() + 1;
+  var year = date.getFullYear();
+  var laDate = nday + "/" + month + "/" + year;
+  document.getElementById("laDate").innerHTML = laDate;
+}
+
+date();

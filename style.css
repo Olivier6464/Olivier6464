@@ -7,6 +7,7 @@
   --main-option-bg-hover: rgb(156, 214, 195);
   --main-option-color-hover: black;
   --main-temps-color: rgb(233, 99, 10);
+  --main-date-color: rgb(54, 11, 245);
   --main-nav-li-color: rgb(16, 17, 12);
   --main-nav-a-color: rgb(9, 3, 10);
 }
@@ -65,6 +66,10 @@ option:hover {
   color: var(--main-temps-color);
 }
 
+#laDate {
+  color: var(--main-date-color);
+}
+
 textarea,
 input,
 select {
@@ -106,7 +111,7 @@ nav li {
   padding: 10px 10px;
   text-align: center;
   color: var(--main-nav-li-color);
-  font-size: 1.1em;
+  font-size: 1.5em;
 }
 
 nav a {
