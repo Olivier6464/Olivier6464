@@ -370,7 +370,6 @@ seltab.forEach(elem =>
 
 function heure() {
   var h = new Date();
-
   document.getElementById("temps").innerHTML =
     (h.getHours() < 10 ? "0" + h.getHours() : h.getHours()) +
     ":" +
