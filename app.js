@@ -108,6 +108,10 @@ function affichage() {
     bil += rtl + spacer.box("HISTOIRE DE LA MALADIE", egal);
     bil += rtl + document.getElementById("histoire").value;
   }
+  if (document.getElementById("modeDeVie").value !== "") {
+    bil += rtl + spacer.box(" Mode de vie", egal);
+    bil += rtl + document.getElementById("modeDeVie").value;
+  }
   if (document.getElementById("atcd").value !== "") {
     bil += rtl + spacer.box("Antécédents", egal);
     bil += rtl + document.getElementById("atcd").value;
@@ -116,10 +120,7 @@ function affichage() {
     bil += rtl + spacer.box(" Antécédents Chirurgicaux", egal);
     bil += rtl + document.getElementById("atcdChir").value;
   }
-  if (document.getElementById("modeDeVie").value !== "") {
-    bil += rtl + spacer.box(" Mode de vie", egal);
-    bil += rtl + document.getElementById("modeDeVie").value;
-  }
+  
   if (document.getElementById("operation").value !== "") {
     bil +=
       rtl +
