@@ -7,7 +7,7 @@
   --main-option-bg-hover: rgb(156, 214, 195);
   --main-option-color-hover: black;
   --main-temps-color: rgb(233, 99, 10);
-  --main-date-color: rgb(54, 11, 245);
+  --main-date-color: rgb(115, 93, 212);
   --main-nav-li-color: rgb(16, 17, 12);
   --main-nav-a-color: rgb(9, 3, 10);
 }
@@ -16,6 +16,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family:  Times;
+  font-size:30px;
 }
 
 a {
@@ -24,7 +26,7 @@ a {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Kalam', sans-serif;
   color: #444;
   border-color: #dbe4bc;
   /* background-color: #d5dbc8; */
@@ -37,11 +39,11 @@ li:hover {
 }
 
 p {
-  font-family: "Times New Roman", Times;
+  /* font-family: "Times New Roman", Times; */
 }
 
 h1 {
-  font-family: "Times New Roman", Times;
+  /* font-family: "Times New Roman", Times; */
   background-color: var(--main-h1-bg-color);
 }
 
@@ -73,7 +75,7 @@ option:hover {
 textarea,
 input,
 select {
-  font-family: "Contrail One";
+  /* font-family: "Contrail One"; */
   width: 80%;
   margin-left: 10%;
   padding: 5px;
@@ -83,8 +85,8 @@ select {
 }
 
 fieldset {
-  font-family: "Kalam", cursive;
-  font-size: 1.5em;
+  /* font-family: cursive; */
+  font-size: 1em;
   position: relative;
   padding: 15px 0;
   border: 0;
@@ -118,6 +120,7 @@ nav a {
   color: var(--main-nav-a-color);
 }
 
+
 .head {
   width: 100%;
 }
@@ -132,12 +135,6 @@ nav a {
 }
 
 .dolor {
-  padding: 10px;
-  border-radius: 5px 5px 0 0;
-  background-color: var(--main-lb-color);
-}
-
-.donnees {
   padding: 10px;
   border-radius: 5px 5px 0 0;
   background-color: var(--main-lb-color);
@@ -167,7 +164,7 @@ nav a {
   background-color: var(--main-lb-color);
 }
 
-.titi {
+.donnees {
   padding: 10px;
   border-radius: 5px 5px 0 0;
   background-color: var(--main-lb-color);

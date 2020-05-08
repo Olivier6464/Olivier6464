@@ -116,11 +116,10 @@ function affichage() {
     bil += rtl + spacer.box("Antécédents", egal);
     bil += rtl + document.getElementById("atcd").value;
   }
-  if (document.getElementById("atcdChir").value !== "") {
-    bil += rtl + spacer.box(" Antécédents Chirurgicaux", egal);
-    bil += rtl + document.getElementById("atcdChir").value;
-  }
-  
+  bil +=
+    rtl +
+    spacer.box(" Prescription médicale", egal) +
+    rtl + document.getElementById("pec").value;
   if (document.getElementById("operation").value !== "") {
     bil +=
       rtl +
@@ -254,11 +253,7 @@ function affichage() {
     spacer.box(" Projet kiné du patient", egal) +
     rtl +
     document.getElementById("projetKine").value;
-  bil +=
-    rtl +
-    spacer.box(" Objectif de prise en charge du patient", egal) +
-    rtl +
-    document.getElementById("pec").value;
+  
   bil +=
     rtl +
     spacer.box(" Prise en charge prévisionnelle", egal) +
@@ -354,11 +349,15 @@ tab.forEach((elem) =>
 // select on focus on deroule
 var chselect = document.querySelectorAll("select");
 var seltab = Array.from(chselect);
-seltab.forEach((elem) =>
-  elem.addEventListener("focus", function (event) {
-    event.target.size = 10;
+seltab.forEach((elem) => 
+  {
+    elem.addEventListener("focus", function (event) {
+    
+      event.target.size = 7;
+    }
+    
+    )
   })
-);
 
 seltab.forEach((elem) =>
   elem.addEventListener("blur", function (event) {

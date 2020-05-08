@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <link
       href="https://fonts.googleapis.com/css?family=Contrail+One&display=swap"
       rel="stylesheet"
@@ -76,6 +77,7 @@
           required="true"
           size="15"
           maxlength="30"
+        
         /><br /><br /><label class="donnees" for="entrée">Date d'entrée</label
         ><input
           type="date"
@@ -119,12 +121,34 @@
         <label class="donnees"> <strong>Antécédents</strong> </label><br />
         <textarea id="atcd" name="atcd" rows="5" cols="80"></textarea>
         <br /><br />
-        <label class="donnees">
-          <strong>Antécédents Chirurgicaux</strong> </label
-        ><br />
-        <textarea id="atcdChir" name="atcdChir" rows="5" cols="80"></textarea>
-        <br /><br />
 
+        <fieldset>
+          <label class="fonctionnel"><strong>Prescription médicale</strong>
+          </label><br />
+          <textarea name="pec"  id="pec" rows="3" cols="80"></textarea>
+          <select id="phrpec" onchange="replaceSelection('pec',this.id)">
+            <option value="">phrases</option>
+            <option values="Réautonomisation, rééducation à la marche."
+              >Réautonomisation, rééducation à la marche</option
+            >
+            <option value="Rééducation à la marche"
+              >Rééducation à la marche</option
+            >
+            <option value="Travail des transferts et de l'équilibre"
+              >Travail des transferts et de l'équilibre</option
+            >
+            <option value="Kinésithérapie respiratoire"
+              >Kinésithérapie respiratoire</option
+            >
+            <option value="Reprise progressive de la marche"
+              >Reprise progressive de la marche</option
+            >
+            <option value="réautonomisation">réautonomisation</option>
+          </select>
+        </fieldset>
+
+        <br />
+        
         <label class="donnees"> <strong>Date de l'opération</strong> </label
         ><br />
         <input
@@ -307,7 +331,7 @@ scratchs"
           <option value="3">forte</option>
           <option value="4">très forte</option> </select
         ><br /><br /><label class="dolor" for="caracteristique"
-          >Caractéristiques:</label
+          >Caractéristiques</label
         ><select multiple id="typeDouleur" name="typeDouleur">
           <option value=""></option>
           <option value="mécanique">Mécanique</option>
@@ -704,8 +728,8 @@ muco-purulents. "
       <br /><br />
 
       <fieldset>
-        <label class="titi">
-          <strong>PROJET KINÉ DU PATIENT</strong>
+        <label class="donnees">
+          PROJET KINÉ DU PATIENT
         </label>
         <textarea
           name="projetKine"
@@ -734,36 +758,10 @@ muco-purulents. "
         </select>
       </fieldset>
 
-      <fieldset>
-        <label class="titi">
-          <strong>OBJECTIF DE PRISE EN CHARGE DU PATIENT</strong>
-        </label>
-        <textarea name="pec" id="pec" rows="3" cols="80"></textarea>
-        <select id="phrpec" onchange="replaceSelection('pec',this.id)">
-          <option value="">phrases</option>
-          <option values="Réautonomisation, rééducation à la marche."
-            >Réautonomisation, rééducation à la marche</option
-          >
-          <option value="Rééducation à la marche"
-            >Rééducation à la marche</option
-          >
-          <option value="Travail des transferts et de l'équilibre"
-            >Travail des transferts et de l'équilibre</option
-          >
-          <option value="Kinésithérapie respiratoire"
-            >Kinésithérapie respiratoire</option
-          >
-          <option value="Reprise progressive de la marche"
-            >Reprise progressive de la marche</option
-          >
-          <option value="réautonomisation">réautonomisation</option>
-        </select>
-      </fieldset>
+      
 
       <fieldset>
-        <label class="titi">
-          <strong>PRISE EN CHARGE PRÉVISIONNELLE</strong>
-        </label>
+        <label class="donnees">PRISE EN CHARGE PRÉVISIONNELLE</label>
         <textarea
           name="priseEnChargePrev"
           id="priseEnChargePrev"
