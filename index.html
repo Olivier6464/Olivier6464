@@ -31,7 +31,7 @@
     <div id="top"></div>
 
     <nav class="nav">
-      <ul>
+      <ul class="container">
         <li id="laDate"></li>
         <li id="temps"></li>
         <li id="copier" onclick="affichage()">Copier</li>
@@ -48,7 +48,7 @@
       <fieldset>
         <br /><br />
         <legend align="center">
-          <span class="donnees"><strong>Dossier médical</strong></span>
+          <span class="donnees rubrique"><strong>Dossier médical</strong></span>
         </legend>
 
         <label class="donnees" for="civilite">Civilité</label>
@@ -308,9 +308,10 @@ scratchs"
       </fieldset>
       <br /><br />
       <fieldset>
-        <legend class="dolor" align="center">
+        <legend class="dolor rubrique" align="center">
           <strong>Cotation de la douleur EVS</strong>
         </legend>
+        <br />
 
         <label class="dolor" for="auRepos">Au Repos</label><br /><select
           id="douleurRepos"
@@ -358,8 +359,9 @@ scratchs"
 
       <fieldset>
         <legend align="center">
-          <span class="fonctionnel"><strong>FONCTIONNEL</strong></span>
+          <span class="fonctionnel rubrique"><strong>FONCTIONNEL</strong></span>
         </legend>
+        <br />
 
         <label class="fonctionnel" for="assis">Equilibre assis</label>
         <select id="assis">
@@ -478,8 +480,9 @@ scratchs"
 
       <fieldset>
         <legend align="center">
-          <span class="trophique"><strong>TROPHICITE</strong></span>
+          <span class="trophique rubrique"><strong>TROPHICITE</strong></span>
         </legend>
+        <br />
 
         <label class="trophique">Oedème </label>
         <select id="oedeme">
@@ -524,8 +527,9 @@ scratchs"
 
       <fieldset>
         <legend align="center">
-          <span class="articulaire"><strong>ARTICULAIRE</strong></span>
+          <span class="articulaire rubrique"><strong>ARTICULAIRE</strong></span>
         </legend>
+        <br />
 
         <label class="articulaire"><stong>Amplitude</stong></label>
         <textarea id="amplitude" name="amplitude" rows="4" cols="80"></textarea>
@@ -597,8 +601,9 @@ scratchs"
 
       <fieldset>
         <legend align="center">
-          <span class="musculaire"><strong>MUSCULAIRE</strong></span>
+          <span class="musculaire rubrique"><strong>MUSCULAIRE</strong></span>
         </legend>
+        <br />
 
         <label class="musculaire">
           Verrouillage quadriceps
@@ -646,8 +651,9 @@ scratchs"
 
       <fieldset>
         <legend align="center">
-          <span class="respicogito">AUTRES</span>
+          <span class="respicogito rubrique"><strong>AUTRES</strong></span>
         </legend>
+        <br />
 
         <label class="respicogito">
           Fonctions supérieures
@@ -724,7 +730,9 @@ muco-purulents. "
         </select>
       </fieldset>
       <br /><br />
-      <hr />
+      <legend align="center">
+        <span class="musculaire rubrique"><strong>Rééducation</strong></span>
+      </legend>
       <br /><br />
 
       <fieldset>
@@ -761,7 +769,7 @@ muco-purulents. "
       
 
       <fieldset>
-        <label class="donnees">PRISE EN CHARGE PRÉVISIONNELLE</label>
+        <label class="donnees">OBJECTIFS ET PRISE EN CHARGE PRÉVISIONNELLE</label>
         <textarea
           name="priseEnChargePrev"
           id="priseEnChargePrev"
