@@ -256,7 +256,7 @@ function affichage() {
   
   bil +=
     rtl +
-    spacer.box("Objectifs et prise en charge prévisionnelle", egal) +
+    spacer.box(" Objectifs et prise en charge prévisionnelle", egal) +
     rtl +
     document.getElementById("priseEnChargePrev").value;
   $(".element-a-cacher").each(function () {
