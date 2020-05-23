@@ -7,7 +7,7 @@
   --main-menu-hover: rgb(224, 247, 126);
   --main-option-bg-hover: #9cd6c39b;
   --main-option-color-hover: black;
-  --main-temps-color: rgb(233, 99, 10);
+  --main-temps-color: #50fa7b;
   --main-date-color: #12d0e9;
   --main-nav-li-color: rgb(237, 240, 226);
   --main-nav-a-color: rgb(230, 274, 240);
@@ -34,9 +34,13 @@ body {
   background-color: var(--main-bg-color);
 }
 
+li {
+  /* font-weight: 700;*/
+} 
+
 li:hover {
   cursor: pointer;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 h1 {
@@ -69,6 +73,7 @@ option:hover {
 
 #laDate {
   color: var(--main-date-color);
+  font-weight: 800;
 }
 
 textarea,
@@ -82,6 +87,7 @@ select {
   text-align: left;
   border-radius: 10px;
 }
+
 
 fieldset {
   /* font-family: cursive; */
@@ -179,7 +185,7 @@ nav a {
 
 .pe {
   font-size: 2em;
-  color: coral;
+  color: #50fa7b;
   font-weight: bold;
 }
 
