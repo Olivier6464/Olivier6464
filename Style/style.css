@@ -80,12 +80,27 @@ textarea,
 input,
 select {
   /* font-family: "Contrail One"; */
+  outline: none;
+  box-shadow:none;
   width: 80%;
   margin-left: 10%;
   padding: 5px;
   font-size: 1em;
   text-align: left;
   border-radius: 10px;
+}
+
+input:-moz-placeholder,
+input:focus
+{
+    box-shadow:none !important;
+}
+
+textarea:focus, input:focus {
+  border-color: #51aaFF;
+  border-width: 4px;
+  border-radius: 15px;
+  
 }
 
 

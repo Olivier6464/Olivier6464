@@ -280,9 +280,9 @@ function replaceSelection (idfield, idoption) {
 
   d.addEventListener('click', (e) => {
     e.preventDefault
-    var word = d.options[d.selectedIndex].value
+    var word = d.options[d.selectedIndex].value 
     document.getElementById(idoption).size = 1
-    word = word.replace(/\s\s+/g, ' ')
+    word = word.replace(/\s\s+/g, ' ') 
     const from = elem.selectionStart
     const to = elem.selectionEnd
     elem.value = elem.value.slice(0, from) + word + elem.value.slice(to)
@@ -301,29 +301,29 @@ function frenchdate (strDate) {
 const efface = document.getElementById('reinitialise')
 efface.addEventListener('click', (e) => location.reload(true))
 
-var chtext = document.querySelectorAll('textarea')
-var tab = Array.from(chtext)
-tab.forEach((elem) =>
-  elem.addEventListener(
-    'focus',
-    (event) => {
-      event.target.style.backgroundColor = '#EEEEEE'
-      event.target.style.borderColor = 'green'
-    },
-    true
-  )
-)
+// var chtext = document.querySelectorAll('textarea')
+// var tab = Array.from(chtext)
+// tab.forEach((elem) =>
+//   elem.addEventListener(
+//     'focus',
+//     (event) => {
+//       event.target.style.backgroundColor = '#EEEEEE'
+//       event.target.style.borderColor = 'green'
+//     },
+//     true
+//   )
+// )
 
-tab.forEach((elem) =>
-  elem.addEventListener(
-    'blur',
-    (event) => {
-      event.target.style.backgroundColor = ''
-      event.target.style.borderColor = '#dbe4bc'
-    },
-    true
-  )
-)
+// tab.forEach((elem) =>
+//   elem.addEventListener(
+//     'blur',
+//     (event) => {
+//       event.target.style.backgroundColor = ''
+//       event.target.style.borderColor = '#dbe4bc'
+//     },
+//     true
+//   )
+// )
 
 // select on focus on deroule
 var chselect = document.querySelectorAll('select')
