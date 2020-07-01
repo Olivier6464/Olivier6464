@@ -1,4 +1,3 @@
-
 <html id="fen" lang="fr">
   <head>
     <meta charset="utf-8" />
@@ -10,7 +9,11 @@
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link
+      href="http://fonts.googleapis.com/css?family=PT+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
     <link
       href="https://fonts.googleapis.com/css?family=Contrail+One&display=swap"
       rel="stylesheet"
@@ -19,7 +22,11 @@
       href="https://fonts.googleapis.com/css?family=Kalam&display=swap"
       rel="stylesheet"
     />
-     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css"
+    />
     <link rel="stylesheet" type="text/css" href="Style/style.css" />
     <link rel="icon" href="favicon.ico" />
     <script type="text/javascript" defer src="JS/app.js"></script>
@@ -78,7 +85,6 @@
           required="true"
           size="15"
           maxlength="30"
-        
         /><br /><br /><label class="donnees" for="entrée">Date d'entrée</label
         ><input
           type="date"
@@ -124,15 +130,22 @@
         <br /><br />
 
         <fieldset>
-          <label class="fonctionnel"><strong>Prescription médicale</strong>
-          </label><br />
-          <textarea name="pec"  id="pec" rows="3" cols="80"></textarea>
+          <label class="fonctionnel"
+            ><strong>Prescription médicale</strong> </label
+          ><br />
+          <textarea name="pec" id="pec" rows="3" cols="80"></textarea>
           <select id="phrpec" onchange="replaceSelection('pec',this.id)">
             <option value="">phrases</option>
-            <option value="BILAN ET REEDUCATION DE L'EQUILIBRE">BILAN ET REEDUCATION DE L'EQUILIBRE</option>
+            <option value="BILAN ET REEDUCATION DE L'EQUILIBRE"
+              >BILAN ET REEDUCATION DE L'EQUILIBRE</option
+            >
             <option value="GYMNASTIQUE DYNAMIQUE">GYMNASTIQUE DYNAMIQUE</option>
-            <option value="REEDUCATION A LA MARCHE">REEDUCATION A LA MARCHE</option>
-            <option value="RENFORCEMENT MUSCULAIRE">RENFORCEMENT MUSCULAIRE</option>
+            <option value="REEDUCATION A LA MARCHE"
+              >REEDUCATION A LA MARCHE</option
+            >
+            <option value="RENFORCEMENT MUSCULAIRE"
+              >RENFORCEMENT MUSCULAIRE</option
+            >
             <option value="renfort autonomie">renfort autonomie</option>
             <option value="RELAXATION">RELAXATION</option>
             <option values="Réautonomisation, rééducation à la marche."
@@ -155,7 +168,7 @@
         </fieldset>
 
         <br />
-        
+
         <label class="donnees"> <strong>Date de l'opération</strong> </label
         ><br />
         <input
@@ -232,6 +245,8 @@
             <option value="releveur Liberté">releveur Liberté</option>
             <option value="releveur Thuasne">releveur Thuasne</option>
             <option value="releveur sur moulage">releveur sur moulage</option>
+            <option value="botte platrée">botte platrée</option>
+            <option value="botte en résine">botte en résine</option>
             <option value="botte de marche">botte de marche</option>
             <option
               value="botte de marche avec coussins d'air
@@ -644,9 +659,9 @@ scratchs"
         <textarea id="autres" rows="4" cols="80"></textarea>
         <select id="phrautres" onchange="replaceSelection('autres',this.id)">
           <option value="">phrases</option>
-          <option value="déficit global de force musculaire"\\n
-            >déficit global de force  g musculaire</option
-          >\\n
+          <option value="déficit global de force musculaire"
+            >déficit global de force musculaire</option
+          >
           <option value="bonne conservation de la force musculaire"
             >bonne conservation de la force musculaire</option
           >
@@ -738,12 +753,11 @@ muco-purulents. "
       </fieldset>
       <br /><br />
       <fieldset>
-      <legend align="center">
-        <span class="articulaire rubrique"><strong>Rééducation</strong></span>
-      </legend>
-      <br /><br />
+        <legend align="center">
+          <span class="articulaire rubrique"><strong>Rééducation</strong></span>
+        </legend>
+        <br /><br />
 
-      
         <label class="donnees">
           PROJET KINÉ DU PATIENT
         </label>
@@ -774,10 +788,10 @@ muco-purulents. "
         </select>
       </fieldset>
 
-      
-
       <fieldset>
-        <label class="donnees">OBJECTIFS ET PRISE EN CHARGE PRÉVISIONNELLE</label>
+        <label class="donnees"
+          >OBJECTIFS ET PRISE EN CHARGE PRÉVISIONNELLE</label
+        >
         <textarea
           name="priseEnChargePrev"
           id="priseEnChargePrev"
