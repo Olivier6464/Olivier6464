@@ -37,42 +37,42 @@ const spacer = {
     var boxText = spacer.newline()
     let length = text.length + 38
     if (character === '=') length = 25
-      if (character === '*') length = 40
+    if (character === '*') length = 40
 
-        boxText += spacer.line(length, character) + spacer.newline()
-      boxText += spacer.wrap(text, length, character) + spacer.newline()
-      boxText += spacer.line(length, character) + spacer.newline()
-      return boxText
-    }
+    boxText += spacer.line(length, character) + spacer.newline()
+    boxText += spacer.wrap(text, length, character) + spacer.newline()
+    boxText += spacer.line(length, character) + spacer.newline()
+    return boxText
   }
+}
 
-  window.onload = function () {
-    $('.element-a-cacher').each(function () {
-      $(this).hide()
-    })
-  }
+window.onload = function () {
+  $('.element-a-cacher').each(function () {
+    $(this).hide()
+  })
+}
 
-  function affichage () {
-    var bil = ''
-    var esp = ' '
-    var rtl = '\n'
-    var egal = '='
-    var nom = document.getElementById('nom').value
-    var prenom = document.getElementById('prenom').value
-    /* les chaines les plus longues de chaque rubrique expl: fonctionnelle */
-    var marche = 'Marche (périmètre, aides techniques ...): '
-    var lplfonc = marche.length
-    var assis = 'Équilibre assis: '
-    var debout = 'Équilibre debout: '
-    var transferts = 'Transferts (lit vers fauteuil): '
-    var doubletache = 'Double tâche: '
-    var oedeme = 'Oedème: '
-    var hematome = 'Hématome: '
-    var inflamation = 'Inflammation: '
-    var amyotrophie = 'Amyotrophie: '
-    var mobilisation = 'A la mobilisation: '
-    var repos = 'Au repos:'
-    var lpldoul = mobilisation.length
+function affichage () {
+  var bil = ''
+  var esp = ' '
+  var rtl = '\n'
+  var egal = '='
+  var nom = document.getElementById('nom').value
+  var prenom = document.getElementById('prenom').value
+  /* les chaines les plus longues de chaque rubrique expl: fonctionnelle */
+  var marche = 'Marche (périmètre, aides techniques ...): '
+  var lplfonc = marche.length
+  var assis = 'Équilibre assis: '
+  var debout = 'Équilibre debout: '
+  var transferts = 'Transferts (lit vers fauteuil): '
+  var doubletache = 'Double tâche: '
+  var oedeme = 'Oedème: '
+  var hematome = 'Hématome: '
+  var inflamation = 'Inflammation: '
+  var amyotrophie = 'Amyotrophie: '
+  var mobilisation = 'A la mobilisation: '
+  var repos = 'Au repos:'
+  var lpldoul = mobilisation.length
 
   // bil += spacer.box("Bilan Kinésithérapique",fois);
   bil +=
@@ -280,9 +280,9 @@ function replaceSelection (idfield, idoption) {
 
   d.addEventListener('click', (e) => {
     e.preventDefault
-    var word = d.options[d.selectedIndex].value 
+    var word = d.options[d.selectedIndex].value
     document.getElementById(idoption).size = 1
-    word = word.replace(/\s\s+/g, ' ') 
+    word = word.replace(/\s\s+/g, ' ')
     const from = elem.selectionStart
     const to = elem.selectionEnd
     elem.value = elem.value.slice(0, from) + word + elem.value.slice(to)
@@ -340,7 +340,7 @@ seltab.forEach((elem) =>
   elem.addEventListener('blur', function (event) {
     event.target.size = 1
   })
-  )
+)
 
 function heure () {
   var h = new Date()
@@ -360,8 +360,8 @@ function date () {
   var nday = date.getDate() + 1 < 10 ? '0' + date.getDate() : date.getDate()
   var month =
   date.getMonth() + 1 < 10
-  ? '0' + (date.getMonth() + 1)
-  : date.getMonth() + 1
+    ? '0' + (date.getMonth() + 1)
+    : date.getMonth() + 1
   var year = date.getFullYear()
   var laDate = nday + '/' + month + '/' + year
   document.getElementById('laDate').innerHTML = laDate
@@ -369,14 +369,14 @@ function date () {
 
 date()
 
-document.addEventListener('DOMContentLoaded', function (){
-  var textareas = document.getElementsByTagName("textarea");
-  for(var i = 0; i<textareas.length; i++){
-    textareas[i].onkeyup = function (e){
+document.addEventListener('DOMContentLoaded', function () {
+  var textareas = document.getElementsByTagName('textarea')
+  for (var i = 0; i < textareas.length; i++) {
+    textareas[i].onkeyup = function (e) {
       if (e.key == 'Escape') {
-        var rtl = '\n';
-        e.target.value += rtl;
+        var rtl = '\n'
+        e.target.value += rtl
       }
     }
-  }});
-
+  } 
+})
