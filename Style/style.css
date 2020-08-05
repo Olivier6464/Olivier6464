@@ -59,20 +59,13 @@ label {
   text-align: center;
 }
 
+nav a {
+  color: var(--main-nav-a-color);
+}
+
 option:hover {
   background: var(--main-option-bg-hover);
   color: var(--main-option-color-hover);
-}
-
-#temps {
-  color: var(--main-temps-color);
-  font-weight: 800;
-}
-
-
-#laDate {
-  color: var(--main-date-color);
-  font-weight: 800;
 }
 
 textarea,
@@ -102,7 +95,6 @@ textarea:focus, input:focus {
   
 }
 
-
 fieldset {
   /* font-family: cursive; */
   font-size: 1em;
@@ -115,6 +107,15 @@ legend {
   text-decoration: none;
 }
 
+#temps {
+  color: var(--main-temps-color);
+  font-weight: 800;
+}
+
+#laDate {
+  color: var(--main-date-color);
+  font-weight: 800;
+}
 
 .nav .menu {
   color: beige;
@@ -126,8 +127,6 @@ legend {
   padding-bottom: 15px;
   list-style: none;
 }
-
-
 
 .has-children { /*1*/
   position: relative;
@@ -154,10 +153,6 @@ legend {
   top: 0px;
   left: 100%;
   background: #1e76d6;
-}
-
-nav a {
-  color: var(--main-nav-a-color);
 }
 
 .head {
