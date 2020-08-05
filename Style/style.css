@@ -115,18 +115,8 @@ legend {
   text-decoration: none;
 }
 
-nav {
-  font-family: "Contrail One", cursive;
-  /* background-color: var(--main-bg-color); */
-  padding: 0px 0px;
-  text-align: center;
-  position: absolute;
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-}
 
-.container {
+.nav .menu {
   color: beige;
   background-color: rgb(15, 2, 27);
   display: flex;
@@ -135,6 +125,35 @@ nav {
   padding-top: 15px;
   padding-bottom: 15px;
   list-style: none;
+}
+
+
+
+.has-children { /*1*/
+  position: relative;
+}
+
+.has-children:hover > .sous-menu { /*2*/
+  display: flex;
+}
+
+.sous-menu { /*3*/
+  display: none;
+  flex-flow: column wrap;
+  min-width: 100px;
+  position: absolute;
+  background: dodgerblue;
+}
+
+.sous-menu a { /*4*/
+  text-align: left;
+  color:white;
+}
+
+.sous-menu .sous-menu { /*5*/
+  top: 0px;
+  left: 100%;
+  background: #1e76d6;
 }
 
 nav a {
