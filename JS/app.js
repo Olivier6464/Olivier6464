@@ -330,7 +330,7 @@ var chselect = document.querySelectorAll('select')
 var seltab = Array.from(chselect)
 seltab.forEach((elem) => {
   elem.addEventListener('focus', function (event) {
-    event.target.size = 7
+    event.target.size = elem.options.length
   }
 
   )
@@ -378,5 +378,5 @@ document.addEventListener('DOMContentLoaded', function () {
         e.target.value += rtl
       }
     }
-  } 
+  }
 })

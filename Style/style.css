@@ -4,8 +4,8 @@
   --main-a-color: black;
   --main-h1-bg-color: #80ced6;
   --main-menu-hover: rgb(224, 247, 126);
-  --main-option-bg-hover: #9cd6c39b;
-  --main-option-color-hover: black;
+  --main-option-bg-hover: #f4f74be0;
+  --main-option-color-hover: rgb(55, 15, 201);
   --main-temps-color: #50fa7b;
   --main-date-color: #12d0e9;
   --main-nav-li-color: rgb(237, 240, 226);
@@ -59,13 +59,27 @@ label {
   text-align: center;
 }
 
+nav {
+  font-family: "Contrail One", cursive;
+  /* background-color: var(--main-bg-color); */
+  padding: 0px 0px;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
 
 nav a {
   color: var(--main-nav-a-color);
 }
 
 option:nth-child(even){
-  background-color: #dbfc82;
+  background-color: #caf0f5;
+}
+
+option:nth-child(odd){
+  background-color: #b5eea7;
 }
 
 option:hover {
