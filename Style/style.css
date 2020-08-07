@@ -59,8 +59,13 @@ label {
   text-align: center;
 }
 
+
 nav a {
   color: var(--main-nav-a-color);
+}
+
+option:nth-child(even){
+  background-color: #dbfc82;
 }
 
 option:hover {
