@@ -74,6 +74,10 @@ nav a {
   color: var(--main-nav-a-color);
 }
 
+.orthese{
+  text-align: center;
+}
+
 option:nth-child(even){
   background-color: #caf0f5;
 }
@@ -100,6 +104,13 @@ select {
   text-align: left;
   border-radius: 10px;
 }
+
+select optgroup {
+  background:#e2d37a;
+  /* text-align: center; */
+  }
+
+ 
 
 input:-moz-placeholder,
 input:focus
