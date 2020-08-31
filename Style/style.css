@@ -167,11 +167,16 @@ legend {
 }
 
 .sous-menu { /*3*/
+  list-style: none;
   display: none;
   flex-flow: column wrap;
   min-width: 100px;
   position: absolute;
-  background: dodgerblue;
+  background: rgb(15, 2, 27);
+}
+
+.sous-menu li:hover{
+  background-color: rgba(231, 211, 119, 0.938);
 }
 
 .sous-menu a { /*4*/
@@ -182,7 +187,7 @@ legend {
 .sous-menu .sous-menu { /*5*/
   top: 0px;
   left: 100%;
-  background: #1e76d6;
+  background: rgb(15, 2, 27);
 }
 
 .head {
