@@ -78,11 +78,9 @@ function affichage () {
   bil +=
   document.getElementById('civilite').value +
   esp +
-  nom.charAt(0).toUpperCase() +
-  nom.substring(1).toLowerCase() +
+  nom.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase()) +
   esp +
-  prenom.charAt(0).toUpperCase() +
-  prenom.substring(1).toLowerCase()
+  prenom.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())
   bil +=
   rtl +
   "Date de l'admission: " +
@@ -378,5 +376,5 @@ document.addEventListener('DOMContentLoaded', function () {
         e.target.value += rtl
       }
     }
-  } 
+  }
 })
