@@ -64,45 +64,45 @@
     <fieldset>
       <br /><br />
       <legend align="center">
-        <span class="donnees rubrique"><strong>Dossier médical</strong></span>
+        <span class="donnees rubrique">Dossier médical</span>
       </legend>
 
-      <label class="donnees" for="civilite">Civilité</label>
+      <label class="donnees" for="civilite"><span>Civilité</span></label>
       <br />
       <select id="civilite" name="civilite">
         <option value="Madame" selected="selected">Madame</option>
         <option value="Monsieur">Monsieur</option>
         <option value="Mademoiselle">Mademoiselle</option>
-      </select><br /><br /><label class="donnees" for="nom">Nom</label>
+      </select><br /><br /><label class="donnees" for="nom"><span>Nom</span></label>
       <br />
       <input id="nom" class="majuscule" name="nom" type="text" required="true" size="15"
-        maxlength="30" /><br /><br /><label class="donnees" for="prenom">Prénom</label>
+        maxlength="30" /><br /><br /><label class="donnees" for="prenom"><span>Prénom</span></label>
       <br />
       <input id="prenom" class="majuscule" name="prenom" type="text" required="true" size="15"
-        maxlength="30" /><br /><br /><label class="donnees" for="entrée">Date d'entrée</label><input type="date"
+        maxlength="30" /><br /><br /><label class="donnees" for="entrée"><span>Date d'entrée</span></label><input type="date"
         id="entree" name="entree" class="date" type="text" required="true" size="18" /><br /><br />
 
       <label class="donnees">
-        <strong>ANAMNESE Motif du Séjour</strong> </label><br />
+        <span>ANAMNESE Motif du Séjour</span> </label><br />
 
       <textarea class="champ" id="anamnese" name="anamnese" rows="5" cols="80"></textarea>
 
       <br /><br />
 
-      <label class="donnees"> <strong>HISTOIRE DE LA MALADIE</strong> </label><br />
+      <label class="donnees"> <span>HISTOIRE de la maladie</span> </label><br />
       <textarea class="champ" id="histoire" name="histoire" rows="5" cols="80"></textarea>
       <br /><br />
 
-      <label class="donnees"> <strong>Mode de vie</strong> </label><br />
+      <label class="donnees"> <span>Mode de vie</span> </label><br />
       <textarea id="modeDeVie" name="modeDeVie" rows="5" cols="80"></textarea>
       <br /><br />
 
-      <label class="donnees"> <strong>Antécédents</strong> </label><br />
+      <label class="donnees"> <span>Antécédents</span> </label><br />
       <textarea id="atcd" name="atcd" rows="5" cols="80"></textarea>
       <br /><br />
 
       <fieldset>
-        <label class="fonctionnel"><strong>Prescription médicale</strong> </label><br />
+        <label class="fonctionnel"><span>Prescription médicale</span> </label><br />
         <textarea name="pec" id="pec" rows="3" cols="80"></textarea>
         <select id="phrpec" onchange="replaceSelection('pec',this.id)">
           <option value="">phrases</option>
@@ -123,14 +123,14 @@
 
       <br />
 
-      <label class="donnees"> <strong>Date de l'opération</strong> </label><br />
+      <label class="donnees"> <span>Date de l'opération</span> </label><br />
       <input id="operation" name="operation" class="date" type="date" size="18" />
       <br /><br />
 
-      <label class="donnees" for="appui"><strong>Appui (total/limité/sans appui) </strong></label><br /><input
+      <label class="donnees" for="appui"><span>Appui (total/limité/sans appui) </span></label><br /><input
         id="appui" name="appui" type="text" size="15" maxlength="30" /><br /><br />
 
-      <label class="donnees" for="nom"><strong>Immobilisation (plâtre/attelle...) </strong></label><br /><select
+      <label class="donnees" for="nom"><span>Immobilisation (plâtre/attelle...) </span></label><br /><select
         id="immobilisation" name="immobilisation" type="text" onfocus="this.style.color='darkgreen'">
         <option value=""></option>
         <optgroup class="orthese" label="Attelles, écharpes">
@@ -167,15 +167,10 @@
 pied">chaussure de décharge de l'avant pied</option>
         </optgroup>
         <optgroup class="orthese" label="Ceintures">
-          <option value="ceinture de soutient abdominal">ceinture de soutient abdominal</option>
-          <option value="ceinture thoracique">ceinture thoracique</option>
-          <option value="ceinture lombaire">ceinture lombaire</option>
-          <option value="ceinture lombaire à double renforts
-    de
-    contention">ceinture lombaire à double renforts de contention</option>
-        </optgroup>
-
-        <optgroup class="orthese" label="Colliers cervicals">
+          <option value="ceispan {
+            margin-left: 30px;
+            padding: 30px;
+          }hese" label="Colliers cervicals">
           <option value="collier cervical">collier cervical</option>
           <option value="collier cervical en mousse">collier cervical en mousse</option>
           <option value="collier cervical Philadelphie">collier cervical Philadelphie</option>
@@ -207,25 +202,25 @@ scratchs">orthèse de genou avec fermeture a scratchs
     <br /><br />
     <fieldset>
       <legend class="dolor rubrique" align="center">
-        <strong>Cotation de la douleur EVS</strong>
+        <span>Cotation de la douleur EVS</span>
       </legend>
       <br />
 
-      <label class="dolor" for="auRepos">Au Repos</label><br /><select id="douleurRepos" name="douleurRepos">
+      <label class="dolor" for="auRepos"><span>Au Repos</span></label><br /><select id="douleurRepos" name="douleurRepos">
         <option value="0" selected="selected">pas de douleur</option>
         <option value="1">faible</option>
         <option value="2">moyenne</option>
         <option value="3">forte</option>
         <option value="4">très forte</option>
       </select>
-      <br /><br /><label class="dolor" for="aLaMobilisation">A la mobilisation</label><select id="douleurMob"
+      <br /><br /><label class="dolor" for="aLaMobilisation"><span>A la mobilisation</span></label><select id="douleurMob"
         name="douleurMob">
         <option value="0" selected="selected">pas de douleur</option>
         <option value="1">faible</option>
         <option value="2">moyenne</option>
         <option value="3">forte</option>
         <option value="4">très forte</option>
-      </select><br /><br /><label class="dolor" for="caracteristique">Caractéristiques</label><select multiple
+      </select><br /><br /><label class="dolor" for="caracteristique"><span>Caractéristiques</span></label><select multiple
         id="typeDouleur" name="typeDouleur">
         <option value=""></option>
         <option value="mécanique">Mécanique</option>
@@ -243,26 +238,28 @@ scratchs">orthèse de genou avec fermeture a scratchs
         <option value="angoissante">Angoissante</option>
         <option value="obsédante">Obsédante</option>
       </select><br /><br />
-      <label class="dolor" for="typeRepos">autre type</label><input id="typeRepos" name="typeRepos"
+      <label class="dolor" for="typeRepos"><span>autre type de douleur</span></label><input id="typeRepos" name="typeRepos"
         type="text" /><br /><br />
-      <label class="dolor" for="localisation">localisation </label><input id="localisation" name="localisation"
+      <label class="dolor" for="localisation"><span>localisation</span></label><input id="localisation" name="localisation"
         type="text" /><br />
     </fieldset>
     <br /><br />
 
     <fieldset>
       <legend align="center">
-        <span class="fonctionnel rubrique"><strong>FONCTIONNEL</strong></span>
+        <span class="fonctionnel rubrique"><span>
+          Fonctionnel
+        </span></span>
       </legend>
       <br />
 
-      <label class="fonctionnel" for="assis">Equilibre assis</label>
+      <label class="fonctionnel" for="assis"><span>Equilibre assis</span></label>
       <select id="assis">
         <option id="oui" value="oui">oui</option>
         <option id="non" value="non">non</option>
       </select>
       <br /><br />
-      <label class="fonctionnel">Équilibre debout </label>
+      <label class="fonctionnel"><span>Équilibre debout</span></label>
       <select id="debout">
         <option id="oui" value="oui">oui</option>
         <option id="non" value="non">non</option>
@@ -271,17 +268,17 @@ scratchs">orthèse de genou avec fermeture a scratchs
         <option value="risque limité de chute, limitation minime">DE 15 À 30 SECONDES</option>
         <option value="très faible risque de chute, pas de limitation">> 30 S</option>
       </select><br /><br />
-      <label class="fonctionnel">Transferts (lit vers fauteuil) </label>
+      <label class="fonctionnel"><span>Transferts (lit vers fauteuil)</span></label>
       <select id="transferts">
         <option id="oui" value="oui">oui</option>
         <option id="non" value="non">non</option>
       </select><br /><br />
-      <label class="fonctionnel">Double tâche </label>
+      <label class="fonctionnel"><span>Double tâche</span></label>
       <select id="doubleTache">
         <option id="oui" value="oui">oui</option>
         <option id="non" value="non">non</option>
       </select><br /><br />
-      <label class="fonctionnel">Autonomie AVJ</label>
+      <label class="fonctionnel"><span>Autonomie AVJ</span></label>
       <textarea id="autonomie" name="autonomie" rows="2" cols="80"></textarea>
       <select open id="phrautonomie" onchange="replaceSelection('autonomie',this.id)" ;
         onfocus="this.selectedIndex= 0;">
@@ -294,7 +291,7 @@ scratchs">orthèse de genou avec fermeture a scratchs
       </select>
       <br /><br />
 
-      <label class="fonctionnel">Marche (périmètre, aides techniques ...)</label>
+      <label class="fonctionnel"><span>Marche (périmètre, aides techniques ...)</span></label>
 
       <textarea id="marche" name="marche" rows="2" cols="80"></textarea>
       <select open id="phrmarche" onchange="replaceSelection('marche',this.id)" ; onfocus="this.selectedIndex= 0;">
@@ -329,32 +326,32 @@ scratchs">orthèse de genou avec fermeture a scratchs
 
     <fieldset>
       <legend align="center">
-        <span class="trophique rubrique"><strong>TROPHICITE</strong></span>
+        <span class="trophique rubrique"><span>Trophique</span></span>
       </legend>
       <br />
 
-      <label class="trophique">Oedème </label>
+      <label class="trophique"><span>Oedème</span></label>
       <select id="oedeme">
         <option id="non" value="non">non</option>
         <option id="oui" value="oui">oui</option>
       </select><br /><br />
-      <label class="trophique">Hématome </label>
+      <label class="trophique"><span>Hématome</span></label>
       <select id="hematome">
         <option id="non" value="non">non</option>
         <option id="oui" value="oui">oui</option>
       </select><br /><br />
-      <label class="trophique">Amyotrophie </label>
+      <label class="trophique"><span>Amyotrophie</span></label>
       <select id="amyotrophie">
         <option id="non" value="non">non</option>
         <option id="oui" value="oui">oui</option>
       </select><br /><br />
-      <label class="trophique">Inflammation </label>
+      <label class="trophique"><span>Inflammation</span></label>
       <select id="inflamation">
         <option id="non" value="non">non</option>
         <option id="oui" value="oui">oui</option>
       </select><br /><br />
 
-      <label class="trophique"><strong>Remarques</strong></label>
+      <label class="trophique"><span>Remarques</span></label>
       <textarea id="remarques" name="remarques" rows="4" cols="80"></textarea>
       <select id="phrremarques" onchange="replaceSelection('remarques',this.id)">
         <option value="">phrases</option>
@@ -371,12 +368,12 @@ scratchs">orthèse de genou avec fermeture a scratchs
 
     <fieldset>
       <legend align="center">
-        <span class="articulaire rubrique"><strong>ARTICULAIRE</strong></span>
+        <span class="articulaire rubrique"><span>Articulaire</span></span>
       </legend>
       <br />
 
       <label class="articulaire">
-        <stong>Amplitude</stong>
+        <span>Amplitude</span>
       </label>
       <textarea id="amplitude" name="amplitude" rows="4" cols="80"></textarea>
       <select id="phramplitude" onchange="replaceSelection('amplitude',this.id)">
@@ -403,10 +400,10 @@ scratchs">orthèse de genou avec fermeture a scratchs
         <option value="réductible">réductible</option>
       </select>
 
-      <br /><br />
+      <br><br>
 
       <label class="articulaire">
-        Attitude vicieuse
+        <span>Attitude vicieuse</span>
       </label>
       <textarea id="attitudeVicieuse" name="attitudeVicieuse" rows="4" cols="80"></textarea>
       <select id="phrattitudeVicieuse" onchange="replaceSelection('attitudeVicieuse',this.id)">
@@ -419,17 +416,16 @@ scratchs">orthèse de genou avec fermeture a scratchs
         <option value="non réductible">non réductible</option>
         <option value="réductible">réductible</option>
       </select>
-      <br /><br />
     </fieldset>
-
+    <br><br>
     <fieldset>
       <legend align="center">
-        <span class="musculaire rubrique"><strong>MUSCULAIRE</strong></span>
+        <span class="musculaire rubrique">Musculaire</span>
       </legend>
-      <br />
+      <br><br>
 
       <label class="musculaire">
-        Verrouillage quadriceps
+        <span>Verrouillage quadriceps</span>
       </label>
 
       <textarea id="verrouillage" rows="4" cols="80"></textarea>
@@ -443,7 +439,7 @@ scratchs">orthèse de genou avec fermeture a scratchs
 
       <br /><br />
       <label class="musculaire">
-        Autres groupes musculaires
+        <span>Autres groupes musculaires</span>
       </label>
 
       <textarea id="autres" rows="4" cols="80"></textarea>
@@ -459,12 +455,12 @@ scratchs">orthèse de genou avec fermeture a scratchs
 
     <fieldset>
       <legend align="center">
-        <span class="respicogito rubrique"><strong>AUTRES</strong></span>
+        <span class="respicogito rubrique">Cognitif / Relationnel</span>
       </legend>
-      <br />
+      <br><br>
 
       <label class="respicogito">
-        Fonctions supérieures
+        <span>Fonctions supérieures</span>
       </label>
       <textarea id="fonctionsSuperieures" rows="4" cols="80"></textarea>
       <select id="phrfonctionsSuperieures" onchange="replaceSelection('fonctionsSuperieures',this.id)">
@@ -474,9 +470,15 @@ scratchs">orthèse de genou avec fermeture a scratchs
         <option value="troubles cognitifs sévères">troubles cognitifs sévères</option>
         <option value="désorientaton spatio-temporelle">désorientaton spatio-temporelle</option>
       </select>
+    </fieldset>
       <br /><br />
+      <fieldset>
+      <legend align="center">
+        <span class="respicogito rubrique">Respiratoire</span>
+      </legend>
+      <br><br>
       <label class="respicogito">
-        Fonctions respiratoires
+        <span>Fonctions respiratoires</span>
       </label>
       <textarea id="fonctionsRespiratoires" rows="4" cols="120"></textarea>
       <select id="phrfonctionsRespiratoires" onchange="replaceSelection('fonctionsRespiratoires',this.id)">
@@ -505,12 +507,12 @@ muco-purulents. ">blanc avec stries jaunâtres</option>
     <br /><br />
     <fieldset>
       <legend align="center">
-        <span class="articulaire rubrique"><strong>Rééducation</strong></span>
+        <span class="articulaire rubrique"><span>Rééducation</span></span>
       </legend>
       <br /><br />
 
       <label class="donnees">
-        PROJET KINÉ DU PATIENT
+        <span>PROJET KINÉ DU PATIENT</span>
       </label>
       <textarea name="projetKine" id="projetKine" rows="3" cols="80"></textarea>
       <select id="phrprojetkine" onchange="replaceSelection('projetKine',this.id)">
@@ -524,7 +526,7 @@ muco-purulents. ">blanc avec stries jaunâtres</option>
     </fieldset>
 
     <fieldset>
-      <label class="donnees">OBJECTIFS ET PRISE EN CHARGE PRÉVISIONNELLE</label>
+      <label class="donnees"><span>OBJECTIFS ET PRISE EN CHARGE PRÉVISIONNELLE</span></label>
       <textarea name="priseEnChargePrev" id="priseEnChargePrev" rows="3" cols="80"></textarea>
       <select id="phrpecPrev" onchange="replaceSelection('priseEnChargePrev',this.id)">
         <option value="">phrases</option>

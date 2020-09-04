@@ -3,9 +3,9 @@
   --main-lb-color: #faeda1fa;
   --main-a-color: black;
   --main-h1-bg-color: #80ced6;
-  --main-menu-hover: rgb(224, 247, 126);
-  --main-option-bg-hover: #f4f74be0;
-  --main-option-color-hover: rgb(55, 15, 201);
+  --main-menu-hover: rgb(238, 252, 180);
+  --main-option-bg-hover: hsla(103, 87%, 75%, 0.726);
+  --main-option-color-hover: rgb(73, 48, 10);
   --main-temps-color: #50fa7b;
   --main-date-color: #12d0e9;
   --main-nav-li-color: rgb(237, 240, 226);
@@ -22,15 +22,16 @@
 
 a {
   text-decoration: none;
-  color: var(--main-a-color);
+  /* color: var(--main-a-color); */
 }
 
 body {
   font-family: 'Kalam', sans-serif;
   color: #444;
   border-color: #dbe4bc;
-  /* background-color: #d5dbc8; */
-  background-color: var(--main-bg-color);
+  background: linear-gradient(90deg, rgb(71, 67, 151) 0%, rgb(119, 199, 143) 35%, rgb(103, 165, 98) 100%);
+  /* background: linear-gradient(90deg, rgb(71, 67, 151) 0%, rgb(119, 199, 143) 35%, rgb(0, 238, 255) 100%); */
+  /* background-color: var(--main-bg-color); */
 }
 
 li {
@@ -44,23 +45,26 @@ li:hover {
 
 h1 {
   /* font-family: "Times New Roman", Times; */
+  /* background: rgb(2,0,36); */
+  
+  
   background-color: var(--main-h1-bg-color);
 }
 
-span {
-  margin-left: 30px;
-}
+
 
 label {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-weight: bold;
-  margin: 0 15px 0 0;
   margin-left: 10%;
+  vertical-align: middle ;
+  display: inline-block ;
+  
   text-align: center;
 }
 
 nav {
-  font-family: "Contrail One", cursive;
+  font-family: arial, "sans serif";
   /* background-color: var(--main-bg-color); */
   padding: 0px 0px;
   text-align: center;
@@ -71,19 +75,25 @@ nav {
 }
 
 nav a {
-  color: var(--main-nav-a-color);
+  /* color: var(--main-nav-a-color); */
+  color: #e2d37a;
+}
+
+span {
+  padding: 30px;
+  
 }
 
 .orthese{
   text-align: center;
 }
 
-option:nth-child(even){
+/* option:nth-child(even){
   background-color: #caf0f5;
-}
+} */
 
 option:nth-child(odd){
-  background-color: #b5eea7;
+  background-color: #EFEFEF;
 }
 
 option:hover {
@@ -149,7 +159,8 @@ legend {
 
 .nav .menu {
   color: beige;
-  background-color: rgb(15, 2, 27);
+  background-color: rgb(134, 115, 153);
+  /* background-color: rgb(15, 2, 27); */
   display: flex;
   flex-direction: row;
   justify-content: space-around;
