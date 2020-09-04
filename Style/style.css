@@ -127,8 +127,6 @@ select optgroup {
   /* text-align: center; */
   }
 
- 
-
 input:-moz-placeholder,
 input:focus
 {
@@ -166,7 +164,9 @@ legend {
 
 .nav .menu {
   color: beige;
-  background-color: rgb(134, 115, 153);
+  
+  background-color: rgb(16, 90, 35); 
+  /* background-color: rgb(134, 115, 153);  */
   /* background-color: rgb(15, 2, 27); */
   display: flex;
   flex-direction: row;
@@ -270,9 +270,13 @@ legend {
 }
 
 .rubrique {
-  color: #223083;
-  background: #50fa7b;
+  /* color: #223083; */
+  color: rgb(31, 23, 3);
+  /* color: rgb(80, 61, 13); */
+  background: silver;
+  /* background: #50fa7b; */
   padding: 16px;
+  border-radius: 40px;
   box-shadow: 3px 2px 0px 0px rgba(20, 19, 19, 0.5);
 }
 
