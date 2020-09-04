@@ -29,8 +29,8 @@ body {
   font-family: 'Kalam', sans-serif;
   color: #444;
   border-color: #dbe4bc;
-  /* background: linear-gradient(90deg, rgb(71, 67, 151) 0%, rgb(119, 199, 143) 35%, rgb(103, 165, 98) 100%); */
-  background: linear-gradient(70deg, rgb(71, 67, 151) 0%, rgb(119, 199, 143) 35%, rgb(103, 165, 98) 100%);
+  background: linear-gradient(90deg, rgb(71, 67, 151) 0%, rgb(119, 199, 143) 35%, rgb(103, 165, 98) 100%);
+  /* background: linear-gradient(70deg, rgb(71, 67, 151) 0%, rgb(119, 199, 143) 35%, rgb(103, 165, 98) 100%); */
   /* background-color: var(--main-bg-color); */
 }
 
@@ -112,6 +112,13 @@ select {
   padding: 5px;
   font-size: 1em;
   text-align: left;
+}
+
+textarea, input, select{
+  border-radius:  0 10px 10px 10px;
+}
+
+textarea + select {
   border-radius: 10px;
 }
 
@@ -131,7 +138,7 @@ input:focus
 textarea:focus, input:focus {
   border-color: #51aaFF;
   border-width: 4px;
-  border-radius: 15px;
+ 
   
 }
 
