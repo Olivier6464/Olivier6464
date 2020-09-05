@@ -101,7 +101,7 @@
       <textarea id="atcd" name="atcd" rows="5" cols="80"></textarea>
       <br /><br />
 
-      <fieldset>
+     
         <label class="fonctionnel"><span>Prescription médicale</span> </label><br />
         <textarea name="pec" id="pec" rows="3" cols="80"></textarea>
         <select id="phrpec" onchange="replaceSelection('pec',this.id)">
@@ -119,10 +119,7 @@
           <option value="Reprise progressive de la marche">Reprise progressive de la marche</option>
           <option value="réautonomisation">réautonomisation</option>
         </select>
-      </fieldset>
-
-      <br />
-
+      <br><br>
       <label class="donnees"> <span>Date de l'opération</span> </label><br />
       <input id="operation" name="operation" class="date" type="date" size="18" />
       <br /><br />
@@ -130,6 +127,8 @@
       <label class="donnees" for="appui"><span>Appui (total/limité/sans appui) </span></label><br /><input
         id="appui" name="appui" type="text" size="15" maxlength="30" /><br /><br />
 
+        <!-- debut attelles  -->
+   
       <label class="donnees" for="nom"><span>Immobilisation (plâtre/attelle...) </span></label><br /><select
         id="immobilisation" name="immobilisation" type="text" onfocus="this.style.color='darkgreen'">
         <option value=""></option>
@@ -195,6 +194,7 @@ scratchs">orthèse de genou avec fermeture a scratchs
         </optgroup>
       </select>
     </fieldset>
+    <!-- fin attelles  -->
     <br /><br />
     <fieldset>
       <legend class="dolor rubrique" align="center">
