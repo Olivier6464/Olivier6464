@@ -149,8 +149,7 @@ function affichage () {
   bil +=
   rtl +
   'Type: ' +
-  getSelectionsListe('typeDouleur') +
-  document.getElementById('typeRepos').value
+  getSelectionsListe('typeDouleur')
   bil += rtl + 'Localisation: ' + document.getElementById('localisation').value
   bil += rtl + spacer.box('FONCTIONNEL', egal)
   bil +=
