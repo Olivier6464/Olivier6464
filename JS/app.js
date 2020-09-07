@@ -147,8 +147,7 @@ function affichage () {
   bil +=
   rtl +
   'Type: ' +
-  getSelectionsListe('typeDouleur') +
-  document.getElementById('typeRepos').value
+  getSelectionsListe('typeDouleur')
   bil += rtl + 'Localisation: ' + document.getElementById('localisation').value
   bil += rtl + spacer.box('FONCTIONNEL', egal)
   bil +=
@@ -259,7 +258,7 @@ function replaceSelection (idfield, idoption) {
   const d = document.getElementById(idoption)
   var elem = document.getElementById(idfield)
   d.addEventListener('keyup', (e) => {
-    e.preventDefault
+    // d.preventDefault()
     // e.stopPropagation
 
     if (e.code === 'Space' || e.code === 'Enter') {
@@ -274,10 +273,10 @@ function replaceSelection (idfield, idoption) {
       document.getElementById(idoption).selectedIndex = 0
       elem.focus()
     }
-  })
+  }, false)
 
   d.addEventListener('click', (e) => {
-    e.preventDefault
+    e.preventDefault()
     var word = d.options[d.selectedIndex].value
     document.getElementById(idoption).size = 1
     word = word.replace(/\s\s+/g, ' ')
@@ -288,7 +287,7 @@ function replaceSelection (idfield, idoption) {
     elem.selectionEnd = from + word.length
     document.getElementById(idoption).selectedIndex = 0
     elem.focus()
-  })
+  }, false)
 }
 
 function frenchdate (strDate) {
@@ -297,7 +296,7 @@ function frenchdate (strDate) {
 }
 
 const efface = document.getElementById('reinitialise')
-efface.addEventListener('click', (e) => location.reload(true))
+efface.addEventListener('click', (e) => location.reload(true), false)
 
 // var chtext = document.querySelectorAll('textarea')
 // var tab = Array.from(chtext)
@@ -328,16 +327,15 @@ var chselect = document.querySelectorAll('select')
 var seltab = Array.from(chselect)
 seltab.forEach((elem) => {
   elem.addEventListener('focus', function (event) {
-    event.target.size = 7
+    event.target.size = elem.options.length
   }
-
-  )
+  , false)
 })
 
 seltab.forEach((elem) =>
   elem.addEventListener('blur', function (event) {
     event.target.size = 1
-  })
+  }, false)
 )
 
 function heure () {
@@ -377,4 +375,8 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   }
+<<<<<<< HEAD
 })
+=======
+}, false)
+>>>>>>> menu-flexbox
