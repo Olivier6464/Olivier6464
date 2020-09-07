@@ -375,8 +375,4 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   }
-<<<<<<< HEAD
-})
-=======
 }, false)
->>>>>>> menu-flexbox
