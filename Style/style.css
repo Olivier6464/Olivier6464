@@ -30,7 +30,8 @@ body {
   font-family: 'Kalam', sans-serif;
   color: #444;
   border-color: #dbe4bc;
-  background: linear-gradient(90deg, rgb(71, 67, 151) 0%, rgb(119, 199, 143) 35%, rgb(103, 165, 98) 100%);
+  background: linear-gradient(90deg, rgb(180, 214, 171) 0%, rgb(119, 199, 143) 60%, rgb(180, 214, 171) 100%);
+  /* background: linear-gradient(90deg, rgb(71, 67, 151) 0%, rgb(119, 199, 143) 35%, rgb(103, 165, 98) 100%); */
   /* background: linear-gradient(70deg, rgb(71, 67, 151) 0%, rgb(119, 199, 143) 35%, rgb(103, 165, 98) 100%); */
   /* background-color: var(--main-bg-color); */
 }
