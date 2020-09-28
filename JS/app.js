@@ -354,13 +354,14 @@ heure()
 function date () {
   var date = new Date()
   var nday = date.getDate() + 1 < 10 ? '0' + date.getDate() : date.getDate()
-  var month =
-  date.getMonth() + 1 < 10
-    ? '0' + (date.getMonth() + 1)
-    : date.getMonth() + 1
+  var hday = date.getDate()  < 10 ? '0' + date.getDate() - 1: date.getDate() - 1
+  var month = date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1): date.getMonth() + 1
   var year = date.getFullYear()
   var laDate = nday + '/' + month + '/' + year
   document.getElementById('laDate').innerHTML = laDate
+  var d = new Date()
+  d.setDate(d.getDate()-1)
+  document.getElementById('entree').valueAsDate = d
 }
 
 date()
