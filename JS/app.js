@@ -358,7 +358,7 @@ function fdate () {
   var year = date.getFullYear()
   var laDate = nday + '/' + month + '/' + year
   document.getElementById('laDate').innerHTML = laDate
-  document.getElementById('entree').valueAsDate = date.getDate() - 1
+  document.getElementById('entree').valueAsDate = date.setDate(date.getDate() - 1)
 }
 
 fdate()
