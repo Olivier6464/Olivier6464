@@ -58,7 +58,7 @@
     </ul>
 
   </nav>
-  <br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br />
 
   <div>
     <fieldset>
@@ -130,7 +130,7 @@
         <!-- debut attelles  -->
    
         <label class="donnees" for="nom"
-        ><strong>Immobilisation (plâtre/attelle...) </strong></label
+        ><span>Immobilisation (plâtre/attelle...)</span></label
       ><br /><select
         id="immobilisation"
         name="immobilisation"
@@ -297,6 +297,7 @@ scratchs"
         <option value="inflammatoire">inflammatoire</option>
         <option value="élancements">Elancements</option>
         <option value="pénétrante">Pénétrante</option>
+        <option value="brulûres">brulûres</option>
         <option value="décharges électriques">Décharges électriques</option>
         <option value="coups de poignard">Coups de poignard</option>
         <option value="en étau">En étau</option>
@@ -589,7 +590,9 @@ muco-purulents. ">blanc avec stries jaunâtres</option>
     </fieldset>
 
     <fieldset>
-      <label class="donnees"><span>OBJECTIFS ET PRISE EN CHARGE PRÉVISIONNELLE</span></label>
+      <label class="donnees">
+        <span>Objectifs et prise en charge prévisionnelle</span>
+      </label>
       <textarea name="priseEnChargePrev" id="priseEnChargePrev" rows="3" cols="80"></textarea>
       <select id="phrpecPrev" onchange="replaceSelection('priseEnChargePrev',this.id)">
         <option value="">phrases</option>

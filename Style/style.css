@@ -17,8 +17,10 @@
   margin: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-  /* font-family:Times; */
-  font-size:1.4 em;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 a {
@@ -46,10 +48,6 @@ li:hover {
 }
 
 h1 {
-  /* font-family: "Times New Roman", Times; */
-  /* background: rgb(2,0,36); */
-  
-  
   background-color: var(--main-h1-bg-color);
 }
 
@@ -57,7 +55,9 @@ h1 {
 
 label {
   /* text-transform: uppercase; */
-  font-weight: bold;
+  font-size: 1.4rem;
+  /* font-weight: bold; */
+
   margin-left: 10%;
   vertical-align: middle ;
   display: inline-block ;
@@ -65,8 +65,17 @@ label {
   text-align: center;
 }
 
+label > span {
+  color: rgb(18, 19, 34);
+  padding: 0px;
+  font-size: 1rem;
+  
+  
+}
+
 nav {
   font-family: arial, "sans serif";
+  font-size: 1.4rem;
   /* background-color: var(--main-bg-color); */
   padding: 0px 0px;
   text-align: center;
@@ -81,18 +90,6 @@ nav a {
   color: #e2d37a;
 }
 
-span {
-  padding: 30px;
-  
-}
-
-.orthese{
-  text-align: center;
-}
-
-/* option:nth-child(even){
-  background-color: #caf0f5;
-} */
 
 option:nth-child(odd){
   background-color: #EFEFEF;
@@ -112,7 +109,7 @@ select {
   width: 80%;
   margin-left: 10%;
   padding: 5px;
-  font-size: 1em;
+  font-size: 1.2rem;
   text-align: left;
 }
 
@@ -144,7 +141,7 @@ textarea:focus, input:focus {
 
 fieldset {
   /* font-family: cursive; */
-  font-size: 1em;
+  font-size: 1rem;
   position: relative;
   padding: 15px 0;
   border: 0;
@@ -173,8 +170,8 @@ legend {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   list-style: none;
 }
 
@@ -224,61 +221,62 @@ legend {
 }
 
 .dolor {
-  padding: 10px;
+  padding: 1px 17px 8px 17px;
   border-radius: 5px 5px 0 0;
   background-color: var(--main-lb-color);
 }
 
 .fonctionnel {
-  padding: 10px;
+  padding: 1px 17px 8px 17px;
   border-radius: 5px 5px 0 0;
   background-color: var(--main-lb-color);
 }
 
 .trophique {
-  padding: 10px;
+  padding: 1px 17px 8px 17px;
   border-radius: 5px 5px 0 0;
   background-color: var(--main-lb-color);
 }
 
 .articulaire {
-  padding: 10px;
+  padding:  1px 17px 8px 17px;
   border-radius: 5px 5px 0 0;
   background-color: var(--main-lb-color);
 }
 
 .musculaire {
-  padding: 10px;
+  padding: 1px 17px 8px 17px;
   border-radius: 5px 5px 0 0;
   background-color: var(--main-lb-color);
 }
 
 .donnees {
-  padding: 10px;
+  padding: 1px 17px 8px 17px;
   border-radius: 5px 5px 0 0;
   background-color: var(--main-lb-color);
 }
 
 .respicogito {
-  padding: 10px;
+  padding: 1px 17px 8px 17px;
   border-radius: 5px 5px 0 0;
   background-color: var(--main-lb-color);
 }
 
 .pe {
-  font-size: 2em;
+  font-size: 2rem;
   color: #50fa7b;
   font-weight: bold;
 }
 
 .rubrique {
   /* color: #223083; */
-  color: rgb(31, 23, 3);
-  /* color: rgb(80, 61, 13); */
-  background: silver;
+  color:#eee;
+  font-size: 2rem;/* color: rgb(80, 61, 13); */
+  background: rgba(130, 129, 197, 0.5);
   /* background: #50fa7b; */
-  padding: 16px;
-  border-radius: 40px;
-  box-shadow: 3px 2px 0px 0px rgba(20, 19, 19, 0.5);
+  padding: 0.5rem;
+  border-radius: 50%/30%;
+  box-shadow: 2px 2px 0px 0px rgba(20, 19, 19, 0.2);
 }
+
 
