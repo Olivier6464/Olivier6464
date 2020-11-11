@@ -355,7 +355,7 @@ function fdate () {
   var date = new Date()
   var nday = date.getDate() + 1 < 10 ? '0' + date.getDate() : date.getDate()
   var month = date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1): date.getMonth() + 1
-  var year = date.getFullYear()
+  var year = date.getFullYear() - 2000
   var laDate = nday + '/' + month + '/' + year
   document.getElementById('laDate').innerHTML = laDate
   date.setDate(date.getDate() - 1)
