@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Arvo);
+
 :root {
   --main-bg-color: rgb(180, 214, 171);
   --main-lb-color: #faeda1fa;
@@ -29,7 +31,8 @@ a {
 }
 
 body {
-  font-family: 'Kalam', sans-serif;
+  font-family: 'Arvo';
+  /* font-family: 'Kalam', sans-serif; */
   color: #444;
   border-color: #dbe4bc;
   background: linear-gradient(90deg, rgb(180, 214, 171) 0%, rgb(119, 199, 143) 60%, rgb(180, 214, 171) 100%);
@@ -54,8 +57,13 @@ h1 {
 
 
 label {
+  font-family: "Arvo";
   /* text-transform: uppercase; */
   font-size: 1.4rem;
+  letter-spacing: 0.05em; 
+  /* font-style: oblique; */
+  font-weight: 600;
+  
   /* font-weight: bold; */
 
   margin-left: 10%;
@@ -69,8 +77,6 @@ label > span {
   color: rgb(18, 19, 34);
   padding: 0px;
   font-size: 1rem;
-  
-  
 }
 
 nav {
@@ -133,10 +139,9 @@ input:focus
 }
 
 textarea:focus, input:focus {
-  border-color: #51aaFF;
-  border-width: 4px;
- 
-  
+  /* border-color: #51aaFF; */
+  border-color: #5d51ff;
+  border-width: 1px;
 }
 
 fieldset {
@@ -162,9 +167,10 @@ legend {
 }
 
 .nav .menu {
+  font-family: 'Arvo';
   color: beige;
   
-  background-color: rgb(16, 90, 35); 
+  background-color: rgb(8, 11, 51); 
   /* background-color: rgb(134, 115, 153);  */
   /* background-color: rgb(15, 2, 27); */
   display: flex;
@@ -270,11 +276,22 @@ legend {
 
 .rubrique {
   /* color: #223083; */
-  color:#eee;
-  font-size: 2rem;/* color: rgb(80, 61, 13); */
-  background: rgba(130, 129, 197, 0.5);
-  /* background: #50fa7b; */
-  padding: 0.5rem;
+  /* color: rgba(65, 61, 71, 0.75);*/
+  color: rgb(240, 215, 71);
+  
+  /* color:	#D5AD6D; */
+  font-family: 'Arvo';
+  font-weight: 300;
+  font-size: 1.6rem;/* color: rgb(80, 61, 13); */
+   /*if no support for background-clip*/
+	
+	/* background: -webkit-linear-gradient(transparent, transparent),
+             -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%); */
+            
+  background: -webkit-linear-gradient(transparent, transparent),
+             -webkit-linear-gradient(top, rgba(109, 113, 140, 1) 0%, rgba(109,123,109,1) 26%, rgba(109,106,120,1) 35%, rgba(120,96,67,1) 45%, rgba(152, 20, 179, 1) 61%, rgba(13, 173, 109, 0.52) 100%);
+                        
+  padding: 0.9rem;
   border-radius: 50%/30%;
   box-shadow: 2px 2px 0px 0px rgba(20, 19, 19, 0.2);
 }
