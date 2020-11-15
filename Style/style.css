@@ -2,17 +2,19 @@
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 
 :root {
-  --main-bg-color: rgb(180, 214, 171);
-  --main-lb-color: #faeda1fa;
+  --main-bg-color: #653CAD;
+  /* --main-bg-color: #102A43; */
+  /* --main-bg-color: rgb(180, 214, 171); */
   /* --main-lb-color: #faeda1fa; */
-  --main-a-color: black;Cambria
+  --main-lb-color: #FFC600;
+  --main-a-color: black;
   --main-menu-hover: rgb(238, 252, 180);
   --main-option-bg-hover: hsla(103, 87%, 75%, 0.726);
   --main-option-color-hover: rgb(73, 48, 10);
   --main-temps-color: #50fa7b;
   --main-date-color: #12d0e9;
   --main-nav-li-color: rgb(237, 240, 226);
-  --main-nav-a-color: rgb(230, 274, 240);
+  --main-nav-a-color:  rgb(230, 274, 240);
 }
 
 * {
@@ -23,7 +25,7 @@
 }
 
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 a {
@@ -36,10 +38,10 @@ body {
   /* font-family: 'Kalam', sans-serif; */
   color: #444;
   border-color: #dbe4bc;
-  background: linear-gradient(90deg, rgb(180, 214, 171) 0%, rgb(119, 199, 143) 60%, rgb(180, 214, 171) 100%);
+  /* background: linear-gradient(90deg, rgb(180, 214, 171) 0%, rgb(119, 199, 143) 60%, rgb(180, 214, 171) 100%); */
   /* background: linear-gradient(90deg, rgb(71, 67, 151) 0%, rgb(119, 199, 143) 35%, rgb(103, 165, 98) 100%); */
-  /* background: linear-gradient(70deg, rgb(71, 67, 151) 0%, rgb(119, 199, 143) 35%, rgb(103, 165, 98) 100%); */
-  /* background-color: var(--main-bg-color); */
+  /* background: linear-gradient(70deg, rgb(12, 33, 66) 0%, rgb(14, 217, 231) 35%, rgba(12, 38, 66, 0.972) 100%); */
+  background-color: var(--main-bg-color);
 }
 
 li {
@@ -94,7 +96,7 @@ nav {
 
 nav a {
   /* color: var(--main-nav-a-color); */
-  color: #e2d37a;
+  color: #fdd90e;
 }
 
 
@@ -171,7 +173,7 @@ legend {
   font-family: 'Arvo';
   color: beige;
   
-  background-color: rgb(8, 11, 51); 
+  background-color:#c50873; 
   /* background-color: rgb(134, 115, 153);  */
   /* background-color: rgb(15, 2, 27); */
   display: flex;
@@ -180,6 +182,39 @@ legend {
   padding-top: 10px;
   padding-bottom: 10px;
   list-style: none;
+}
+
+.container-1 {
+  margin-left: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: 0;
+}
+
+.container-1 .lbl-chambre {
+  margin-left: 0;
+  border-radius: 10px 0 0 10px;
+}
+
+.container-1 .lbl-side {
+  margin-left: 0;
+  border-radius: 10px 0 0 10px;
+}
+
+.container-1 .input-chambre {
+  margin-left: 0;
+  border-radius: 0 10px 10px 0;
+}
+
+.container-1 .input-side {
+  margin-left: 0;
+  border-radius: 0 10px 10px 0;
+}
+
+.container-0 {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
 }
 
 .has-children { /*1*/
@@ -200,7 +235,7 @@ legend {
 }
 
 .sous-menu li:hover{
-  background-color: rgba(231, 211, 119, 0.938);
+  background-color: rgba(17, 214, 83, 0.938);
 }
 
 .sous-menu a { /*4*/
@@ -279,6 +314,8 @@ legend {
   /* color: #223083; */
   /* color: rgba(65, 61, 71, 0.75);*/
   color: rgb(240, 215, 71);
+  /* background-color: #26640a; */
+  background-color: #50f;
   
   /* color:	#D5AD6D; */
   font-family: 'Arvo';
@@ -289,8 +326,8 @@ legend {
 	/* background: -webkit-linear-gradient(transparent, transparent),
              -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%); */
             
-  background: -webkit-linear-gradient(transparent, transparent),
-             -webkit-linear-gradient(top, rgba(109, 113, 140, 1) 0%, rgba(109,123,109,1) 26%, rgba(109,106,120,1) 35%, rgba(120,96,67,1) 45%, rgba(152, 20, 179, 1) 61%, rgba(13, 173, 109, 0.52) 100%);
+  /* background: -webkit-linear-gradient(transparent, transparent),
+             -webkit-linear-gradient(top, rgba(109, 113, 140, 1) 0%, rgba(109,123,109,1) 26%, rgb(120, 24, 23) 35%, rgb(117, 69, 11) 45%, rgb(32, 61, 27) 61%, rgba(16, 53, 9, 0.52) 100%); */
                         
   padding: 0.9rem;
   border-radius: 50%/30%;

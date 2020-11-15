@@ -66,7 +66,27 @@
       <legend align="center">
         <span class="donnees  rubrique" ><span>Dossier médical</span></span>
       </legend>
+      <br /><br />
 
+      <div class="container-0">
+        <div class="container-1">
+          <div>
+           <label class="donnees lbl-chambre" for="chambre"><span>chambre n°</span></label>
+          </div>
+          <div>
+           <input id="chambre" class="majuscule input-chambre" name="nom" type="text" min="101" max="228" cols="3" display="inline" maxlength="3" />
+          </div>
+        </div>
+          <div class="container-1">
+           <div>
+            <label class="donnees lbl-side" for="side"><span>Porte/Fenêtre</span></label>
+           </div>
+           <div>
+            <input id="side" class="majuscule input-side" name="nom" type="text" cols="1" pattern="[pPfF]" display="inline" maxlength="1"/>
+           </div>
+        </div>
+       </div>
+       <br>
       <label class="donnees" for="civilite"><span>Civilité</span></label>
       <br />
       <select id="civilite" name="civilite">
@@ -79,8 +99,13 @@
         maxlength="30" /><br /><br /><label class="donnees" for="prenom"><span>Prénom</span></label>
       <br />
       <input id="prenom" class="majuscule" name="prenom" type="text" required="true" size="15"
-        maxlength="30" /><br /><br /><label class="donnees" for="entrée"><span>Date d'entrée</span></label><input type="date"
-        id="entree" name="entree" class="date" type="text" required="true" size="18" /><br /><br />
+        maxlength="30" /><br /><br />
+        
+        <label class="donnees" for="entrée"><span>Date d'entrée</span></label><input type="date"
+        id="entree" name="entree" class="date" required="true" size="18" /><br /><br />
+      
+      
+      <br /><br />
 
       <label class="donnees">
         <span>ANAMNESE Motif du Séjour</span> </label><br />
