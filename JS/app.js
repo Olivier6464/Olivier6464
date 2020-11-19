@@ -57,8 +57,11 @@ function affichage () {
   var esp = ' '
   var rtl = '\n'
   var egal = '='
+  // <--donnees a tester-->
   var nom = document.getElementById('nom').value
   var prenom = document.getElementById('prenom').value
+  var nch = null // numero de chambre
+  var cote = null // cote 
   /* les chaines les plus longues de chaque rubrique expl: fonctionnelle */
   var marche = 'Marche (périmètre, aides techniques ...): '
   var lplfonc = marche.length
@@ -81,7 +84,19 @@ function affichage () {
   nom.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase()) +
   esp +
   prenom.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())
-  bil +=
+
+  nch = document.getElementById('chambre').value
+  
+  cote = document.getElementById('cote').value
+  cote = cote.toUpperCase()
+  var regex=/^[0-9]+$/
+    if (nch.match(regex)){
+    bil += "  CH n°: " + document.getElementById('chambre').value
+    if (cote === 'P' || cote === 'F'){
+      bil += cote
+    }
+  }
+  bil += 
   rtl +
   "Date de l'admission: " +
   frenchdate(document.getElementById('entree').value)

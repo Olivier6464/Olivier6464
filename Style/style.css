@@ -2,8 +2,11 @@
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 
 :root {
-  --main-bg-color: #653CAD;
+  /* --main-bg-color: #5cad3c; */
+  /* --main-bg-color: #C3E8CB; */
   /* --main-bg-color: #102A43; */
+  --main-bg-color: #1F242F;
+  --main-bg-color: #7d837b;
   /* --main-bg-color: rgb(180, 214, 171); */
   /* --main-lb-color: #faeda1fa; */
   --main-lb-color: #FFC600;
@@ -80,6 +83,8 @@ label > span {
   color: rgb(18, 19, 34);
   padding: 0px;
   font-size: 1rem;
+  font-variant: small-caps;
+
 }
 
 nav {
@@ -109,10 +114,15 @@ option:hover {
   color: var(--main-option-color-hover);
 }
 
+textarea {
+  
+  /* font-family: sans-serif;   */
+}
+
 textarea,
 input,
 select {
-  /* font-family: "Contrail One"; */
+  font-family: "Contrail One";font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   outline: none;
   box-shadow:none;
   width: 80%;
@@ -173,7 +183,8 @@ legend {
   font-family: 'Arvo';
   color: beige;
   
-  background-color:#c50873; 
+  background-color:#437cf7; 
+  /* background-color:#c50873;  */
   /* background-color: rgb(134, 115, 153);  */
   /* background-color: rgb(15, 2, 27); */
   display: flex;
@@ -201,14 +212,28 @@ legend {
   border-radius: 10px 0 0 10px;
 }
 
+.container-1 .lbl-entry {
+  margin-left: 0;
+  border-radius: 10px 0 0 10px;
+}
+
 .container-1 .input-chambre {
   margin-left: 0;
   border-radius: 0 10px 10px 0;
+  padding: 1px 17px 8px 17px;
 }
 
 .container-1 .input-side {
   margin-left: 0;
   border-radius: 0 10px 10px 0;
+  padding: 1px 17px 8px 17px;
+}
+
+.container-1 .input-entry {
+  margin-left: 0;
+  border-radius: 0 10px 10px 0;
+  padding: 4px 3px 1px 17px;
+  width: 90%;
 }
 
 .container-0 {
@@ -316,11 +341,14 @@ legend {
   color: rgb(240, 215, 71);
   /* background-color: #26640a; */
   background-color: #50f;
-  
+  font-family: 'Times New Roman', Times, serif;
+  font-variant:small-caps;
   /* color:	#D5AD6D; */
   font-family: 'Arvo';
   font-weight: 300;
   font-size: 1.6rem;/* color: rgb(80, 61, 13); */
+  font-weight: bold;
+  letter-spacing: 0.07em;
    /*if no support for background-clip*/
 	
 	/* background: -webkit-linear-gradient(transparent, transparent),

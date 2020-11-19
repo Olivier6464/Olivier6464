@@ -71,10 +71,10 @@
       <div class="container-0">
         <div class="container-1">
           <div>
-           <label class="donnees lbl-chambre" for="chambre"><span>chambre n°</span></label>
+           <label class="donnees lbl-chambre" for="chambre"><span>Chambre</span></label>
           </div>
           <div>
-           <input id="chambre" class="majuscule input-chambre" name="nom" type="text" min="101" max="228" cols="3" display="inline" maxlength="3" />
+           <input id="chambre" class="majuscule input-chambre" name="nom" type="text" pattern="[0-9]{3}" cols="3" display="inline" maxlength="3" />
           </div>
         </div>
           <div class="container-1">
@@ -82,8 +82,17 @@
             <label class="donnees lbl-side" for="side"><span>Porte/Fenêtre</span></label>
            </div>
            <div>
-            <input id="side" class="majuscule input-side" name="nom" type="text" cols="1" pattern="[pPfF]" display="inline" maxlength="1"/>
+            <input id="cote" class="majuscule input-side" name="nom" type="text" cols="1" pattern="[pPfF]{1}" display="inline" maxlength="1"/>
            </div>
+        </div>
+       </div>
+       <br>
+       <div class="container-1">
+         <div>
+          <label class="donnees lbl-entry" for="entrée"><span>Entré(e) le: </span></label>
+         </div>
+        <div>
+          <input type="date" id="entree" name="entree" class="date input-entry" required="true" size="18" />
         </div>
        </div>
        <br>
@@ -101,8 +110,8 @@
       <input id="prenom" class="majuscule" name="prenom" type="text" required="true" size="15"
         maxlength="30" /><br /><br />
         
-        <label class="donnees" for="entrée"><span>Date d'entrée</span></label><input type="date"
-        id="entree" name="entree" class="date" required="true" size="18" /><br /><br />
+        <!-- <label class="donnees" for="entrée"><span>Date d'entrée</span></label><input type="date"
+        id="entree" name="entree" class="date" required="true" size="18" /><br /><br /> -->
       
       
       <br /><br />
@@ -135,8 +144,9 @@
           <option value="GYMNASTIQUE DYNAMIQUE">GYMNASTIQUE DYNAMIQUE</option>
           <option value="REEDUCATION A LA MARCHE">REEDUCATION A LA MARCHE</option>
           <option value="RENFORCEMENT MUSCULAIRE">RENFORCEMENT MUSCULAIRE</option>
-          <option value="renfort autonomie">renfort autonomie</option>
+          <option value="TEST DE MARCHE DE 6 MN">TEST DE MARCHE DE 6 MN</option>
           <option value="RELAXATION">RELAXATION</option>
+          <option value="renfort autonomie">renfort autonomie</option>
           <option values="Réautonomisation, rééducation à la marche.">Réautonomisation, rééducation à la marche</option>
           <option value="Rééducation à la marche">Rééducation à la marche</option>
           <option value="Travail des transferts et de l'équilibre">Travail des transferts et de l'équilibre</option>
@@ -601,7 +611,7 @@ muco-purulents. ">blanc avec stries jaunâtres</option>
       <br /><br />
 
       <label class="donnees">
-        <span>PROJET KINÉ DU PATIENT</span>
+        <span>Projet kiné du patient</span>
       </label>
       <textarea name="projetKine" id="projetKine" rows="3" cols="80"></textarea>
       <select id="phrprojetkine" onchange="replaceSelection('projetKine',this.id)">
@@ -653,8 +663,8 @@ muco-purulents. ">blanc avec stries jaunâtres</option>
         <option value="- séances collectives de relaxation">séances collectives de relaxation</option>
       </select>
     </fieldset>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    <br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br />
+   
     <!--     pour copier du text dans le clipboqrd-->
     <textarea class="element-a-cacher" id="to-copy" rows="80" cols="80"></textarea>
   </div>
