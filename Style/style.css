@@ -1,12 +1,11 @@
-@import url(https://fonts.googleapis.com/css?family=Cambria);
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 
 :root {
   /* --main-bg-color: #5cad3c; */
   /* --main-bg-color: #C3E8CB; */
-  /* --main-bg-color: #102A43; */
-  --main-bg-color: #1F242F;
-  --main-bg-color: #7d837b;
+  --main-bg-color: #102A43;
+  /* --main-bg-color: #1F242F;  */
+  /* --main-bg-color: #d3e9cb; */
   /* --main-bg-color: rgb(180, 214, 171); */
   /* --main-lb-color: #faeda1fa; */
   --main-lb-color: #FFC600;
@@ -42,8 +41,8 @@ body {
   color: #444;
   border-color: #dbe4bc;
   /* background: linear-gradient(90deg, rgb(180, 214, 171) 0%, rgb(119, 199, 143) 60%, rgb(180, 214, 171) 100%); */
-  /* background: linear-gradient(90deg, rgb(71, 67, 151) 0%, rgb(119, 199, 143) 35%, rgb(103, 165, 98) 100%); */
-  /* background: linear-gradient(70deg, rgb(12, 33, 66) 0%, rgb(14, 217, 231) 35%, rgba(12, 38, 66, 0.972) 100%); */
+  /* background: linear-gradient(90deg, rgb(11, 10, 20) 0%, rgb(151, 194, 168) 35%, rgb(11, 224, 111) 100%); */
+  /* background: linear-gradient(70deg, rgb(114, 121, 131) 0%, rgb(14, 217, 231) 35%, rgba(12, 38, 66, 0.972) 100%); */
   background-color: var(--main-bg-color);
 }
 
@@ -114,11 +113,6 @@ option:hover {
   color: var(--main-option-color-hover);
 }
 
-textarea {
-  
-  /* font-family: sans-serif;   */
-}
-
 textarea,
 input,
 select {
@@ -183,8 +177,8 @@ legend {
   font-family: 'Arvo';
   color: beige;
   
-  background-color:#437cf7; 
-  /* background-color:#c50873;  */
+  /* background-color:#437cf7;  */
+  background-color:#c50873; 
   /* background-color: rgb(134, 115, 153);  */
   /* background-color: rgb(15, 2, 27); */
   display: flex;
