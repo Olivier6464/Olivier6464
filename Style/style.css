@@ -224,12 +224,13 @@ legend {
   margin-left: 0;
   border-radius: 0 10px 10px 0;
   padding: 1px 17px 8px 17px;
+  width: 6em;
 }
 
 .container-1 .input-entry {
   margin-left: 0;
   border-radius: 0 10px 10px 0;
-  padding: 4px 3px 1px 17px;
+  padding: 1px 17px 3px 17px;
   width: 90%;
 }
 
