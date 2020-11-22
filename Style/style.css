@@ -16,7 +16,7 @@
   --main-temps-color: #50fa7b;
   --main-date-color: #12d0e9;
   --main-nav-li-color: rgb(237, 240, 226);
-  --main-nav-a-color:  rgb(230, 274, 240);
+  --main-nav-a-color: rgb(230, 274, 240);
 }
 
 * {
@@ -48,7 +48,7 @@ body {
 
 li {
   font-weight: 400;
-} 
+}
 
 li:hover {
   cursor: pointer;
@@ -65,20 +65,20 @@ label {
   font-family: "Arvo";
   /* text-transform: uppercase; */
   font-size: 1.4rem;
-  letter-spacing: 0.05em; 
+  letter-spacing: 0.05em;
   /* font-style: oblique; */
   font-weight: 600;
-  
+
   /* font-weight: bold; */
 
   margin-left: 10%;
-  vertical-align: middle ;
-  display: inline-block ;
-  
+  vertical-align: middle;
+  display: inline-block;
+
   text-align: center;
 }
 
-label > span {
+label>span {
   color: rgb(18, 19, 34);
   padding: 0px;
   font-size: 1rem;
@@ -104,7 +104,7 @@ nav a {
 }
 
 
-option:nth-child(odd){
+option:nth-child(odd) {
   background-color: #EFEFEF;
 }
 
@@ -116,9 +116,10 @@ option:hover {
 textarea,
 input,
 select {
-  font-family: "Contrail One";font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Contrail One";
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   outline: none;
-  box-shadow:none;
+  box-shadow: none;
   width: 80%;
   margin-left: 10%;
   padding: 5px;
@@ -126,26 +127,28 @@ select {
   text-align: left;
 }
 
-textarea, input, select{
-  border-radius:  0 10px 10px 10px;
+textarea,
+input,
+select {
+  border-radius: 0 10px 10px 10px;
 }
 
-textarea + select {
+textarea+select {
   border-radius: 10px;
 }
 
 select optgroup {
-  background:#e2d37a;
+  background: #e2d37a;
   /* text-align: center; */
-  }
-
-input:-moz-placeholder,
-input:focus
-{
-    box-shadow:none !important;
 }
 
-textarea:focus, input:focus {
+input:-moz-placeholder,
+input:focus {
+  box-shadow: none !important;
+}
+
+textarea:focus,
+input:focus {
   /* border-color: #51aaFF; */
   border-color: #5d51ff;
   border-width: 1px;
@@ -176,9 +179,9 @@ legend {
 .nav .menu {
   font-family: 'Arvo';
   color: beige;
-  
+
   /* background-color:#437cf7;  */
-  background-color:#c50873; 
+  background-color: #c50873;
   /* background-color: rgb(134, 115, 153);  */
   /* background-color: rgb(15, 2, 27); */
   display: flex;
@@ -236,15 +239,18 @@ legend {
   justify-content: left;
 }
 
-.has-children { /*1*/
+.has-children {
+  /*1*/
   position: relative;
 }
 
-.has-children:hover > .sous-menu { /*2*/
+.has-children:hover>.sous-menu {
+  /*2*/
   display: flex;
 }
 
-.sous-menu { /*3*/
+.sous-menu {
+  /*3*/
   list-style: none;
   display: none;
   flex-flow: column wrap;
@@ -253,16 +259,18 @@ legend {
   background: rgb(15, 2, 27);
 }
 
-.sous-menu li:hover{
+.sous-menu li:hover {
   background-color: rgba(17, 214, 83, 0.938);
 }
 
-.sous-menu a { /*4*/
+.sous-menu a {
+  /*4*/
   text-align: left;
-  color:white;
+  color: white;
 }
 
-.sous-menu .sous-menu { /*5*/
+.sous-menu .sous-menu {
+  /*5*/
   top: 0px;
   left: 100%;
   background: rgb(15, 2, 27);
@@ -300,7 +308,7 @@ legend {
 }
 
 .articulaire {
-  padding:  1px 17px 8px 17px;
+  padding: 1px 17px 8px 17px;
   border-radius: 5px 5px 0 0;
   background-color: var(--main-lb-color);
 }
@@ -336,24 +344,23 @@ legend {
   /* background-color: #26640a; */
   background-color: #50f;
   font-family: 'Times New Roman', Times, serif;
-  font-variant:small-caps;
+  font-variant: small-caps;
   /* color:	#D5AD6D; */
   font-family: 'Arvo';
   font-weight: 300;
-  font-size: 1.6rem;/* color: rgb(80, 61, 13); */
+  font-size: 1.6rem;
+  /* color: rgb(80, 61, 13); */
   font-weight: bold;
   letter-spacing: 0.07em;
-   /*if no support for background-clip*/
-	
-	/* background: -webkit-linear-gradient(transparent, transparent),
+  /*if no support for background-clip*/
+
+  /* background: -webkit-linear-gradient(transparent, transparent),
              -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%); */
-            
+
   /* background: -webkit-linear-gradient(transparent, transparent),
              -webkit-linear-gradient(top, rgba(109, 113, 140, 1) 0%, rgba(109,123,109,1) 26%, rgb(120, 24, 23) 35%, rgb(117, 69, 11) 45%, rgb(32, 61, 27) 61%, rgba(16, 53, 9, 0.52) 100%); */
-                        
+
   padding: 0.9rem;
   border-radius: 50%/30%;
   box-shadow: 2px 2px 0px 0px rgba(20, 19, 19, 0.2);
 }
-
-

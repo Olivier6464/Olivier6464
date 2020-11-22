@@ -1,4 +1,4 @@
-function getSelectionsListe (id) {
+function getSelectionsListe(id) {
   const liste = document.getElementById(id)
   var lsSelections = ''
   for (var i = 0; i < liste.options.length; i++) {
@@ -52,7 +52,7 @@ window.onload = function () {
   })
 }
 
-function affichage () {
+function affichage() {
   var bil = ''
   var esp = ' '
   var rtl = '\n'
@@ -79,27 +79,27 @@ function affichage () {
 
   // bil += spacer.box("Bilan Kinésithérapique",fois);
   bil +=
-  document.getElementById('civilite').value +
-  esp +
-  nom.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase()) +
-  esp +
-  prenom.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())
+    document.getElementById('civilite').value +
+    esp +
+    nom.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase()) +
+    esp +
+    prenom.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())
 
   nch = document.getElementById('chambre').value
-  
+
   cote = document.getElementById('cote').value
   cote = cote.toUpperCase()
-  var regex=/^[0-9]+$/
-    if (nch.match(regex)){
+  var regex = /^[0-9]+$/
+  if (nch.match(regex)) {
     bil += "  CH n°: " + document.getElementById('chambre').value
-    if (cote === 'P' || cote === 'F'){
-      bil += cote
+    if (cote === 'P' || cote === 'F') {
+      bil += " L" + cote
     }
   }
-  bil += 
-  rtl +
-  "Date de l'admission: " +
-  frenchdate(document.getElementById('entree').value)
+  bil +=
+    rtl +
+    "Date d'admission: " +
+    frenchdate(document.getElementById('entree').value)
   if (document.getElementById('anamnese').value !== '') {
     bil += rtl + spacer.box('ANAMNÈSE', egal)
     bil += rtl + document.getElementById('anamnese').value
@@ -118,146 +118,146 @@ function affichage () {
     bil += rtl + document.getElementById('atcd').value
   }
   bil +=
-  rtl +
-  spacer.box(' Prescription médicale', egal) +
-  rtl + document.getElementById('pec').value
+    rtl +
+    spacer.box(' Prescription médicale', egal) +
+    rtl + document.getElementById('pec').value
   if (document.getElementById('operation').value !== '') {
     bil +=
-    rtl +
-    rtl +
-    "Date de l'opération: " +
-    frenchdate(document.getElementById('operation').value)
+      rtl +
+      rtl +
+      "Date de l'opération: " +
+      frenchdate(document.getElementById('operation').value)
   }
   if (document.getElementById('appui').value !== '') {
     bil +=
-    rtl +
-    'Appui ( total/limité/sans appui ): ' +
-    document.getElementById('appui').value
+      rtl +
+      'Appui ( total/limité/sans appui ): ' +
+      document.getElementById('appui').value
   }
   if (document.getElementById('immobilisation').value !== '') {
     bil +=
-    rtl +
-    'Immobilisation (plâtre/attelle...): ' +
-    document.getElementById('immobilisation').value
+      rtl +
+      'Immobilisation (plâtre/attelle...): ' +
+      document.getElementById('immobilisation').value
   }
   bil += rtl + spacer.box(' Cotation de la Douleur EVS', egal)
   bil += rtl + 'Échelle de 0 à 4.'
   bil +=
-  rtl +
-  ' 0 = pas de douleur, 1 = faible, 2 = moyenne, 3 = forte, 4 = très forte.' +
-  rtl
+    rtl +
+    ' 0 = pas de douleur, 1 = faible, 2 = moyenne, 3 = forte, 4 = très forte.' +
+    rtl
   bil +=
-  rtl +
-  repos +
-  spacer.line(lpldoul - repos.length + 3, '.') +
-  ' ' +
-  document.getElementById('douleurRepos').value +
-  '/4'
+    rtl +
+    repos +
+    spacer.line(lpldoul - repos.length + 3, '.') +
+    ' ' +
+    document.getElementById('douleurRepos').value +
+    '/4'
   bil +=
-  rtl +
-  mobilisation +
-  ' ' +
-  document.getElementById('douleurMob').value +
-  '/4'
+    rtl +
+    mobilisation +
+    ' ' +
+    document.getElementById('douleurMob').value +
+    '/4'
   bil +=
-  rtl +
-  'Type: ' +
-  getSelectionsListe('typeDouleur')
+    rtl +
+    'Type: ' +
+    getSelectionsListe('typeDouleur')
   bil += rtl + 'Localisation: ' + document.getElementById('localisation').value
   bil += rtl + spacer.box('FONCTIONNEL', egal)
   bil +=
-  rtl +
-  assis +
-  spacer.line(lplfonc - assis.length + 5, '.') +
-  ' ' +
-  document.getElementById('assis').value
+    rtl +
+    assis +
+    spacer.line(lplfonc - assis.length + 5, '.') +
+    ' ' +
+    document.getElementById('assis').value
   bil +=
-  rtl +
-  debout +
-  spacer.line(lplfonc - debout.length, '.') +
-  spacer.line(2, '.') +
-  ' ' +
-  document.getElementById('debout').value
+    rtl +
+    debout +
+    spacer.line(lplfonc - debout.length, '.') +
+    spacer.line(2, '.') +
+    ' ' +
+    document.getElementById('debout').value
   bil +=
-  rtl +
-  transferts +
-  spacer.line(lplfonc - transferts.length, '.') +
-  ' ' +
-  document.getElementById('transferts').value
+    rtl +
+    transferts +
+    spacer.line(lplfonc - transferts.length, '.') +
+    ' ' +
+    document.getElementById('transferts').value
   bil +=
-  rtl +
-  doubletache +
-  spacer.line(lplfonc - doubletache.length + 1, '.') +
-  spacer.line(3, '.') +
-  ' ' +
-  document.getElementById('doubleTache').value
+    rtl +
+    doubletache +
+    spacer.line(lplfonc - doubletache.length + 1, '.') +
+    spacer.line(3, '.') +
+    ' ' +
+    document.getElementById('doubleTache').value
   bil +=
-  rtl + rtl + 'Autonomie AVJ: ' + document.getElementById('autonomie').value
+    rtl + rtl + 'Autonomie AVJ: ' + document.getElementById('autonomie').value
   bil += rtl + rtl + marche + document.getElementById('marche').value
   bil += rtl + spacer.box('TROPHICITÉ', egal)
   bil +=
-  rtl +
-  oedeme +
-  spacer.line(lplfonc - oedeme.length + 4, '.') +
-  ' ' +
-  document.getElementById('oedeme').value
+    rtl +
+    oedeme +
+    spacer.line(lplfonc - oedeme.length + 4, '.') +
+    ' ' +
+    document.getElementById('oedeme').value
   bil +=
-  rtl +
-  hematome +
-  spacer.line(lplfonc - hematome.length, '.') +
-  spacer.line(2, '.') +
-  ' ' +
-  document.getElementById('hematome').value
+    rtl +
+    hematome +
+    spacer.line(lplfonc - hematome.length, '.') +
+    spacer.line(2, '.') +
+    ' ' +
+    document.getElementById('hematome').value
   bil +=
-  rtl +
-  amyotrophie +
-  spacer.line(lplfonc - amyotrophie.length + 1, '.') +
-  ' ' +
-  document.getElementById('amyotrophie').value
+    rtl +
+    amyotrophie +
+    spacer.line(lplfonc - amyotrophie.length + 1, '.') +
+    ' ' +
+    document.getElementById('amyotrophie').value
   bil +=
-  rtl +
-  inflamation +
-  spacer.line(lplfonc - inflamation.length + 1, '.') +
-  ' ' +
-  document.getElementById('inflamation').value
+    rtl +
+    inflamation +
+    spacer.line(lplfonc - inflamation.length + 1, '.') +
+    ' ' +
+    document.getElementById('inflamation').value
   if (document.getElementById('attitudeVicieuse').value !== '') {
     bil += rtl + spacer.box('ARTICULAIRE', egal)
     bil +=
-    rtl +
-    'Attitude vicieuse: ' +
-    document.getElementById('attitudeVicieuse').value
+      rtl +
+      'Attitude vicieuse: ' +
+      document.getElementById('attitudeVicieuse').value
     bil += rtl + 'Amplitude: ' + document.getElementById('amplitude').value
   }
   bil += rtl + spacer.box('MUSCULAIRE', egal)
   bil +=
-  rtl +
-  'Verrouillage quadriceps: ' +
-  document.getElementById('verrouillage').value
+    rtl +
+    'Verrouillage quadriceps: ' +
+    document.getElementById('verrouillage').value
   bil +=
-  rtl +
-  rtl +
-  'Autres groupes musculaires: ' +
-  document.getElementById('autres').value
+    rtl +
+    rtl +
+    'Autres groupes musculaires: ' +
+    document.getElementById('autres').value
   bil +=
-  rtl +
-  spacer.box(' Fonctions Supérieures', egal) +
-  rtl +
-  document.getElementById('fonctionsSuperieures').value
+    rtl +
+    spacer.box(' Fonctions Supérieures', egal) +
+    rtl +
+    document.getElementById('fonctionsSuperieures').value
   bil +=
-  rtl +
-  spacer.box(' Fonctions Respiratoires', egal) +
-  rtl +
-  document.getElementById('fonctionsRespiratoires').value
+    rtl +
+    spacer.box(' Fonctions Respiratoires', egal) +
+    rtl +
+    document.getElementById('fonctionsRespiratoires').value
   bil +=
-  rtl +
-  spacer.box(' Projet kiné du patient', egal) +
-  rtl +
-  document.getElementById('projetKine').value
+    rtl +
+    spacer.box(' Projet kiné du patient', egal) +
+    rtl +
+    document.getElementById('projetKine').value
   bil +=
-  rtl +
-  spacer.box(' Objectifs et prise en charge prévisionnelle', egal) +
-  rtl +
-  document.getElementById('priseEnChargePrev').value
+    rtl +
+    spacer.box(' Objectifs et prise en charge prévisionnelle', egal) +
+    rtl +
+    document.getElementById('priseEnChargePrev').value
   $('.element-a-cacher').each(function () {
     $(this).show()
   })
@@ -269,7 +269,7 @@ function affichage () {
   return false
 }
 
-function replaceSelection (idfield, idoption) {
+function replaceSelection(idfield, idoption) {
   const d = document.getElementById(idoption)
   var elem = document.getElementById(idfield)
   d.addEventListener('keyup', (e) => {
@@ -305,7 +305,7 @@ function replaceSelection (idfield, idoption) {
   }, false)
 }
 
-function frenchdate (strDate) {
+function frenchdate(strDate) {
   var ch = strDate.split('-').reverse().join('/')
   return ch
 }
@@ -343,8 +343,7 @@ var seltab = Array.from(chselect)
 seltab.forEach((elem) => {
   elem.addEventListener('focus', function (event) {
     event.target.size = elem.options.length
-  }
-  , false)
+  }, false)
 })
 
 seltab.forEach((elem) =>
@@ -353,23 +352,23 @@ seltab.forEach((elem) =>
   }, false)
 )
 
-function heure () {
+function heure() {
   var h = new Date()
   document.getElementById('temps').innerHTML =
-  (h.getHours() < 10 ? '0' + h.getHours() : h.getHours()) +
-  ':' +
-  (h.getMinutes() < 10 ? '0' + h.getMinutes() : h.getMinutes()) +
-  ':' +
-  (h.getSeconds() < 10 ? '0' + h.getSeconds() : h.getSeconds())
+    (h.getHours() < 10 ? '0' + h.getHours() : h.getHours()) +
+    ':' +
+    (h.getMinutes() < 10 ? '0' + h.getMinutes() : h.getMinutes()) +
+    ':' +
+    (h.getSeconds() < 10 ? '0' + h.getSeconds() : h.getSeconds())
   setTimeout(heure, 1000)
 }
 
 heure()
 
-function fdate () {
+function fdate() {
   var date = new Date()
   var nday = date.getDate() + 1 < 10 ? '0' + date.getDate() : date.getDate()
-  var month = date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1): date.getMonth() + 1
+  var month = date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1
   var year = date.getFullYear() - 2000
   var laDate = nday + '/' + month + '/' + year
   document.getElementById('laDate').innerHTML = laDate
