@@ -1,5 +1,3 @@
-@import url(http://weloveiconfonts.com/api/?family=entypo);
-
 :root {
   /* --main-bg-color: #5cad3c; */
   /* --main-bg-color: #C3E8CB; */
@@ -232,12 +230,6 @@ legend {
   border-radius: 0 10px 10px 0;
   padding: 1px 17px 3px 17px;
   width: 90%;
-}
-
-img {
-  height: 0.8em;
-  margin-left: 0;
-  padding: 0 0.3em 0 0;
 }
 
 .container-0 {
