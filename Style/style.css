@@ -234,6 +234,12 @@ legend {
   width: 90%;
 }
 
+img {
+  height: 0.8em;
+  margin-left: 0;
+  padding: 0 0.3em 0 0;
+}
+
 .container-0 {
   display: flex;
   flex-direction: row;
