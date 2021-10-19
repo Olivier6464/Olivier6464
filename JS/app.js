@@ -231,7 +231,7 @@ function affichage() {
   bil += rtl + spacer.box('MUSCULAIRE', egal)
   bil +=
     rtl +
-    'Verrouillage quadriceps: ' +
+    'Verrouillage quadriceps: ' + rtl +
     document.getElementById('verrouillage').value
   bil +=
     rtl +
@@ -243,11 +243,13 @@ function affichage() {
     spacer.box(' Fonctions Supérieures', egal) +
     rtl +
     document.getElementById('fonctionsSuperieures').value
-  bil +=
-    rtl +
-    spacer.box(' Fonctions Respiratoires', egal) +
-    rtl +
-    document.getElementById('fonctionsRespiratoires').value
+  if (document.getElementById('fonctionsRespiratoires').value !== ''){
+    bil +=
+      rtl +
+      spacer.box(' Fonctions Respiratoires', egal) +
+      rtl +
+      document.getElementById('fonctionsRespiratoires').value
+  }
   bil +=
     rtl +
     spacer.box(' Projet kiné du patient', egal) +
