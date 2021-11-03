@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
-    <script src="JQuery/jquery.js"></script>
+    <!-- <script src="JQuery/jquery.js"></script> -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Contrail+One&display=swap" rel="stylesheet" />
@@ -15,7 +15,7 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css"
     />
-    <link rel="stylesheet" type="text/css" href="Style/style.min.css" />
+    <link rel="stylesheet" type="text/css" href="Style/style.css" />
     <link rel="icon" href="favicon.ico" />
     <script type="text/javascript" defer src="JS/app.js"></script>
 
@@ -629,13 +629,19 @@ scratchs"
           onchange="replaceSelection('remarques',this.id)"
         >
           <option value="">phrases</option>
-          <option value="a des bandes biflex">a des bandes biflex</option>
-          <option value="porte des bas de contention">
-            porte des bas de contention
+          <option value="le port des bandes biflex">
+            le port des bandes biflex
           </option>
-          <option value="présence du pansement">présence du pansement</option>
-          <option value="présence des agraphes">présence des agraphes</option>
-          <option value="présence des fils">présence des fils</option>
+          <option value="le port des bas de contention">
+            le port des bas de contention
+          </option>
+          <option value="la présence du pansement">
+            la présence du pansement
+          </option>
+          <option value="la présence des agrafes">
+            la présence des agrafes
+          </option>
+          <option value="la présence des fils">la présence des fils</option>
           <option value="hématomes MS">hématomes MS</option>
           <option value="hématomes MI">hématomes MI</option>
         </select>
@@ -657,24 +663,25 @@ scratchs"
           onchange="replaceSelection('amplitude',this.id)"
         >
           <option value="">phrases</option>
-          <option value="++ Amplitudes de l'épaule en passif. ++">
-            épaule en passif
+          <option value="- Amplitudes de l'épaule en passif: ">
+            - Amplitudes de l'épaule en passif:
           </option>
-          <option value="++ Amplitudes de l'épaule en actif. ++">
-            épaule en actif
+          <option value="- Amplitudes de l'épaule en actif: ">
+            - Amplitudes de l'épaule en actif:
           </option>
-          <option value="++ Amplitudes du coude en passif. ++">
-            coude en passif
+          <option value="- Amplitudes du genou en passif: ">
+            - Amplitudes du genou en passif:
           </option>
-          <option value="++ Amplitudes du coude en actif. ++">
-            coude en actif
+          <option value="- Amplitudes du genou en actif: ">
+            - Amplitudes du genou en actif:
           </option>
-          <option value="++ Amplitudes du genou en passif. ++">
-            genou en passif
+          <option value="- Amplitudes du coude en passif: ">
+            - Amplitudes du coude en passif:
           </option>
-          <option value="++ Amplitudes du genou en actif. ++">
-            genou en actif
+          <option value="- Amplitudes du coude en actif: ">
+            - Amplitudes du coude en actif:
           </option>
+
           <option value="flexion: ">flexion:</option>
           <option value="extension: ">extension:</option>
           <option value="abduction: ">abduction:</option>
@@ -932,7 +939,12 @@ muco-purulents. "
           >
             amélioration de l'endurance et de la qualité de la marche
           </option>
-          <option value="- apprentissage des techniques prévention de luxation: lit, position assise, baignoire, automobile">apprentissage des techniques prévention de luxation: lit, position assise, baignoire, automobile</option>
+          <option
+            value="- apprentissage des techniques prévention de luxation: lit, position assise, baignoire, automobile"
+          >
+            apprentissage des techniques prévention de luxation: lit, position
+            assise, baignoire, automobile
+          </option>
           <option value="- mobilisation active et passive">
             mobilisation active et passive
           </option>
@@ -987,13 +999,28 @@ muco-purulents. "
       <br /><br /><br />
 
       <!--     pour copier du text dans le clipboqrd-->
-      <textarea
-        class="element-a-cacher"
-        id="to-copy"
-        rows="80"
-        cols="80"
-      ></textarea>
+      <div class="modal" id="modal">
+        <div id="modal-content">
+          <div id="modal-close" data-dismiss="dialog">X</div>
+          <div id="modal-header"><p>Bilan MK</p></div>
+          <textarea
+            class="modal-body"
+            id="to-copy"
+            rows="30"
+            cols="80"
+          ></textarea>
+          <div id="modal-footer" class="modal-btns">
+            <a href="#" class="btn btn-copy" role="button">Copier</a>
+            <a
+              href="#"
+              class="btn btn-close"
+              role="button"
+              data-dismiss="dialog"
+              >Fermer</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
-    <a name="bas_de_page"></a>
   </body>
 </html>

@@ -1,12 +1,12 @@
 :root {
   /* --main-bg-color: #5cad3c; */
   /* --main-bg-color: #C3E8CB; */
-  --main-bg-color: #102A43;
+  --main-bg-color: #102a43;
   /* --main-bg-color: #1F242F;  */
   /* --main-bg-color: #d3e9cb; */
   /* --main-bg-color: rgb(180, 214, 171); */
   /* --main-lb-color: #faeda1fa; */
-  --main-lb-color: #FFC600;
+  --main-lb-color: #ffc600;
   --main-a-color: black;
   --main-menu-hover: rgb(238, 252, 180);
   --main-option-bg-hover: hsla(103, 87%, 75%, 0.726);
@@ -57,8 +57,6 @@ h1 {
   background-color: var(--main-h1-bg-color);
 }
 
-
-
 label {
   font-family: "Arvo";
   /* text-transform: uppercase; */
@@ -76,12 +74,11 @@ label {
   text-align: center;
 }
 
-label>span {
+label > span {
   color: rgb(18, 19, 34);
   padding: 0px;
   font-size: 1rem;
   font-variant: small-caps;
-
 }
 
 nav {
@@ -101,9 +98,8 @@ nav a {
   color: #fdd90e;
 }
 
-
 option:nth-child(odd) {
-  background-color: #EFEFEF;
+  background-color: #efefef;
 }
 
 option:hover {
@@ -115,7 +111,8 @@ textarea,
 input,
 select {
   font-family: "Contrail One";
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   outline: none;
   box-shadow: none;
   width: 80%;
@@ -131,7 +128,7 @@ select {
   border-radius: 0 10px 10px 10px;
 }
 
-textarea+select {
+textarea + select {
   border-radius: 10px;
 }
 
@@ -175,7 +172,7 @@ legend {
 }
 
 .nav .menu {
-  font-family: 'Arvo';
+  font-family: Arvo;
   color: beige;
 
   /* background-color:#437cf7;  */
@@ -243,7 +240,7 @@ legend {
   position: relative;
 }
 
-.has-children:hover>.sous-menu {
+.has-children:hover > .sous-menu {
   /*2*/
   display: flex;
 }
@@ -342,10 +339,10 @@ legend {
   color: rgb(240, 215, 71);
   /* background-color: #26640a; */
   background-color: #50f;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-variant: small-caps;
   /* color:	#D5AD6D; */
-  font-family: 'Arvo';
+  font-family: "Arvo";
   font-weight: 300;
   font-size: 1.6rem;
   /* color: rgb(80, 61, 13); */
@@ -362,4 +359,86 @@ legend {
   padding: 0.9rem;
   border-radius: 50%/30%;
   box-shadow: 2px 2px 0px 0px rgba(20, 19, 19, 0.2);
+}
+
+.modal {
+  background-color: rgba(3, 2, 2, 0.9);
+  padding: 2 rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.modal.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+#modal-content {
+  background-color: rgb(199, 218, 221);
+  max-width: 90vw;
+  margin: auto;
+  position: relative;
+}
+
+#modal-close {
+  position: absolute;
+  font-weight: 700;
+  top: 0px;
+  right: 0px;
+  color: lavenderblush;
+  background-color: #ff5100;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#modal-header {
+  background-color: #40a019;
+  color: lavenderblush;
+  text-align: center;
+  font-family: Arvo;
+  padding: 10px;
+  border-bottom: 2px, solid, #ddd;
+}
+
+.modal-body {
+  padding: 10px;
+  max-height: 80vh;
+  background-color: rgb(250, 255, 213);
+}
+
+#modal-footer {
+  padding: 20px;
+  border-top: 2px, solid, red;
+  display: flex;
+  align-items: space-between;
+}
+
+.btn {
+  padding: 10px;
+  background-color: darkcyan;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.btn:hover {
+  padding: 12px;
+  font-weight:bold;
+}
+
+.modal-btns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn-close {
+  background-color: #ff5100;
 }
