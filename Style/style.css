@@ -83,7 +83,7 @@ label > span {
 
 nav {
   font-family: arial, "sans serif";
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   /* background-color: var(--main-bg-color); */
   padding: 0px 0px;
   text-align: center;
@@ -431,7 +431,7 @@ legend {
 
 .btn:hover {
   padding: 12px;
-  font-weight:bold;
+  font-weight: bold;
 }
 
 .modal-btns {
