@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+
 :root {
   /* --main-bg-color: #5cad3c; */
   /* --main-bg-color: #C3E8CB; */
@@ -125,6 +127,7 @@ select {
 textarea,
 input,
 select {
+  font-family: "Poppins", sans-serif;
   border-radius: 0 10px 10px 10px;
 }
 

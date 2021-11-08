@@ -63,963 +63,987 @@
       </ul>
     </nav>
     <br /><br /><br /><br /><br /><br />
+    <form>
+      <div>
+        <fieldset>
+          <br /><br />
+          <legend align="center">
+            <span class="donnees rubrique"><span>Dossier médical</span></span>
+          </legend>
+          <br /><br />
 
-    <div>
-      <fieldset>
-        <br /><br />
-        <legend align="center">
-          <span class="donnees rubrique"><span>Dossier médical</span></span>
-        </legend>
-        <br /><br />
-
-        <div class="container-0">
+          <div class="container-0">
+            <div class="container-1">
+              <div>
+                <label class="donnees lbl-chambre" for="chambre"
+                  ><span>Chambre</span></label
+                >
+              </div>
+              <div>
+                <input
+                  id="chambre"
+                  class="majuscule input-chambre"
+                  name="nom"
+                  type="text"
+                  pattern="[0-9]{3}"
+                  cols="3"
+                  display="inline"
+                  maxlength="3"
+                />
+              </div>
+            </div>
+            <div class="container-1">
+              <div>
+                <label class="donnees lbl-side" for="side"
+                  ><span>Porte/Fenêtre</span></label
+                >
+              </div>
+              <div>
+                <input
+                  id="cote"
+                  class="majuscule input-side"
+                  name="nom"
+                  type="text"
+                  cols="1"
+                  pattern="[pPfF]{1}"
+                  display="inline"
+                  maxlength="1"
+                />
+              </div>
+            </div>
+          </div>
+          <br />
           <div class="container-1">
             <div>
-              <label class="donnees lbl-chambre" for="chambre"
-                ><span>Chambre</span></label
+              <label class="donnees lbl-entry" for="entrée"
+                ><span>Entré(e) le: </span></label
               >
             </div>
             <div>
               <input
-                id="chambre"
-                class="majuscule input-chambre"
-                name="nom"
-                type="text"
-                pattern="[0-9]{3}"
-                cols="3"
-                display="inline"
-                maxlength="3"
+                type="date"
+                id="entree"
+                name="entree"
+                class="date input-entry"
+                required="true"
+                size="18"
               />
             </div>
           </div>
-          <div class="container-1">
-            <div>
-              <label class="donnees lbl-side" for="side"
-                ><span>Porte/Fenêtre</span></label
-              >
-            </div>
-            <div>
-              <input
-                id="cote"
-                class="majuscule input-side"
-                name="nom"
-                type="text"
-                cols="1"
-                pattern="[pPfF]{1}"
-                display="inline"
-                maxlength="1"
-              />
-            </div>
-          </div>
-        </div>
-        <br />
-        <div class="container-1">
-          <div>
-            <label class="donnees lbl-entry" for="entrée"
-              ><span>Entré(e) le: </span></label
-            >
-          </div>
-          <div>
-            <input
-              type="date"
-              id="entree"
-              name="entree"
-              class="date input-entry"
-              required="true"
-              size="18"
-            />
-          </div>
-        </div>
-        <br />
-        <label class="donnees" for="civilite"><span>Civilité</span></label>
-        <br />
-        <select id="civilite" name="civilite">
-          <option value="Madame" selected="selected">Madame</option>
-          <option value="Monsieur">Monsieur</option>
-          <option value="Mademoiselle">Mademoiselle</option></select
-        ><br /><br /><label class="donnees" for="nom"><span>Nom</span></label>
-        <br />
-        <input
-          id="nom"
-          class="majuscule"
-          name="nom"
-          type="text"
-          required="true"
-          size="15"
-          maxlength="30"
-        /><br /><br /><label class="donnees" for="prenom"
-          ><span>Prénom</span></label
-        >
-        <br />
-        <input
-          id="prenom"
-          class="majuscule"
-          name="prenom"
-          type="text"
-          required="true"
-          size="15"
-          maxlength="30"
-        /><br /><br />
+          <br />
+          <label class="donnees" for="civilite"><span>Civilité</span></label>
+          <br />
+          <select id="civilite" name="civilite">
+            <option value="Madame" selected="selected">Madame</option>
+            <option value="Monsieur">Monsieur</option>
+            <option value="Mademoiselle">Mademoiselle</option></select
+          ><br /><br /><label class="donnees" for="nom"><span>Nom</span></label>
+          <br />
+          <input
+            id="nom"
+            class="majuscule"
+            name="nom"
+            type="text"
+            required="true"
+            size="15"
+            maxlength="30"
+          /><br /><br /><label class="donnees" for="prenom"
+            ><span>Prénom</span></label
+          >
+          <br />
+          <input
+            id="prenom"
+            class="majuscule"
+            name="prenom"
+            type="text"
+            required="true"
+            size="15"
+            maxlength="30"
+          /><br /><br />
 
-        <!-- <label class="donnees" for="entrée"><span>Date d'entrée</span></label><input type="date"
+          <!-- <label class="donnees" for="entrée"><span>Date d'entrée</span></label><input type="date"
         id="entree" name="entree" class="date" required="true" size="18" /><br /><br /> -->
 
-        <br /><br />
+          <br /><br />
 
-        <label class="donnees"> <span>MOTIF d'admission</span> </label><br />
+          <label class="donnees"> <span>MOTIF d'admission</span> </label><br />
 
-        <textarea
-          class="champ"
-          id="anamnese"
-          name="anamnese"
-          rows="5"
-          cols="80"
-        ></textarea>
-
-        <br /><br />
-
-        <label class="donnees"> <span>HISTOIRE de la maladie</span> </label
-        ><br />
-        <textarea
-          class="champ"
-          id="histoire"
-          name="histoire"
-          rows="5"
-          cols="80"
-        ></textarea>
-        <br /><br />
-
-        <label class="donnees"> <span>Mode de vie</span> </label><br />
-        <textarea id="modeDeVie" name="modeDeVie" rows="5" cols="80"></textarea>
-        <br /><br />
-
-        <label class="donnees"> <span>Antécédents</span> </label><br />
-        <textarea id="atcd" name="atcd" rows="5" cols="80"></textarea>
-        <br /><br />
-
-        <label class="fonctionnel"><span>Prescription médicale</span> </label
-        ><br />
-        <textarea name="pec" id="pec" rows="3" cols="80"></textarea>
-        <select id="phrpec" onchange="replaceSelection('pec',this.id)">
-          <option value="">phrases</option>
-          <option value="BILAN ET REEDUCATION DE L'EQUILIBRE">
-            BILAN ET REEDUCATION DE L'EQUILIBRE
-          </option>
-          <option value="GYMNASTIQUE DYNAMIQUE">GYMNASTIQUE DYNAMIQUE</option>
-          <option value="REEDUCATION A LA MARCHE">
-            REEDUCATION A LA MARCHE
-          </option>
-          <option value="RENFORCEMENT MUSCULAIRE">
-            RENFORCEMENT MUSCULAIRE
-          </option>
-          <option value="TEST DE MARCHE DE 6 MN">TEST DE MARCHE DE 6 MN</option>
-          <option value="RELAXATION">RELAXATION</option>
-          <option value="renfort autonomie">renfort autonomie</option>
-          <option values="Réautonomisation, rééducation à la marche.">
-            Réautonomisation, rééducation à la marche
-          </option>
-          <option value="Rééducation à la marche">
-            Rééducation à la marche
-          </option>
-          <option value="Travail des transferts et de l'équilibre">
-            Travail des transferts et de l'équilibre
-          </option>
-          <option value="Kinésithérapie respiratoire">
-            Kinésithérapie respiratoire
-          </option>
-          <option value="Reprise progressive de la marche">
-            Reprise progressive de la marche
-          </option>
-          <option value="réautonomisation">réautonomisation</option>
-        </select>
-        <br /><br />
-        <label class="donnees"> <span>Date de l'opération</span> </label><br />
-        <input
-          id="operation"
-          name="operation"
-          class="date"
-          type="date"
-          size="18"
-        />
-        <br /><br />
-
-        <label class="donnees" for="appui"
-          ><span>Appui (total/limité/sans appui) </span></label
-        ><br /><input
-          id="appui"
-          name="appui"
-          type="text"
-          size="15"
-        /><br /><br />
-
-        <!-- debut attelles  -->
-
-        <label class="donnees" for="nom"
-          ><span>Immobilisation (plâtre/attelle...)</span></label
-        ><br /><select
-          id="immobilisation"
-          name="immobilisation"
-          type="text"
-          onfocus="this.style.color='darkgreen'"
-        >
-          <option value=""></option>
-          <optgroup label="Attelles, écharpes">
-            <option
-              value="attelle d'immobilisation coude au
-                  corps"
-            >
-              attelle d'immobilisation coude au corps
-            </option>
-            <option value="gilet orthopédique du Dr Berrhail">
-              gilet orthopédique du Dr Berrhail
-            </option>
-            <option value="attelle Dujarrier">attelle Dujarrier</option>
-            <option value="attelle de Zimmer">attelle de Zimmer</option>
-            <option value="attelle de poignet et/ou de la main">
-              attelle de poignet et/ou de la main
-            </option>
-            <option
-              value="attelle de synthèse prête à
-              l'emploi"
-            >
-              attelle de synthèse prête à l'emploi
-            </option>
-            <option value="attelle de synthèse résine">
-              attelle de synthèse résine
-            </option>
-            <option value="atelle de genou monobaleine">
-              atelle de genou monobaleine
-            </option>
-            <option value="attelle platrée">attelle platrée</option>
-            <option
-              value="écharpe d'immobilisation de
-          l'epaule"
-            >
-              écharpe d'immobilisation de l'epaule
-            </option>
-            <option
-              value="écharpe d'immobilisation coude au
-      corps"
-            >
-              écharpe d'immobilisation coude au corps
-            </option>
-          </optgroup>
-
-          <optgroup label="Releveurs, bottes, chaussures">
-            <option value="releveur standard">releveur standard</option>
-            <option value="releveur de pied dynamique">
-              releveur de pied dynamique
-            </option>
-            <option value="releveur Liberté">releveur Liberté</option>
-            <option value="releveur Thuasne">releveur Thuasne</option>
-            <option value="releveur sur moulage">releveur sur moulage</option>
-            <option value="botte platrée">botte platrée</option>
-            <option value="botte en résine">botte en résine</option>
-            <option value="botte de marche">botte de marche</option>
-            <option
-              value="botte de marche avec coussins d'air
-  gonflables"
-            >
-              botte de marche avec coussins d'air gonflables
-            </option>
-            <option value="chaussure de décharge du talon">
-              chaussure de décharge du talon
-            </option>
-            <option
-              value="chaussure de décharge de l'avant
-pied"
-            >
-              chaussure de décharge de l'avant pied
-            </option>
-          </optgroup>
-          <optgroup label="Ceintures">
-            <option value="ceinture de soutient abdominal">
-              ceinture de soutient abdominal
-            </option>
-            <option value="ceinture thoracique">ceinture thoracique</option>
-            <option value="ceinture lombaire">ceinture lombaire</option>
-            <option
-              value="ceinture lombaire à double renforts
-  de
-  contention"
-            >
-              ceinture lombaire à double renforts de contention
-            </option>
-          </optgroup>
-
-          <optgroup label="Colliers cervicals">
-            <option value="collier cervical">collier cervical</option>
-            <option value="collier cervical en mousse">
-              collier cervical en mousse
-            </option>
-            <option value="collier cervical Philadelphie">
-              collier cervical Philadelphie
-            </option>
-          </optgroup>
-          <optgroup label="Orthèses">
-            <option value="orthèse de cheville">orthèse de cheville</option>
-            <option
-              value="orthèse de cheville fonctionelle avec
-  coussins d'air"
-            >
-              orthèse de cheville fonctionelle avec coussins d'air
-            </option>
-            <option
-              value="orthèse du genou de Zimmer
-gonflables"
-            >
-              orthèse du genou de Zimmer gonflables
-            </option>
-            <option value="orthèse d'immobilisation du poignet">
-              orthèse d'immobilisation du poignet
-            </option>
-            <option value="orthèse pour l'arthrose du pouce">
-              orthèse pour l'arthrose du pouce
-            </option>
-            <option value="orthèse de genou articulée">
-              orthèse de genou articulée
-            </option>
-            <option
-              value="orthèse de genou avec fermeture a
-clips"
-            >
-              orthèse de genou avec fermeture a clips
-            </option>
-            <option
-              value="orthèse de genou avec fermeture a
-scratchs"
-            >
-              orthèse de genou avec fermeture a scratchs
-            </option>
-          </optgroup>
-          <optgroup label="Autres">
-            <option value="jersey">jersey</option>
-            <option value="bandes platrées">bandes platrées</option>
-            <option value="sangle acromio claviculaire">
-              sangle acromio claviculaire
-            </option>
-            <option value="coudière">coudière</option>
-            <option value="genouillère">genouillère</option>
-          </optgroup>
-        </select>
-      </fieldset>
-      <!-- fin attelles  -->
-      <br /><br />
-      <fieldset>
-        <legend class="dolor rubrique" align="center">
-          <span>Cotation de la douleur EVS</span>
-        </legend>
-        <br /><br />
-
-        <label class="dolor" for="auRepos"><span>Au Repos</span></label
-        ><br /><select id="douleurRepos" name="douleurRepos">
-          <option value="0" selected="selected">pas de douleur</option>
-          <option value="1">faible</option>
-          <option value="2">moyenne</option>
-          <option value="3">forte</option>
-          <option value="4">très forte</option>
-        </select>
-        <br /><br /><label class="dolor" for="aLaMobilisation"
-          ><span>A la mobilisation</span></label
-        ><select id="douleurMob" name="douleurMob">
-          <option value="0" selected="selected">pas de douleur</option>
-          <option value="1">faible</option>
-          <option value="2">moyenne</option>
-          <option value="3">forte</option>
-          <option value="4">très forte</option></select
-        ><br /><br /><label class="dolor" for="caracteristique"
-          ><span>Caractéristiques</span></label
-        >
-
-        <select multiple id="typeDouleur" name="typeDouleur">
-          <option value=""></option>
-          <option value="mécanique">Mécanique</option>
-          <option value="inflammatoire">inflammatoire</option>
-          <option value="élancements">Elancements</option>
-          <option value="pénétrante">Pénétrante</option>
-          <option value="brulûres">brulûres</option>
-          <option value="décharges électriques">Décharges électriques</option>
-          <option value="coups de poignard">Coups de poignard</option>
-          <option value="en étau">En étau</option>
-          <option value="tiraillement">tiraillement</option>
-        </select>
-        <br /><br />
-        <label class="dolor" for="localisation"
-          ><span>Localisation</span></label
-        >
-        <input id="localisation" name="localisation" type="text" /><br />
-      </fieldset>
-      <br /><br />
-
-      <fieldset>
-        <legend align="center">
-          <span class="fonctionnel rubrique">
-            <span>Fonctionnel</span>
-          </span>
-        </legend>
-        <br />
-
-        <label class="fonctionnel" for="assis"
-          ><span>Équilibre assis</span></label
-        >
-        <select id="assis">
-          <option class="oui" value="oui">oui</option>
-          <option class="non" value="non">non</option>
-        </select>
-        <br /><br />
-        <label class="fonctionnel"><span>Équilibre debout</span></label>
-        <select id="debout">
-          <option class="oui" value="oui">oui</option>
-          <option class="non" value="non">non</option>
-          <option value="risque élevé de chute grave, limitation sévère">
-            unipodal &lt 5 SECONDES
-          </option>
-          <option value="risque modéré de chute, limitation modérée">
-            DE 5 À 15 SECONDES
-          </option>
-          <option value="risque limité de chute, limitation minime">
-            DE 15 À 30 SECONDES
-          </option>
-          <option value="très faible risque de chute, pas de limitation">
-            &gt 30 S
-          </option></select
-        ><br /><br />
-        <label class="fonctionnel"
-          ><span>Transferts (lit vers fauteuil)</span></label
-        >
-        <select id="transferts">
-          <option class="oui" value="oui">oui</option>
-          <option class="non" value="non">non</option></select
-        ><br /><br />
-        <label class="fonctionnel"><span>Double tâche</span></label>
-        <select id="doubleTache">
-          <option class="oui" value="oui">oui</option>
-          <option class="non" value="non">non</option></select
-        ><br /><br />
-        <label class="fonctionnel"><span>Autonomie AVJ</span></label>
-        <textarea id="autonomie" name="autonomie" rows="2" cols="80"></textarea>
-        <select
-          open
-          id="phrautonomie"
-          onchange="replaceSelection('autonomie',this.id)"
-          ;
-          onfocus="this.selectedIndex= 0;"
-        >
-          <option value="">phrases</option>
-          <option value="autonome se déplace sans aide humaine">
-            autonome se déplace sans aide humaine
-          </option>
-          <option
-            value="nécessite aide à la marche et aux transferts,
-    "
-          >
-            aide marche + transferts
-          </option>
-          <option value="nécessite aide pour les transferts et les AVQ, ">
-            aide transferts + AVQ
-          </option>
-          <option value="nécessite aide pour les AVQ, ">aide AVQ</option>
-        </select>
-        <br /><br />
-
-        <label class="fonctionnel"
-          ><span>Marche (périmètre, aides techniques ...)</span></label
-        >
-
-        <textarea id="marche" name="marche" rows="2" cols="80"></textarea>
-        <select
-          open
-          id="phrmarche"
-          onchange="replaceSelection('marche',this.id)"
-          ;
-          onfocus="this.selectedIndex= 0;"
-        >
-          <option value="">phrases</option>
-          <option
-            value="station debout non réalisable même avec aide humaine et technique, "
-          >
-            station debout non réalisable même avec aide humaine et technique,
-          </option>
-          <option
-            value="station debout réalisable avec aide humaine et technique,  "
-          >
-            station debout réalisable avec aide humaine et technique,
-          </option>
-          <option value="marche sans aide technique ">
-            marche sans aide technique
-          </option>
-          <option value="marche avec une canne simple ">
-            marche avec une canne simple
-          </option>
-          <option value="marche avec des cannes anglaises, ">
-            marche avec cannes anglaises
-          </option>
-          <option value="marche avec déambulateur ">
-            marche avec déambulateur
-          </option>
-          <option value="marche avec D2R, ">marche avec D2R</option>
-          <option value="marche avec D3R, ">marche avec D3R</option>
-          <option value="marche avec R4R, ">marche avec R4R</option>
-          <option value="et aide humaine, ">et aide humaine</option>
-          <option value="1/2 couloir aller retour ">
-            1/2 couloir aller retour
-          </option>
-          <option value="un couloir aller retour ">
-            un couloir aller retour
-          </option>
-          <option value=" avec pauses. ">avec pauses.</option>
-          <option value=" sans pause. ">sans pause.</option>
-          <option value="Bon équilibre. ">bon équilibre</option>
-          <option value="Equilibre moyen. ">équilibre moyen</option>
-          <option
-            value="Equilibre précaire avec risques de chute
-          importants. "
-          >
-            Équilibre précaire avec risque de chute important
-          </option>
-          <option value=" → risque élevé de chute grave, limitation sévère">
-            unipodal &lt 5 SECONDES
-          </option>
-          <option value=" → risque modéré de chute, limitation modérée">
-            unipodal DE 5 À 15 SECONDES
-          </option>
-          <option value=" → risque limité de chute, limitation minime">
-            unipodal DE 15 À 30 SECONDES
-          </option>
-          <option value=" → très faible risque de chute, pas de limitation">
-            unipodal + de 30 S
-          </option>
-        </select>
-      </fieldset>
-      <br /><br />
-
-      <fieldset>
-        <legend align="center">
-          <span class="trophique rubrique"><span>Trophique</span></span>
-        </legend>
-        <br />
-
-        <label class="trophique"><span>Oedème</span></label>
-        <select id="oedeme">
-          <option class="non" value="non">non</option>
-          <option class="oui" value="oui">oui</option></select
-        ><br /><br />
-        <label class="trophique"><span>Hématome</span></label>
-        <select id="hematome">
-          <option class="non" value="non">non</option>
-          <option class="oui" value="oui">oui</option></select
-        ><br /><br />
-        <label class="trophique"><span>Amyotrophie</span></label>
-        <select id="amyotrophie">
-          <option class="non" value="non">non</option>
-          <option class="oui" value="oui">oui</option></select
-        ><br /><br />
-        <label class="trophique"><span>Inflammation</span></label>
-        <select id="inflamation">
-          <option class="non" value="non">non</option>
-          <option class="oui" value="oui">oui</option></select
-        ><br /><br />
-
-        <label class="trophique"><span>Remarques</span></label>
-        <textarea id="remarques" name="remarques" rows="4" cols="80"></textarea>
-        <select
-          id="phrremarques"
-          onchange="replaceSelection('remarques',this.id)"
-        >
-          <option value="">phrases</option>
-          <option value="le port des bandes biflex">
-            le port des bandes biflex
-          </option>
-          <option value="le port des bas de contention">
-            le port des bas de contention
-          </option>
-          <option value="la présence du pansement">
-            la présence du pansement
-          </option>
-          <option value="la présence des agrafes">
-            la présence des agrafes
-          </option>
-          <option value="la présence des fils">la présence des fils</option>
-          <option value="hématomes MS">hématomes MS</option>
-          <option value="hématomes MI">hématomes MI</option>
-        </select>
-      </fieldset>
-      <br /><br />
-
-      <fieldset>
-        <legend align="center">
-          <span class="articulaire rubrique"><span>Articulaire</span></span>
-        </legend>
-        <br />
-
-        <label class="articulaire">
-          <span>Amplitude</span>
-        </label>
-        <textarea id="amplitude" name="amplitude" rows="4" cols="80"></textarea>
-        <select
-          id="phramplitude"
-          onchange="replaceSelection('amplitude',this.id)"
-        >
-          <option value="">phrases</option>
-          <option value="- Amplitudes de l'épaule en passif: ">
-            - Amplitudes de l'épaule en passif:
-          </option>
-          <option value="- Amplitudes de l'épaule en actif: ">
-            - Amplitudes de l'épaule en actif:
-          </option>
-          <option value="- Amplitudes du genou en passif: ">
-            - Amplitudes du genou en passif:
-          </option>
-          <option value="- Amplitudes du genou en actif: ">
-            - Amplitudes du genou en actif:
-          </option>
-          <option value="- Amplitudes du coude en passif: ">
-            - Amplitudes du coude en passif:
-          </option>
-          <option value="- Amplitudes du coude en actif: ">
-            - Amplitudes du coude en actif:
-          </option>
-
-          <option value="flexion: ">flexion:</option>
-          <option value="extension: ">extension:</option>
-          <option value="abduction: ">abduction:</option>
-          <option value="adduction: ">adduction:</option>
-          <option value="rotation externe: ">rotation externe:</option>
-          <option value="rotation interne: ">rotation interne:</option>
-          <option value="main bouche: ">main bouche:</option>
-          <option value="main tête: ">main tête:</option>
-          <option value="main dos: ">main dos:</option>
-          <option value="flexum des genoux">flexum des genoux</option>
-          <option value="flexum du genou D">flexum du genou D</option>
-          <option value="flexum du genou G">flexum du genou G</option>
-          <option value="non réductible">non réductible</option>
-          <option value="réductible">réductible</option>
-        </select>
-
-        <br /><br />
-
-        <label class="articulaire">
-          <span>Attitude vicieuse</span>
-        </label>
-        <textarea
-          id="attitudeVicieuse"
-          name="attitudeVicieuse"
-          rows="4"
-          cols="80"
-        ></textarea>
-        <select
-          id="phrattitudeVicieuse"
-          onchange="replaceSelection('attitudeVicieuse',this.id)"
-        >
-          <option value="">phrases</option>
-          <option value="en flexum des hanches">en flexum des hanches</option>
-          <option value="attitude cyphotique">attitude cyphotique</option>
-          <option value="flexum des genoux">flexum des genoux</option>
-          <option value="flexum du genou D">flexum du genou D</option>
-          <option value="flexum du genou G">flexum du genou G</option>
-          <option value="non réductible">non réductible</option>
-          <option value="réductible">réductible</option>
-        </select>
-      </fieldset>
-      <br /><br />
-      <fieldset>
-        <legend align="center">
-          <span class="musculaire rubrique"><span>Musculaire</span></span>
-        </legend>
-        <br /><br />
-
-        <label class="musculaire">
-          <span>Verrouillage quadriceps</span>
-        </label>
-
-        <textarea id="verrouillage" rows="4" cols="80"></textarea>
-        <select
-          id="phrverrouillage"
-          onchange="replaceSelection('verrouillage',this.id)"
-        >
-          <option value="">phrases</option>
-          <option value="verrouillage incomplet à droite">
-            verrouillage incomplet à droite
-          </option>
-          <option value="verrouillage incomplet à gauche">
-            verrouillage incomplet à gauche
-          </option>
-          <option value="EMFM quadriceps D (DANIELS ET WORTHINGHAM): ">
-            EMFM quadriceps D
-          </option>
-          <option value="EMFM quadriceps G (DANIELS ET WORTHINGHAM): ">
-            EMFM quadriceps G
-          </option>
-        </select>
-
-        <br /><br />
-        <label class="musculaire">
-          <span>Autres groupes musculaires</span>
-        </label>
-
-        <textarea id="autres" rows="4" cols="80"></textarea>
-        <select id="phrautres" onchange="replaceSelection('autres',this.id)">
-          <option value="">phrases</option>
-          <option value="déficit global de force musculaire">
-            déficit global de force musculaire
-          </option>
-          <option value="bonne conservation de la force musculaire">
-            bonne conservation de la force musculaire
-          </option>
-          <option value="hémiparésie G">hémiparésie G</option>
-          <option value="hémiparésie D">hémiparésie D</option>
-        </select>
-      </fieldset>
-      <br /><br />
-
-      <fieldset>
-        <legend align="center">
-          <span class="respicogito rubrique"
-            ><span>Cognitif / Relationnel</span></span
-          >
-        </legend>
-        <br /><br />
-
-        <label class="respicogito">
-          <span>Fonctions supérieures</span>
-        </label>
-        <textarea id="fonctionsSuperieures" rows="4" cols="80"></textarea>
-        <select
-          id="phrfonctionsSuperieures"
-          onchange="replaceSelection('fonctionsSuperieures',this.id)"
-        >
-          <option value="">phrases</option>
-          <option value="bonne compréhension des consignes">
-            bonne compréhension des consignes
-          </option>
-          <option value="Troubles cognitifs légers">
-            Troubles cognitifs légers
-          </option>
-          <option value="troubles cognitifs sévères">
-            troubles cognitifs sévères
-          </option>
-          <option value="désorientaton spatio-temporelle">
-            désorientaton spatio-temporelle
-          </option>
-        </select>
-      </fieldset>
-      <br /><br />
-      <fieldset>
-        <legend align="center">
-          <span class="respicogito rubrique"><span>Respiratoire</span></span>
-        </legend>
-        <br /><br />
-        <label class="respicogito">
-          <span>Fonctions respiratoires</span>
-        </label>
-        <textarea id="fonctionsRespiratoires" rows="4" cols="120"></textarea>
-        <select
-          id="phrfonctionsRespiratoires"
-          onchange="replaceSelection('fonctionsRespiratoires',this.id)"
-        >
-          <option value="">phrases</option>
-          <option value="Sous O2 en chambre à ">O2 en chambre</option>
-          <option value="SatO2/pouls au repos = ">SatO2/pouls =</option>
-          <option
-            value="Dyspnée: stade V essoufflé au repos (Sadoul
-et Polu). "
-          >
-            dyspnée au repos
-          </option>
-          <option
-            value="Dyspnée: stade IV essoufflé à la marche lente (Sadoul et Polu). "
-          >
-            dyspnée à la marche lente
-          </option>
-          <option
-            value="Dyspnée: stade III essoufflé à la marche normale en terrain plat (Sadoul et Polu). "
-          >
-            dyspnée à la marche normale
-          </option>
-          <option
-            value="Dyspnée: stade II essoufflé au 1er étage ou à la marche rapide ou en pente (Sadoul et Polu). "
-          >
-            dyspnée à la marche rapide
-          </option>
-          <option
-            value="Dyspnée: stade I essoufflé pour des efforts importants ou au-delà du 2eme étage (Sadoul et Polu). "
-          >
-            dyspnée à l'effort
-          </option>
-          <option value="Expectoration: crachats muqueux. ">
-            blanc ou translucide
-          </option>
-          <option value="Expectoration: crachats purulents. ">
-            jaune ou verdâtre
-          </option>
-          <option
-            value="Expectoration: crachats
-muco-purulents. "
-          >
-            blanc avec stries jaunâtres
-          </option>
-          <option value="Expectoration: crachats hémoptoïques. ">
-            blanc avec des stries rouges
-          </option>
-          <option value="Expectoration: crachats hémorragiques. ">
-            rouges
-          </option>
-        </select>
-      </fieldset>
-      <br /><br />
-      <fieldset>
-        <legend align="center">
-          <span class="articulaire rubrique"><span>Rééducation</span></span>
-        </legend>
-        <br /><br />
-
-        <label class="donnees">
-          <span>Projet kiné du patient</span>
-        </label>
-        <textarea
-          name="projetKine"
-          id="projetKine"
-          rows="3"
-          cols="80"
-        ></textarea>
-        <select
-          id="phrprojetkine"
-          onchange="replaceSelection('projetKine',this.id)"
-        >
-          <option value="">phrases</option>
-          <option value="retrouver une marche fonctionnelle.">
-            retrouver une marche fonctionnelle.
-          </option>
-          <option value="souhaite améliorer son périmètre de marche.">
-            améliorer périmètre de marche
-          </option>
-          <option value="retour à domicile.">RAD</option>
-          <option value="retour à la maison de retraite">
-            retour à la maison de retraite
-          </option>
-          <option value="retour à la résidence sénior">
-            retour à la résidence sénior
-          </option>
-        </select>
-      </fieldset>
-
-      <fieldset>
-        <label class="donnees">
-          <span>Objectifs et prise en charge prévisionnelle</span>
-        </label>
-        <textarea
-          name="priseEnChargePrev"
-          id="priseEnChargePrev"
-          rows="3"
-          cols="80"
-        ></textarea>
-        <select
-          id="phrpecPrev"
-          onchange="replaceSelection('priseEnChargePrev',this.id)"
-        >
-          <option value="">phrases</option>
-          <option value="A court terme: ">A court terme:</option>
-          <option value="A long terme: ">A long terme:</option>
-          <option value="- travail de la station debout et des transferts">
-            travail de la station debout et des transferts
-          </option>
-          <option value="- rééducation à la marche et de l'équilibre">
-            rééducation à la marche et de l'équilibre
-          </option>
-          <option value="- rééducation à la marche">
-            rééducation à la marche
-          </option>
-          <option value="- reprise progressive de la marche">
-            reprise progressive de la marche
-          </option>
-          <option
-            value="- amélioration de l'endurance et de la qualité de la marche"
-          >
-            amélioration de l'endurance et de la qualité de la marche
-          </option>
-          <option
-            value="- apprentissage des techniques prévention de luxation: lit, position assise, baignoire, automobile"
-          >
-            apprentissage des techniques prévention de luxation: lit, position
-            assise, baignoire, automobile
-          </option>
-          <option value="- mobilisation active et passive">
-            mobilisation active et passive
-          </option>
-          <option value="- travail individuel de l'équilibre">
-            travail de l'équilibre
-          </option>
-          <option value="- travail des transferts">
-            travail des transferts
-          </option>
-          <option value="- renforcement musculaire">
-            renforcement musculaire
-          </option>
-          <option value="- prise en charge collective">
-            prise en charge collective
-          </option>
-          <option value="- gymnastique médicale adaptée">
-            gymnastique médicale adaptée
-          </option>
-          <option value="- éducation thérapeutique">
-            éducation thérapeutique
-          </option>
-          <option value="- gymnastique adaptée">gymnastique adaptée</option>
-          <option value="- désencombrement bronchique">
-            désencombrement bronchique
-          </option>
-          <option value="- rééducation respiratoire">
-            rééducation respiratoire
-          </option>
-          <option value="- ré-entrainement à l'effort (ergocycle)">
-            ré-entrainement à l'effort (ergocycle)
-          </option>
-          <option value="- séances collectives de rééducation à la marche">
-            séances collectives de rééducation à la marche
-          </option>
-          <option value="- séances collectives de gymnastique douce">
-            séances collectives de gymnastique douce
-          </option>
-          <option value="- séances collectives de gymnastique soutenue">
-            séances collectives de gymnastique soutenues
-          </option>
-          <option value="- séances collectives de rééducation respiratoire">
-            séances collectives de rééducation respiratoire
-          </option>
-          <option value="- séances collectives de rééducation de l'équilibre">
-            séances collectives de rééducation de l'équilibre
-          </option>
-          <option value="- séances collectives de relaxation">
-            séances collectives de relaxation
-          </option>
-        </select>
-      </fieldset>
-      <div id="bas_de_page"></div>
-      <br /><br /><br />
-
-      <!--     pour copier du text dans le clipboqrd-->
-      <div class="modal" id="modal">
-        <div id="modal-content">
-          <div id="modal-close" data-dismiss="dialog">X</div>
-          <div id="modal-header"><p>Bilan MK</p></div>
           <textarea
-            class="modal-body"
-            id="to-copy"
-            rows="30"
+            class="champ"
+            id="anamnese"
+            name="anamnese"
+            rows="5"
             cols="80"
           ></textarea>
-          <div id="modal-footer" class="modal-btns">
-            <a href="#" class="btn btn-copy" role="button">Copier</a>
-            <a
-              href="#"
-              class="btn btn-close"
-              role="button"
-              data-dismiss="dialog"
-              >Fermer</a
+
+          <br /><br />
+
+          <label class="donnees"> <span>HISTOIRE de la maladie</span> </label
+          ><br />
+          <textarea
+            class="champ"
+            id="histoire"
+            name="histoire"
+            rows="5"
+            cols="80"
+          ></textarea>
+          <br /><br />
+
+          <label class="donnees"> <span>Mode de vie</span> </label><br />
+          <textarea
+            id="modeDeVie"
+            name="modeDeVie"
+            rows="5"
+            cols="80"
+          ></textarea>
+          <br /><br />
+
+          <label class="donnees"> <span>Antécédents</span> </label><br />
+          <textarea id="atcd" name="atcd" rows="5" cols="80"></textarea>
+          <br /><br />
+
+          <label class="fonctionnel"><span>Prescription médicale</span> </label
+          ><br />
+          <textarea name="pec" id="pec" rows="3" cols="80"></textarea>
+          <select id="phrpec" onchange="replaceSelection('pec',this.id)">
+            <option value="">phrases</option>
+            <option value="BILAN ET REEDUCATION DE L'EQUILIBRE">
+              BILAN ET REEDUCATION DE L'EQUILIBRE
+            </option>
+            <option value="GYMNASTIQUE DYNAMIQUE">GYMNASTIQUE DYNAMIQUE</option>
+            <option value="REEDUCATION A LA MARCHE">
+              REEDUCATION A LA MARCHE
+            </option>
+            <option value="RENFORCEMENT MUSCULAIRE">
+              RENFORCEMENT MUSCULAIRE
+            </option>
+            <option value="TEST DE MARCHE DE 6 MN">
+              TEST DE MARCHE DE 6 MN
+            </option>
+            <option value="RELAXATION">RELAXATION</option>
+            <option value="renfort autonomie">renfort autonomie</option>
+            <option values="Réautonomisation, rééducation à la marche.">
+              Réautonomisation, rééducation à la marche
+            </option>
+            <option value="Rééducation à la marche">
+              Rééducation à la marche
+            </option>
+            <option value="Travail des transferts et de l'équilibre">
+              Travail des transferts et de l'équilibre
+            </option>
+            <option value="Kinésithérapie respiratoire">
+              Kinésithérapie respiratoire
+            </option>
+            <option value="Reprise progressive de la marche">
+              Reprise progressive de la marche
+            </option>
+            <option value="réautonomisation">réautonomisation</option>
+          </select>
+          <br /><br />
+          <label class="donnees"> <span>Date de l'opération</span> </label
+          ><br />
+          <input
+            id="operation"
+            name="operation"
+            class="date"
+            type="date"
+            size="18"
+          />
+          <br /><br />
+
+          <label class="donnees" for="appui"
+            ><span>Appui (total/limité/sans appui) </span></label
+          ><br /><input
+            id="appui"
+            name="appui"
+            type="text"
+            size="15"
+          /><br /><br />
+
+          <!-- debut attelles  -->
+
+          <label class="donnees" for="nom"
+            ><span>Immobilisation (plâtre/attelle...)</span></label
+          ><br /><select
+            id="immobilisation"
+            name="immobilisation"
+            type="text"
+            onfocus="this.style.color='darkgreen'"
+          >
+            <option value=""></option>
+            <optgroup label="Attelles, écharpes">
+              <option
+                value="attelle d'immobilisation coude au
+                  corps"
+              >
+                attelle d'immobilisation coude au corps
+              </option>
+              <option value="gilet orthopédique du Dr Berrhail">
+                gilet orthopédique du Dr Berrhail
+              </option>
+              <option value="attelle Dujarrier">attelle Dujarrier</option>
+              <option value="attelle de Zimmer">attelle de Zimmer</option>
+              <option value="attelle de poignet et/ou de la main">
+                attelle de poignet et/ou de la main
+              </option>
+              <option
+                value="attelle de synthèse prête à
+              l'emploi"
+              >
+                attelle de synthèse prête à l'emploi
+              </option>
+              <option value="attelle de synthèse résine">
+                attelle de synthèse résine
+              </option>
+              <option value="atelle de genou monobaleine">
+                atelle de genou monobaleine
+              </option>
+              <option value="attelle platrée">attelle platrée</option>
+              <option
+                value="écharpe d'immobilisation de
+          l'epaule"
+              >
+                écharpe d'immobilisation de l'epaule
+              </option>
+              <option
+                value="écharpe d'immobilisation coude au
+      corps"
+              >
+                écharpe d'immobilisation coude au corps
+              </option>
+            </optgroup>
+
+            <optgroup label="Releveurs, bottes, chaussures">
+              <option value="releveur standard">releveur standard</option>
+              <option value="releveur de pied dynamique">
+                releveur de pied dynamique
+              </option>
+              <option value="releveur Liberté">releveur Liberté</option>
+              <option value="releveur Thuasne">releveur Thuasne</option>
+              <option value="releveur sur moulage">releveur sur moulage</option>
+              <option value="botte platrée">botte platrée</option>
+              <option value="botte en résine">botte en résine</option>
+              <option value="botte de marche">botte de marche</option>
+              <option
+                value="botte de marche avec coussins d'air
+  gonflables"
+              >
+                botte de marche avec coussins d'air gonflables
+              </option>
+              <option value="chaussure de décharge du talon">
+                chaussure de décharge du talon
+              </option>
+              <option
+                value="chaussure de décharge de l'avant
+pied"
+              >
+                chaussure de décharge de l'avant pied
+              </option>
+            </optgroup>
+            <optgroup label="Ceintures">
+              <option value="ceinture de soutient abdominal">
+                ceinture de soutient abdominal
+              </option>
+              <option value="ceinture thoracique">ceinture thoracique</option>
+              <option value="ceinture lombaire">ceinture lombaire</option>
+              <option
+                value="ceinture lombaire à double renforts
+  de
+  contention"
+              >
+                ceinture lombaire à double renforts de contention
+              </option>
+            </optgroup>
+
+            <optgroup label="Colliers cervicals">
+              <option value="collier cervical">collier cervical</option>
+              <option value="collier cervical en mousse">
+                collier cervical en mousse
+              </option>
+              <option value="collier cervical Philadelphie">
+                collier cervical Philadelphie
+              </option>
+            </optgroup>
+            <optgroup label="Orthèses">
+              <option value="orthèse de cheville">orthèse de cheville</option>
+              <option
+                value="orthèse de cheville fonctionelle avec
+  coussins d'air"
+              >
+                orthèse de cheville fonctionelle avec coussins d'air
+              </option>
+              <option
+                value="orthèse du genou de Zimmer
+gonflables"
+              >
+                orthèse du genou de Zimmer gonflables
+              </option>
+              <option value="orthèse d'immobilisation du poignet">
+                orthèse d'immobilisation du poignet
+              </option>
+              <option value="orthèse pour l'arthrose du pouce">
+                orthèse pour l'arthrose du pouce
+              </option>
+              <option value="orthèse de genou articulée">
+                orthèse de genou articulée
+              </option>
+              <option
+                value="orthèse de genou avec fermeture a
+clips"
+              >
+                orthèse de genou avec fermeture a clips
+              </option>
+              <option
+                value="orthèse de genou avec fermeture a
+scratchs"
+              >
+                orthèse de genou avec fermeture a scratchs
+              </option>
+            </optgroup>
+            <optgroup label="Autres">
+              <option value="jersey">jersey</option>
+              <option value="bandes platrées">bandes platrées</option>
+              <option value="sangle acromio claviculaire">
+                sangle acromio claviculaire
+              </option>
+              <option value="coudière">coudière</option>
+              <option value="genouillère">genouillère</option>
+            </optgroup>
+          </select>
+        </fieldset>
+        <!-- fin attelles  -->
+        <br /><br />
+        <fieldset>
+          <legend class="dolor rubrique" align="center">
+            <span>Cotation de la douleur EVS</span>
+          </legend>
+          <br /><br />
+
+          <label class="dolor" for="auRepos"><span>Au Repos</span></label
+          ><br /><select id="douleurRepos" name="douleurRepos">
+            <option value="0" selected="selected">pas de douleur</option>
+            <option value="1">faible</option>
+            <option value="2">moyenne</option>
+            <option value="3">forte</option>
+            <option value="4">très forte</option>
+          </select>
+          <br /><br /><label class="dolor" for="aLaMobilisation"
+            ><span>A la mobilisation</span></label
+          ><select id="douleurMob" name="douleurMob">
+            <option value="0" selected="selected">pas de douleur</option>
+            <option value="1">faible</option>
+            <option value="2">moyenne</option>
+            <option value="3">forte</option>
+            <option value="4">très forte</option></select
+          ><br /><br /><label class="dolor" for="caracteristique"
+            ><span>Caractéristiques</span></label
+          >
+
+          <select multiple id="typeDouleur" name="typeDouleur">
+            <option value=""></option>
+            <option value="mécanique">Mécanique</option>
+            <option value="inflammatoire">inflammatoire</option>
+            <option value="élancements">Elancements</option>
+            <option value="pénétrante">Pénétrante</option>
+            <option value="brulûres">brulûres</option>
+            <option value="décharges électriques">Décharges électriques</option>
+            <option value="coups de poignard">Coups de poignard</option>
+            <option value="en étau">En étau</option>
+            <option value="tiraillement">tiraillement</option>
+          </select>
+          <br /><br />
+          <label class="dolor" for="localisation"
+            ><span>Localisation</span></label
+          >
+          <input id="localisation" name="localisation" type="text" /><br />
+        </fieldset>
+        <br /><br />
+
+        <fieldset>
+          <legend align="center">
+            <span class="fonctionnel rubrique">
+              <span>Fonctionnel</span>
+            </span>
+          </legend>
+          <br />
+
+          <label class="fonctionnel" for="assis"
+            ><span>Équilibre assis</span></label
+          >
+          <select id="assis">
+            <option class="oui" value="oui">oui</option>
+            <option class="non" value="non">non</option>
+          </select>
+          <br /><br />
+          <label class="fonctionnel"><span>Équilibre debout</span></label>
+          <select id="debout">
+            <option class="oui" value="oui">oui</option>
+            <option class="non" value="non">non</option>
+            <option value="risque élevé de chute grave, limitation sévère">
+              unipodal &lt 5 SECONDES
+            </option>
+            <option value="risque modéré de chute, limitation modérée">
+              DE 5 À 15 SECONDES
+            </option>
+            <option value="risque limité de chute, limitation minime">
+              DE 15 À 30 SECONDES
+            </option>
+            <option value="très faible risque de chute, pas de limitation">
+              &gt 30 S
+            </option></select
+          ><br /><br />
+          <label class="fonctionnel"
+            ><span>Transferts (lit vers fauteuil)</span></label
+          >
+          <select id="transferts">
+            <option class="oui" value="oui">oui</option>
+            <option class="non" value="non">non</option></select
+          ><br /><br />
+          <label class="fonctionnel"><span>Double tâche</span></label>
+          <select id="doubleTache">
+            <option class="oui" value="oui">oui</option>
+            <option class="non" value="non">non</option></select
+          ><br /><br />
+          <label class="fonctionnel"><span>Autonomie AVJ</span></label>
+          <textarea
+            id="autonomie"
+            name="autonomie"
+            rows="2"
+            cols="80"
+          ></textarea>
+          <select
+            open
+            id="phrautonomie"
+            onchange="replaceSelection('autonomie',this.id)"
+            ;
+            onfocus="this.selectedIndex= 0;"
+          >
+            <option value="">phrases</option>
+            <option value="autonome se déplace sans aide humaine">
+              autonome se déplace sans aide humaine
+            </option>
+            <option
+              value="nécessite aide à la marche et aux transferts,
+    "
             >
+              aide marche + transferts
+            </option>
+            <option value="nécessite aide pour les transferts et les AVQ, ">
+              aide transferts + AVQ
+            </option>
+            <option value="nécessite aide pour les AVQ, ">aide AVQ</option>
+          </select>
+          <br /><br />
+
+          <label class="fonctionnel"
+            ><span>Marche (périmètre, aides techniques ...)</span></label
+          >
+
+          <textarea id="marche" name="marche" rows="2" cols="80"></textarea>
+          <select
+            open
+            id="phrmarche"
+            onchange="replaceSelection('marche',this.id)"
+            ;
+            onfocus="this.selectedIndex= 0;"
+          >
+            <option value="">phrases</option>
+            <option
+              value="station debout non réalisable même avec aide humaine et technique, "
+            >
+              station debout non réalisable même avec aide humaine et technique,
+            </option>
+            <option
+              value="station debout réalisable avec aide humaine et technique,  "
+            >
+              station debout réalisable avec aide humaine et technique,
+            </option>
+            <option value="marche sans aide technique ">
+              marche sans aide technique
+            </option>
+            <option value="marche avec une canne simple ">
+              marche avec une canne simple
+            </option>
+            <option value="marche avec des cannes anglaises, ">
+              marche avec cannes anglaises
+            </option>
+            <option value="marche avec déambulateur ">
+              marche avec déambulateur
+            </option>
+            <option value="marche avec D2R, ">marche avec D2R</option>
+            <option value="marche avec D3R, ">marche avec D3R</option>
+            <option value="marche avec R4R, ">marche avec R4R</option>
+            <option value="et aide humaine, ">et aide humaine</option>
+            <option value="1/2 couloir aller retour ">
+              1/2 couloir aller retour
+            </option>
+            <option value="un couloir aller retour ">
+              un couloir aller retour
+            </option>
+            <option value=" avec pauses. ">avec pauses.</option>
+            <option value=" sans pause. ">sans pause.</option>
+            <option value="Bon équilibre. ">bon équilibre</option>
+            <option value="Equilibre moyen. ">équilibre moyen</option>
+            <option
+              value="Equilibre précaire avec risques de chute
+          importants. "
+            >
+              Équilibre précaire avec risque de chute important
+            </option>
+            <option value=" → risque élevé de chute grave, limitation sévère">
+              unipodal &lt 5 SECONDES
+            </option>
+            <option value=" → risque modéré de chute, limitation modérée">
+              unipodal DE 5 À 15 SECONDES
+            </option>
+            <option value=" → risque limité de chute, limitation minime">
+              unipodal DE 15 À 30 SECONDES
+            </option>
+            <option value=" → très faible risque de chute, pas de limitation">
+              unipodal + de 30 S
+            </option>
+          </select>
+        </fieldset>
+        <br /><br />
+
+        <fieldset>
+          <legend align="center">
+            <span class="trophique rubrique"><span>Trophique</span></span>
+          </legend>
+          <br />
+
+          <label class="trophique"><span>Oedème</span></label>
+          <select id="oedeme">
+            <option class="non" value="non">non</option>
+            <option class="oui" value="oui">oui</option></select
+          ><br /><br />
+          <label class="trophique"><span>Hématome</span></label>
+          <select id="hematome">
+            <option class="non" value="non">non</option>
+            <option class="oui" value="oui">oui</option></select
+          ><br /><br />
+          <label class="trophique"><span>Amyotrophie</span></label>
+          <select id="amyotrophie">
+            <option class="non" value="non">non</option>
+            <option class="oui" value="oui">oui</option></select
+          ><br /><br />
+          <label class="trophique"><span>Inflammation</span></label>
+          <select id="inflamation">
+            <option class="non" value="non">non</option>
+            <option class="oui" value="oui">oui</option></select
+          ><br /><br />
+
+          <label class="trophique"><span>Remarques</span></label>
+          <textarea
+            id="remarques"
+            name="remarques"
+            rows="4"
+            cols="80"
+          ></textarea>
+          <select
+            id="phrremarques"
+            onchange="replaceSelection('remarques',this.id)"
+          >
+            <option value="">phrases</option>
+            <option value="le port des bandes biflex">
+              le port des bandes biflex
+            </option>
+            <option value="le port des bas de contention">
+              le port des bas de contention
+            </option>
+            <option value="la présence du pansement">
+              la présence du pansement
+            </option>
+            <option value="la présence des agrafes">
+              la présence des agrafes
+            </option>
+            <option value="la présence des fils">la présence des fils</option>
+            <option value="hématomes MS">hématomes MS</option>
+            <option value="hématomes MI">hématomes MI</option>
+          </select>
+        </fieldset>
+        <br /><br />
+
+        <fieldset>
+          <legend align="center">
+            <span class="articulaire rubrique"><span>Articulaire</span></span>
+          </legend>
+          <br />
+
+          <label class="articulaire">
+            <span>Amplitude</span>
+          </label>
+          <textarea
+            id="amplitude"
+            name="amplitude"
+            rows="4"
+            cols="80"
+          ></textarea>
+          <select
+            id="phramplitude"
+            onchange="replaceSelection('amplitude',this.id)"
+          >
+            <option value="">phrases</option>
+            <option value="- Amplitudes de l'épaule en passif: ">
+              - Amplitudes de l'épaule en passif:
+            </option>
+            <option value="- Amplitudes de l'épaule en actif: ">
+              - Amplitudes de l'épaule en actif:
+            </option>
+            <option value="- Amplitudes du genou en passif: ">
+              - Amplitudes du genou en passif:
+            </option>
+            <option value="- Amplitudes du genou en actif: ">
+              - Amplitudes du genou en actif:
+            </option>
+            <option value="- Amplitudes du coude en passif: ">
+              - Amplitudes du coude en passif:
+            </option>
+            <option value="- Amplitudes du coude en actif: ">
+              - Amplitudes du coude en actif:
+            </option>
+
+            <option value="flexion: ">flexion:</option>
+            <option value="extension: ">extension:</option>
+            <option value="abduction: ">abduction:</option>
+            <option value="adduction: ">adduction:</option>
+            <option value="rotation externe: ">rotation externe:</option>
+            <option value="rotation interne: ">rotation interne:</option>
+            <option value="main bouche: ">main bouche:</option>
+            <option value="main tête: ">main tête:</option>
+            <option value="main dos: ">main dos:</option>
+            <option value="flexum des genoux">flexum des genoux</option>
+            <option value="flexum du genou D">flexum du genou D</option>
+            <option value="flexum du genou G">flexum du genou G</option>
+            <option value="non réductible">non réductible</option>
+            <option value="réductible">réductible</option>
+          </select>
+
+          <br /><br />
+
+          <label class="articulaire">
+            <span>Attitude vicieuse</span>
+          </label>
+          <textarea
+            id="attitudeVicieuse"
+            name="attitudeVicieuse"
+            rows="4"
+            cols="80"
+          ></textarea>
+          <select
+            id="phrattitudeVicieuse"
+            onchange="replaceSelection('attitudeVicieuse',this.id)"
+          >
+            <option value="">phrases</option>
+            <option value="en flexum des hanches">en flexum des hanches</option>
+            <option value="attitude cyphotique">attitude cyphotique</option>
+            <option value="flexum des genoux">flexum des genoux</option>
+            <option value="flexum du genou D">flexum du genou D</option>
+            <option value="flexum du genou G">flexum du genou G</option>
+            <option value="non réductible">non réductible</option>
+            <option value="réductible">réductible</option>
+          </select>
+        </fieldset>
+        <br /><br />
+        <fieldset>
+          <legend align="center">
+            <span class="musculaire rubrique"><span>Musculaire</span></span>
+          </legend>
+          <br /><br />
+
+          <label class="musculaire">
+            <span>Verrouillage quadriceps</span>
+          </label>
+
+          <textarea id="verrouillage" rows="4" cols="80"></textarea>
+          <select
+            id="phrverrouillage"
+            onchange="replaceSelection('verrouillage',this.id)"
+          >
+            <option value="">phrases</option>
+            <option value="verrouillage incomplet à droite">
+              verrouillage incomplet à droite
+            </option>
+            <option value="verrouillage incomplet à gauche">
+              verrouillage incomplet à gauche
+            </option>
+            <option value="EMFM quadriceps D (DANIELS ET WORTHINGHAM): ">
+              EMFM quadriceps D
+            </option>
+            <option value="EMFM quadriceps G (DANIELS ET WORTHINGHAM): ">
+              EMFM quadriceps G
+            </option>
+          </select>
+
+          <br /><br />
+          <label class="musculaire">
+            <span>Autres groupes musculaires</span>
+          </label>
+
+          <textarea id="autres" rows="4" cols="80"></textarea>
+          <select id="phrautres" onchange="replaceSelection('autres',this.id)">
+            <option value="">phrases</option>
+            <option value="déficit global de force musculaire">
+              déficit global de force musculaire
+            </option>
+            <option value="bonne conservation de la force musculaire">
+              bonne conservation de la force musculaire
+            </option>
+            <option value="hémiparésie G">hémiparésie G</option>
+            <option value="hémiparésie D">hémiparésie D</option>
+          </select>
+        </fieldset>
+        <br /><br />
+
+        <fieldset>
+          <legend align="center">
+            <span class="respicogito rubrique"
+              ><span>Cognitif / Relationnel</span></span
+            >
+          </legend>
+          <br /><br />
+
+          <label class="respicogito">
+            <span>Fonctions supérieures</span>
+          </label>
+          <textarea id="fonctionsSuperieures" rows="4" cols="80"></textarea>
+          <select
+            id="phrfonctionsSuperieures"
+            onchange="replaceSelection('fonctionsSuperieures',this.id)"
+          >
+            <option value="">phrases</option>
+            <option value="bonne compréhension des consignes">
+              bonne compréhension des consignes
+            </option>
+            <option value="Troubles cognitifs légers">
+              Troubles cognitifs légers
+            </option>
+            <option value="troubles cognitifs sévères">
+              troubles cognitifs sévères
+            </option>
+            <option value="désorientaton spatio-temporelle">
+              désorientaton spatio-temporelle
+            </option>
+          </select>
+        </fieldset>
+        <br /><br />
+        <fieldset>
+          <legend align="center">
+            <span class="respicogito rubrique"><span>Respiratoire</span></span>
+          </legend>
+          <br /><br />
+          <label class="respicogito">
+            <span>Fonctions respiratoires</span>
+          </label>
+          <textarea id="fonctionsRespiratoires" rows="4" cols="120"></textarea>
+          <select
+            id="phrfonctionsRespiratoires"
+            onchange="replaceSelection('fonctionsRespiratoires',this.id)"
+          >
+            <option value="">phrases</option>
+            <option value="Sous O2 en chambre à ">O2 en chambre</option>
+            <option value="SatO2/pouls au repos = ">SatO2/pouls =</option>
+            <option
+              value="Dyspnée: stade V essoufflé au repos (Sadoul
+et Polu). "
+            >
+              dyspnée au repos
+            </option>
+            <option
+              value="Dyspnée: stade IV essoufflé à la marche lente (Sadoul et Polu). "
+            >
+              dyspnée à la marche lente
+            </option>
+            <option
+              value="Dyspnée: stade III essoufflé à la marche normale en terrain plat (Sadoul et Polu). "
+            >
+              dyspnée à la marche normale
+            </option>
+            <option
+              value="Dyspnée: stade II essoufflé au 1er étage ou à la marche rapide ou en pente (Sadoul et Polu). "
+            >
+              dyspnée à la marche rapide
+            </option>
+            <option
+              value="Dyspnée: stade I essoufflé pour des efforts importants ou au-delà du 2eme étage (Sadoul et Polu). "
+            >
+              dyspnée à l'effort
+            </option>
+            <option value="Expectoration: crachats muqueux. ">
+              blanc ou translucide
+            </option>
+            <option value="Expectoration: crachats purulents. ">
+              jaune ou verdâtre
+            </option>
+            <option
+              value="Expectoration: crachats
+muco-purulents. "
+            >
+              blanc avec stries jaunâtres
+            </option>
+            <option value="Expectoration: crachats hémoptoïques. ">
+              blanc avec des stries rouges
+            </option>
+            <option value="Expectoration: crachats hémorragiques. ">
+              rouges
+            </option>
+          </select>
+        </fieldset>
+        <br /><br />
+        <fieldset>
+          <legend align="center">
+            <span class="articulaire rubrique"><span>Rééducation</span></span>
+          </legend>
+          <br /><br />
+
+          <label class="donnees">
+            <span>Projet kiné du patient</span>
+          </label>
+          <textarea
+            name="projetKine"
+            id="projetKine"
+            rows="3"
+            cols="80"
+          ></textarea>
+          <select
+            id="phrprojetkine"
+            onchange="replaceSelection('projetKine',this.id)"
+          >
+            <option value="">phrases</option>
+            <option value="retrouver une marche fonctionnelle.">
+              retrouver une marche fonctionnelle.
+            </option>
+            <option value="souhaite améliorer son périmètre de marche.">
+              améliorer périmètre de marche
+            </option>
+            <option value="retour à domicile.">RAD</option>
+            <option value="retour à la maison de retraite">
+              retour à la maison de retraite
+            </option>
+            <option value="retour à la résidence sénior">
+              retour à la résidence sénior
+            </option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <label class="donnees">
+            <span>Objectifs et prise en charge prévisionnelle</span>
+          </label>
+          <textarea
+            name="priseEnChargePrev"
+            id="priseEnChargePrev"
+            rows="3"
+            cols="80"
+          ></textarea>
+          <select
+            id="phrpecPrev"
+            onchange="replaceSelection('priseEnChargePrev',this.id)"
+          >
+            <option value="">phrases</option>
+            <option value="A court terme: ">A court terme:</option>
+            <option value="A long terme: ">A long terme:</option>
+            <option value="- travail de la station debout et des transferts">
+              travail de la station debout et des transferts
+            </option>
+            <option value="- rééducation à la marche et de l'équilibre">
+              rééducation à la marche et de l'équilibre
+            </option>
+            <option value="- rééducation à la marche">
+              rééducation à la marche
+            </option>
+            <option value="- reprise progressive de la marche">
+              reprise progressive de la marche
+            </option>
+            <option
+              value="- amélioration de l'endurance et de la qualité de la marche"
+            >
+              amélioration de l'endurance et de la qualité de la marche
+            </option>
+            <option
+              value="- apprentissage des techniques prévention de luxation: lit, position assise, baignoire, automobile"
+            >
+              apprentissage des techniques prévention de luxation: lit, position
+              assise, baignoire, automobile
+            </option>
+            <option value="- mobilisation active et passive">
+              mobilisation active et passive
+            </option>
+            <option value="- travail individuel de l'équilibre">
+              travail de l'équilibre
+            </option>
+            <option value="- travail des transferts">
+              travail des transferts
+            </option>
+            <option value="- renforcement musculaire">
+              renforcement musculaire
+            </option>
+            <option value="- prise en charge collective">
+              prise en charge collective
+            </option>
+            <option value="- gymnastique médicale adaptée">
+              gymnastique médicale adaptée
+            </option>
+            <option value="- éducation thérapeutique">
+              éducation thérapeutique
+            </option>
+            <option value="- gymnastique adaptée">gymnastique adaptée</option>
+            <option value="- désencombrement bronchique">
+              désencombrement bronchique
+            </option>
+            <option value="- rééducation respiratoire">
+              rééducation respiratoire
+            </option>
+            <option value="- ré-entrainement à l'effort (ergocycle)">
+              ré-entrainement à l'effort (ergocycle)
+            </option>
+            <option value="- séances collectives de rééducation à la marche">
+              séances collectives de rééducation à la marche
+            </option>
+            <option value="- séances collectives de gymnastique douce">
+              séances collectives de gymnastique douce
+            </option>
+            <option value="- séances collectives de gymnastique soutenue">
+              séances collectives de gymnastique soutenues
+            </option>
+            <option value="- séances collectives de rééducation respiratoire">
+              séances collectives de rééducation respiratoire
+            </option>
+            <option value="- séances collectives de rééducation de l'équilibre">
+              séances collectives de rééducation de l'équilibre
+            </option>
+            <option value="- séances collectives de relaxation">
+              séances collectives de relaxation
+            </option>
+          </select>
+        </fieldset>
+        <div id="bas_de_page"></div>
+        <br /><br /><br />
+
+        <!--     pour copier du text dans le clipboqrd-->
+        <div class="modal" id="modal">
+          <div id="modal-content">
+            <div id="modal-close" data-dismiss="dialog">X</div>
+            <div id="modal-header"><p>Bilan MK</p></div>
+            <textarea
+              class="modal-body"
+              id="to-copy"
+              rows="30"
+              cols="80"
+            ></textarea>
+            <div id="modal-footer" class="modal-btns">
+              <a href="#" class="btn btn-copy" role="button">Copier</a>
+              <a
+                href="#"
+                class="btn btn-close"
+                role="button"
+                data-dismiss="dialog"
+                >Fermer</a
+              >
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </form>
   </body>
 </html>

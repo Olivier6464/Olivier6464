@@ -94,9 +94,7 @@ function affichage() {
     }
   }
   bil +=
-    rtl +
-    "Date d'admission: " +
-    frenchdate(document.getElementById("entree").value);
+    rtl + "Admission le " + frenchdate(document.getElementById("entree").value);
   if (document.getElementById("anamnese").value !== "") {
     bil += rtl + spacer.box("ANAMNÈSE", egal);
     bil += rtl + document.getElementById("anamnese").value;
@@ -302,16 +300,18 @@ function affichage() {
   modal.children[0].addEventListener("click", function (e) {
     e.stopPropagation();
   });
- }
-
-function disableScrolling(){
-  var x=window.scrollX;
-  var y=window.scrollY;
-  window.onscroll=function(){window.scrollTo(x, y);};
 }
 
-function enableScrolling(){
-  window.onscroll=function(){};
+function disableScrolling() {
+  var x = window.scrollX;
+  var y = window.scrollY;
+  window.onscroll = function () {
+    window.scrollTo(x, y);
+  };
+}
+
+function enableScrolling() {
+  window.onscroll = function () {};
 }
 
 function replaceSelection(idfield, idoption) {
