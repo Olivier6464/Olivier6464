@@ -95,7 +95,7 @@ function affichage() {
   }
   bil +=
     rtl +
-    "Date de l'admission:" +
+    "Date de l'admission: " +
     frenchdate(document.getElementById("entree").value);
   if (document.getElementById("anamnese").value !== "") {
     bil += rtl + spacer.box("ANAMNÈSE", egal);
