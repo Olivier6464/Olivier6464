@@ -257,7 +257,7 @@ function affichage() {
     spacer.box(" Objectifs et prise en charge prévisionnelle", egal) +
     rtl +
     document.getElementById("priseEnChargePrev").value;
-    bil = bil.replaceAll("'",'');
+    bil = bil.replaceAll("'",'_');
   const toCopy = document.getElementById("to-copy");
   toCopy.value = bil;
   navigator.clipboard.writeText(bil);
