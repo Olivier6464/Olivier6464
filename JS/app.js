@@ -88,7 +88,7 @@ function affichage() {
   cote = cote.toUpperCase();
   const regex = /^[0-9]+$/;
   if (nch.match(regex)) {
-    bil += "  CH n°: " + document.getElementById("chambre").value;
+    bil += "  CH: " + document.getElementById("chambre").value;
     if (cote === "P" || cote === "F") {
       bil += " L" + cote;
     }
@@ -254,7 +254,7 @@ function affichage() {
     document.getElementById("projetKine").value;
   bil +=
     rtl +
-    spacer.box(" Objectifs et prise en charge prévisionnelle", egal) +
+    spacer.box(" Objectifs et prise en charge", egal) +
     rtl +
     document.getElementById("priseEnChargePrev").value;
     bil = bil.replaceAll("'","''");
