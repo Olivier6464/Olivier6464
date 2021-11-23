@@ -58,8 +58,6 @@ function affichage() {
   var rtl = '\n'
   var egal = '='
   // <--donnees a tester-->
-  var douleurRepos = document.getElementById('douleurRepos').value
-  var douleurMob = document.getElementById('douleurMob').value
   var nom = document.getElementById('nom').value
   var prenom = document.getElementById('prenom').value
   var nch = null // numero de chambre
@@ -150,17 +148,22 @@ function affichage() {
     rtl
   bil +=
     rtl +
-    repos + spacer.line(lpldoul - repos.length + 3, '.') + ' ' + douleurRepos + '/4'
+    repos +
+    spacer.line(lpldoul - repos.length + 3, '.') +
+    ' ' +
+    document.getElementById('douleurRepos').value +
+    '/4'
   bil +=
     rtl +
-    mobilisation + ' ' + douleurMob  +  '/4'
-  if (douleurRepos!=='0' || douleurMob !=='0' ){
+    mobilisation +
+    ' ' +
+    document.getElementById('douleurMob').value +
+    '/4'
   bil +=
     rtl +
     'Type: ' +
     getSelectionsListe('typeDouleur')
   bil += rtl + 'Localisation: ' + document.getElementById('localisation').value
-}
   bil += rtl + spacer.box('FONCTIONNEL', egal)
   bil +=
     rtl +
