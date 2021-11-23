@@ -96,33 +96,37 @@ function affichage() {
     "Entré(e): " +
     frenchdate(document.getElementById("entree").value);
   if (document.getElementById("anamnese").value !== "") {
-    bil += rtl + spacer.box("ANAMNÈSE", egal);
-    bil += rtl + document.getElementById("anamnese").value;
+    bil += rtl + rtl +
+    `======= Anamnèse  =======`;
+    bil += rtl + rtl + document.getElementById("anamnese").value;
   }
 
   if (document.getElementById("histoire").value !== "") {
-    bil += rtl + spacer.box("HISTOIRE DE LA MALADIE", egal);
-    bil += rtl + document.getElementById("histoire").value;
+    bil += rtl + rtl +
+    `======= Histoire de la maladie  =======`;
+    bil += rtl + rtl +  document.getElementById("histoire").value;
   }
   if (document.getElementById("modeDeVie").value !== "") {
-    bil += rtl + spacer.box(" Mode de vie", egal);
-    bil += rtl + document.getElementById("modeDeVie").value;
+    bil += rtl + rtl +
+    `======= Mode de vie  =======`;
+    bil += rtl + rtl + document.getElementById("modeDeVie").value;
   }
   if (document.getElementById("atcd").value !== "") {
-    bil += rtl + spacer.box("Antécédents", egal);
-    bil += rtl + document.getElementById("atcd").value;
+    bil += rtl + rtl + 
+    `======= Antécédants  =======`;
+    bil += rtl + rtl + document.getElementById("atcd").value;
   }
   bil +=
-    rtl +
-    spacer.box(" Prescription médicale", egal) +
-    rtl +
+    rtl + rtl +
+    `======= Prescription médicale  =======`
+     + rtl + rtl +
     document.getElementById("pec").value;
   if (document.getElementById("operation").value !== "") {
     bil +=
       rtl +
       rtl +
       "Date de l'opération: " +
-      frenchdate(document.getElementById("operation").value);
+      frenchdate(document.getElementById("operation").value) + rtl;
   }
   if (document.getElementById("appui").value !== "") {
     bil +=
@@ -132,7 +136,7 @@ function affichage() {
   }
   if (document.getElementById("immobilisation").value !== "") {
     bil +=
-      rtl +
+      rtl + rtl +
       "Immobilisation (plâtre/attelle...): " +
       document.getElementById("immobilisation").value;
   }
@@ -160,7 +164,7 @@ function affichage() {
     'Type: ' +
     getSelectionsListe('typeDouleur')
   bil += rtl + 'Localisation: ' + document.getElementById('localisation').value
-  bil += rtl + spacer.box('FONCTIONNEL', egal)
+  bil += rtl + spacer.box('Fonctionnel', egal)
   bil +=
     rtl +
     assis +
@@ -190,7 +194,7 @@ function affichage() {
   bil +=
     rtl + rtl + "Autonomie AVJ: " + document.getElementById("autonomie").value;
   bil += rtl + rtl + marche + document.getElementById("marche").value;
-  bil += rtl + spacer.box("TROPHICITÉ", egal);
+  bil += rtl + spacer.box("Trophicité", egal);
   bil +=
     rtl +
     oedeme +
@@ -220,14 +224,14 @@ function affichage() {
     bil += rtl + rtl + "A noter: " + rtl + remarques;
   }
   if (document.getElementById("attitudeVicieuse").value !== "") {
-    bil += rtl + spacer.box("ARTICULAIRE", egal);
+    bil += rtl + spacer.box("Articulaire", egal);
     bil +=
       rtl +
       "Attitude vicieuse: " +
       document.getElementById("attitudeVicieuse").value;
     bil += rtl + "Amplitude: " + document.getElementById("amplitude").value;
   }
-  bil += rtl + spacer.box("MUSCULAIRE", egal);
+  bil += rtl + spacer.box("Musculaire", egal);
   bil +=
     rtl +
     "Verrouillage quadriceps: " +
