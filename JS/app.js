@@ -261,9 +261,14 @@ function affichage() {
     rtl +
     document.getElementById("priseEnChargePrev").value;
     bil = bil.replaceAll("'","''");
-  const toCopy = document.getElementById("to-copy");
+   
+  let toCopy = document.getElementById("to-copy");
   toCopy.value = bil;
-  navigator.clipboard.writeText(bil);
+  toCopy.select();
+  document.execCommand('copy');
+
+
+  // navigator.clipboard.writeText(toCopy.value);
 
   const modal = document.getElementById("modal");
   modal.classList.add("show");
@@ -272,7 +277,11 @@ function affichage() {
   function modalClosePerKey(e) {
     if (e.key === "Escape") {
       const theCopy = document.getElementById("to-copy");
-      navigator.clipboard.writeText(theCopy.value);
+      let toCopy = document.getElementById("to-copy");
+      toCopy.select();
+      document.execCommand('copy');
+      
+      // navigator.clipboard.writeText(theCopy.value);
       document.removeEventListener("keyup", modalClosePerKey);
       modal.classList.remove("show");
       enableScrolling();
