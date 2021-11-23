@@ -54,6 +54,7 @@ function affichage() {
   // <--donnees a tester-->
   var nom = document.getElementById('nom').value
   var prenom = document.getElementById('prenom').value
+  var remarques = document.getElementById('remarques').value
   var nch = null // numero de chambre
   var cote = null // cote 
   /* les chaines les plus longues de chaque rubrique expl: fonctionnelle */
