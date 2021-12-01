@@ -166,7 +166,7 @@
 
           <br /><br />
 
-          <label class="donnees"> <span>MOTIF d'admission</span> </label><br />
+          <label class="donnees" onclick="rmuglyspaces('anamnese')"> <span>MOTIF d'admission</span> </label><br />
 
           <textarea
             class="champ"
@@ -178,7 +178,7 @@
 
           <br /><br />
 
-          <label class="donnees"> <span>HISTOIRE de la maladie</span> </label
+          <label class="donnees" onclick="rmuglyspaces('histoire')"> <span>HISTOIRE de la maladie</span> </label
           ><br />
           <textarea
             class="champ"
@@ -189,7 +189,7 @@
           ></textarea>
           <br /><br />
 
-          <label class="donnees"> <span>Mode de vie</span> </label><br />
+          <label class="donnees" onclick="rmuglyspaces('modeDeVie')"> <span>Mode de vie</span> </label><br />
           <textarea
             id="modeDeVie"
             name="modeDeVie"
@@ -198,11 +198,11 @@
           ></textarea>
           <br /><br />
 
-          <label class="donnees"> <span>Antécédents</span> </label><br />
+          <label class="donnees" onclick="rmuglyspaces('atcd')"> <span>Antécédents</span> </label><br />
           <textarea id="atcd" name="atcd" rows="5" cols="80"></textarea>
           <br /><br />
 
-          <label class="fonctionnel"><span>Prescription médicale</span> </label
+          <label class="fonctionnel" onclick="rmuglyspaces('pec')"><span>Prescription médicale</span> </label
           ><br />
           <textarea name="pec" id="pec" rows="3" cols="80"></textarea>
           <select id="phrpec" onchange="replaceSelection('pec',this.id)">
