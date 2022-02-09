@@ -52,11 +52,11 @@ function affichage() {
   const rtl = "\n";
   const egal = "=";
   // <--donnees a tester-->
-  var nom = document.getElementById('nom').value
-  var prenom = document.getElementById('prenom').value
-  var remarques = document.getElementById('remarques').value
-  var nch = null // numero de chambre
-  var cote = null // cote 
+  var nom = document.getElementById("nom").value;
+  var prenom = document.getElementById("prenom").value;
+  var remarques = document.getElementById("remarques").value;
+  var nch = null; // numero de chambre
+  var cote = null; // cote
   /* les chaines les plus longues de chaque rubrique expl: fonctionnelle */
   const marche = "Marche (périmètre, aides techniques ...): ";
   const lplfonc = marche.length;
@@ -92,41 +92,38 @@ function affichage() {
     }
   }
   bil +=
-    rtl +
-    "Entré(e): " +
-    frenchdate(document.getElementById("entree").value);
+    rtl + "Entré(e): " + frenchdate(document.getElementById("entree").value);
   if (document.getElementById("anamnese").value !== "") {
-    bil += rtl + rtl +
-    `======= Anamnèse  =======`;
+    bil += rtl + rtl + `======= Anamnèse  =======`;
     bil += rtl + rtl + document.getElementById("anamnese").value;
   }
 
   if (document.getElementById("histoire").value !== "") {
-    bil += rtl + rtl +
-    `======= Histoire de la maladie  =======`;
-    bil += rtl + rtl +  document.getElementById("histoire").value;
+    bil += rtl + rtl + `======= Histoire de la maladie  =======`;
+    bil += rtl + rtl + document.getElementById("histoire").value;
   }
   if (document.getElementById("modeDeVie").value !== "") {
-    bil += rtl + rtl +
-    `======= Mode de vie  =======`;
+    bil += rtl + rtl + `======= Mode de vie  =======`;
     bil += rtl + rtl + document.getElementById("modeDeVie").value;
   }
   if (document.getElementById("atcd").value !== "") {
-    bil += rtl + rtl + 
-    `======= Antécédants  =======`;
+    bil += rtl + rtl + `======= Antécédants  =======`;
     bil += rtl + rtl + document.getElementById("atcd").value;
   }
   bil +=
-    rtl + rtl +
-    `======= Prescription médicale  =======`
-     + rtl + rtl +
+    rtl +
+    rtl +
+    `======= Prescription médicale  =======` +
+    rtl +
+    rtl +
     document.getElementById("pec").value;
   if (document.getElementById("operation").value !== "") {
     bil +=
       rtl +
       rtl +
       "Date de l'opération: " +
-      frenchdate(document.getElementById("operation").value) + rtl;
+      frenchdate(document.getElementById("operation").value) +
+      rtl;
   }
   if (document.getElementById("appui").value !== "") {
     bil +=
@@ -136,7 +133,8 @@ function affichage() {
   }
   if (document.getElementById("immobilisation").value !== "") {
     bil +=
-      rtl + rtl +
+      rtl +
+      rtl +
       "Immobilisation (plâtre/attelle...): " +
       document.getElementById("immobilisation").value;
   }
@@ -149,22 +147,19 @@ function affichage() {
   bil +=
     rtl +
     repos +
-    spacer.line(lpldoul - repos.length + 3, '.') +
-    ' ' +
-    document.getElementById('douleurRepos').value +
-    '/4'
+    spacer.line(lpldoul - repos.length + 3, ".") +
+    " " +
+    document.getElementById("douleurRepos").value +
+    "/4";
   bil +=
     rtl +
     mobilisation +
-    ' ' +
-    document.getElementById('douleurMob').value +
-    '/4'
-  bil +=
-    rtl +
-    'Type: ' +
-    getSelectionsListe('typeDouleur')
-  bil += rtl + 'Localisation: ' + document.getElementById('localisation').value
-  bil += rtl + spacer.box('Fonctionnel', egal)
+    " " +
+    document.getElementById("douleurMob").value +
+    "/4";
+  bil += rtl + "Type: " + getSelectionsListe("typeDouleur");
+  bil += rtl + "Localisation: " + document.getElementById("localisation").value;
+  bil += rtl + spacer.box("Fonctionnel", egal);
   bil +=
     rtl +
     assis +
@@ -256,7 +251,10 @@ function affichage() {
   }
   bil +=
     rtl +
-    spacer.box(" Projet kiné du patient", egal) +
+    spacer.box(
+      " Projet kiné du patient (attentes et besoins du patient)",
+      egal
+    ) +
     rtl +
     document.getElementById("projetKine").value;
   bil +=
@@ -264,15 +262,12 @@ function affichage() {
     spacer.box(" Objectifs et prise en charge", egal) +
     rtl +
     document.getElementById("priseEnChargePrev").value;
-    bil = bil.replaceAll("'","''");
-   
+  bil = bil.replaceAll("'", "''");
+
   let toCopy = document.getElementById("to-copy");
   toCopy.value = bil;
   toCopy.select();
-  document.execCommand('copy');
-
-
-  // navigator.clipboard.writeText(toCopy.value);
+  navigator.clipboard.writeText(toCopy.value);
 
   const modal = document.getElementById("modal");
   modal.classList.add("show");
@@ -283,8 +278,8 @@ function affichage() {
       const theCopy = document.getElementById("to-copy");
       let toCopy = document.getElementById("to-copy");
       toCopy.select();
-      document.execCommand('copy');
-      
+      navigator.clipboard.writeText(toCopy.value);
+
       // navigator.clipboard.writeText(theCopy.value);
       document.removeEventListener("keyup", modalClosePerKey);
       modal.classList.remove("show");
@@ -440,8 +435,8 @@ function fdate() {
 fdate();
 
 function rmuglyspaces(id) {
-  ch=document.getElementById(id).value
-  ch = ch.replace(/^\s*/gm, '')
-  ch = ch.replace(/  +/g, ' ')
-  document.getElementById(id).value = ch
+  ch = document.getElementById(id).value;
+  ch = ch.replace(/^\s*/gm, "");
+  ch = ch.replace(/  +/g, " ");
+  document.getElementById(id).value = ch;
 }

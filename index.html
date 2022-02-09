@@ -18,7 +18,7 @@
     <script type="text/javascript" defer src="JS/app.js"></script>
 
     <!-- <script type = "text/javascript" src = "JS/frenchdate.js"></script> -->
-    <title>bilan MK23</title>
+    <title>bilan MK</title>
   </head>
 
   <body>
@@ -51,11 +51,7 @@
         <li id="copier" onclick="affichage()">Copier</li>
         <!-- on affiche les numeros internes -->
         <li>
-          <a
-            href="https://www.has-sante.fr/upload/docs/application/pdf/Evaluation_%20fonctionnelle_%20AVC_ref.pdf"
-            target="_blank"
-            >Google</a
-          >
+          <a href="Actes/index.html" target="_blank">Actes</a>
         </li>
         <li><a href="#top">Haut</a></li>
         <li><a href="#bas_de_page">Bas</a></li>
@@ -116,7 +112,7 @@
           <div class="container-1">
             <div>
               <label class="donnees lbl-entry" for="entrée"
-                ><span>Entré(e) le: </span></label
+                ><span><i class="fa fa-calendar">Entré(e) le:</i> </span></label
               >
             </div>
             <div>
@@ -166,7 +162,9 @@
 
           <br /><br />
 
-          <label class="donnees" onclick="rmuglyspaces('anamnese')"> <span>MOTIF d'admission</span> </label><br />
+          <label class="donnees" onclick="rmuglyspaces('anamnese')">
+            <span>MOTIF d'admission</span> </label
+          ><br />
 
           <textarea
             class="champ"
@@ -178,7 +176,8 @@
 
           <br /><br />
 
-          <label class="donnees" onclick="rmuglyspaces('histoire')"> <span>HISTOIRE de la maladie</span> </label
+          <label class="donnees" onclick="rmuglyspaces('histoire')">
+            <span>HISTOIRE de la maladie</span> </label
           ><br />
           <textarea
             class="champ"
@@ -189,7 +188,9 @@
           ></textarea>
           <br /><br />
 
-          <label class="donnees" onclick="rmuglyspaces('modeDeVie')"> <span>Mode de vie</span> </label><br />
+          <label class="donnees" onclick="rmuglyspaces('modeDeVie')">
+            <span>Mode de vie</span> </label
+          ><br />
           <textarea
             id="modeDeVie"
             name="modeDeVie"
@@ -198,11 +199,14 @@
           ></textarea>
           <br /><br />
 
-          <label class="donnees" onclick="rmuglyspaces('atcd')"> <span>Antécédents</span> </label><br />
+          <label class="donnees" onclick="rmuglyspaces('atcd')">
+            <span>Antécédents</span> </label
+          ><br />
           <textarea id="atcd" name="atcd" rows="5" cols="80"></textarea>
           <br /><br />
 
-          <label class="fonctionnel" onclick="rmuglyspaces('pec')"><span>Prescription médicale</span> </label
+          <label class="fonctionnel" onclick="rmuglyspaces('pec')"
+            ><span>Prescription médicale</span> </label
           ><br />
           <textarea name="pec" id="pec" rows="3" cols="80"></textarea>
           <select id="phrpec" onchange="replaceSelection('pec',this.id)">
@@ -900,7 +904,7 @@ muco-purulents. "
           <br /><br />
 
           <label class="donnees">
-            <span>Projet kiné du patient</span>
+            <span>Projet kiné du patient (attentes et besoins du patient)</span>
           </label>
           <textarea
             name="projetKine"
@@ -949,6 +953,9 @@ muco-purulents. "
             <option value="- travail de la station debout et des transferts">
               travail de la station debout et des transferts
             </option>
+            <option value="- travail de la marche avec aide technique">
+              travail de la marche avec aide technique
+            </option>
             <option value="- rééducation à la marche et de l'équilibre">
               rééducation à la marche et de l'équilibre
             </option>
@@ -975,11 +982,43 @@ muco-purulents. "
             <option value="- travail individuel de l'équilibre">
               travail de l'équilibre
             </option>
+            <option
+              value="- recherche de la projection antérieure du centre du gravité"
+            >
+              recherche de la projection antérieure du centre du gravité
+            </option>
+            <option
+              value="- travail des stratégies d'adaptation posturale et de protection par des exercices de déséquilibration intrinsèque et extrinsèques"
+            >
+              travail des stratégies d'adaptation posturale et de protection par
+              des exercices de déséquilibration intrinsèque et extrinsèques
+            </option>
+            <option
+              value="- travail en double tâche: contrôle postural et mouvement volontaire complexe et contrôle postural et tâche cognitive"
+            >
+              travail en double tâche: contrôle postural et mouvement volontaire
+              complexe et contrôle postural et tâche cognitive
+            </option>
+            <option value="- travail du relevé du sol">
+              travail du relevé du sol
+            </option>
             <option value="- travail des transferts">
               travail des transferts
             </option>
+            <option
+              value="- travail des transferts: debout/assis, assis/debout et retournement et lever du lit"
+            >
+              travail des transferts: debout/assis, assis/debout et retournement
+              et lever du lit
+            </option>
             <option value="- renforcement musculaire">
               renforcement musculaire
+            </option>
+            <option
+              value="- renforcement musculaire, des quadriceps, des muscles stabilisateurs du bassin et des triceps suraux en charge"
+            >
+              renforcement musculaire, des quadriceps, des muscles
+              stabilisateurs du bassin et des triceps suraux en charge
             </option>
             <option value="- prise en charge collective">
               prise en charge collective
