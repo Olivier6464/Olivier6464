@@ -262,7 +262,7 @@ function affichage() {
     spacer.box(" Objectifs et prise en charge", egal) +
     rtl +
     document.getElementById("priseEnChargePrev").value;
-  bil = bil.replaceAll("'", "''");
+  bil = bil.replaceAll("'", "' '");
 
   let toCopy = document.getElementById("to-copy");
   toCopy.value = bil;
