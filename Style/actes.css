@@ -5,6 +5,11 @@
   font-size: 16px;
 }
 
+body {
+  font-family: monospace;
+  font-weight: 500;
+}
+
 
 hr.stbleu {
   height: 2px;
@@ -19,12 +24,14 @@ hr.stbleu {
   }
 
 h1 {
+  font-size: 1em;
   color: white;
   text-align: center;
-  font-size: 1.5em;
+  
 }
 h2 {
-  font-size: 1em;
+  font-size: 1.2em;
+  font-style: italic;
   color: rgb(228, 168, 18);
   text-align: center;
   padding: 1em;
@@ -45,7 +52,7 @@ a {
 
 li {
   color: rgb(240, 233, 222);
-  font-size: 0.7em;
+  font-size: 1em;
   background-color: rgb(35, 38, 43);
   margin-top: 0;
   margin-bottom: 3px;
@@ -62,6 +69,7 @@ li:hover {
 ul {
   margin-bottom: 1em;
 }
+
 
 em {
   color: yellow;
