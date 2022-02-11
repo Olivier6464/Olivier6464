@@ -86,13 +86,13 @@ function affichage() {
   cote = cote.toUpperCase();
   const regex = /^[0-9]+$/;
   if (nch.match(regex)) {
-    bil += "  CH: " + document.getElementById("chambre").value;
+    bil += "  CH " + document.getElementById("chambre").value;
     if (cote === "P" || cote === "F") {
       bil += " L" + cote;
     }
   }
   bil +=
-    rtl + "Entré(e): " + frenchdate(document.getElementById("entree").value);
+    rtl + "Entré(e) le " + frenchdate(document.getElementById("entree").value);
   if (document.getElementById("anamnese").value !== "") {
     bil += rtl + rtl + `======= Anamnèse  =======`;
     bil += rtl + rtl + document.getElementById("anamnese").value;
