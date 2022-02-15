@@ -47,16 +47,17 @@ const spacer = {
 };
 
 function affichage() {
+  // storeAndCheck();
   let bil = "";
   const esp = " ";
   const rtl = "\n";
   const egal = "=";
   // <--donnees a tester-->
-  var nom = document.getElementById("nom").value;
-  var prenom = document.getElementById("prenom").value;
-  var remarques = document.getElementById("remarques").value;
-  var nch = null; // numero de chambre
-  var cote = null; // cote
+  let nom = document.getElementById("nom").value;
+  let prenom = document.getElementById("prenom").value;
+  let remarques = document.getElementById("remarques").value;
+  let nch = null; // numero de chambre
+  let cote = null; // cote
   /* les chaines les plus longues de chaque rubrique expl: fonctionnelle */
   const marche = "Marche (périmètre, aides techniques ...): ";
   const lplfonc = marche.length;
@@ -262,7 +263,7 @@ function affichage() {
     spacer.box(" Objectifs et prise en charge", egal) +
     rtl +
     document.getElementById("priseEnChargePrev").value;
-  bil = bil.replaceAll("'", "' '");
+  bil = bil.replaceAll("'", " ");
 
   let toCopy = document.getElementById("to-copy");
   toCopy.value = bil;
@@ -440,3 +441,74 @@ function rmuglyspaces(id) {
   ch = ch.replace(/  +/g, " ");
   document.getElementById(id).value = ch;
 }
+//clients warnings
+// on store la chaine date d entree du haut
+// on prend la date courante du header
+// new Date("dateString") est browser-dependant
+// on parse la date et on verifie
+function parseDate(str) {
+  var mdy = str.split("-");
+  return new Date(mdy[0], mdy[1] - 1, mdy[2]); //ma version
+  //return new Date(mdy[2], mdy[0] - 1, mdy[1]);
+}
+
+/***
+new Date(annee, mois, jour) // les mois commence à O decembre = 11
+*/
+
+// function datediff(first, second) {
+//   // Take the difference between the dates and divide by milliseconds per day.
+//   // Round to nearest whole number to deal with DST.
+//   return Math.round((second - first) / (1000 * 60 * 60 * 24));
+// }
+
+// function storeAndCheck() {
+//   //on recup les donnees du patient
+//   let nom = document.getElementById("nom").value;
+//   let prenom = document.getElementById("prenom").value;
+//   /**extraire la date du jour*/
+//   let StrDate = document.getElementById("laDate").innerHTML;
+//   let nowDate = StrDate.split("/");
+//   nowDate[2] = "20" + nowDate[2];
+//   nowDate.reverse();
+//   let strNowDate = nowDate.join("-");
+//   //let now = new Date(nowDate[0], nowDate[1] - 1, nowDate[2]);
+
+//   let strEntryDate = document.getElementById("entree").value;
+//   //let tabEntryDate = strEntryDate.split("/").reverse();
+//   let dateEntre = strEntryDate; // chaine de la date d'entrée
+
+//   //jours mois annees
+
+//   //on créer l'objet
+//   const patient = new Object();
+//   patient.name = nom;
+//   patient.prenom = prenom;
+//   patient.dateEntre = dateEntre;
+//   patient.aujourdhui = strNowDate;
+
+//   // cas ou rien est en place
+//   if (localStorage.getItem("liste") == null) {
+//     let patients = [];
+//     patients.push(patient);
+//     let chPatients = JSON.stringify(patients);
+//     localStorage.setItem("liste", chPatients);
+//   } else {
+//     let chPatients = localStorage.getItem("liste");
+//     let patients = JSON.parse(chPatients);
+//     patients.push(patient);
+
+//     patients = patients.map((elem) => {
+//       let dateEntree = elem.dateEntre;
+//       let days = datediff(parseDate(dateEntree), parseDate(strNowDate));
+//       elem.jourspresents = days;
+
+//       chPatients = JSON.stringify(patients);
+//       localStorage.setItem("liste", chPatients);
+//       let lesPatients = JSON.parse(localStorage.getItem("liste"));
+//       console.log(lesPatients);
+//     });
+//   }
+// }
+
+// storeAndCheck();
