@@ -46,6 +46,14 @@ const spacer = {
   },
 };
 
+function rmNastyChars(ch){
+  ch = ch.replaceAll("'", " ");
+  ch = ch.replaceAll(/[:()"]/g, ""); 
+  // lignes vides en double
+  //ch = ch.replaceAll(/\n\n+/g,"\n\n");     
+  return ch;
+}
+
 function affichage() {
   // storeAndCheck();
   let bil = "";
@@ -263,7 +271,7 @@ function affichage() {
     spacer.box(" Objectifs et prise en charge", egal) +
     rtl +
     document.getElementById("priseEnChargePrev").value;
-  bil = bil.replaceAll("'", " ");
+  bil = rmNastyChars(bil);
 
   let toCopy = document.getElementById("to-copy");
   toCopy.value = bil;
@@ -512,3 +520,23 @@ new Date(annee, mois, jour) // les mois commence à O decembre = 11
 // }
 
 // storeAndCheck();
+const plus1j = () => {
+  const date = new Date();
+  const plus = document.querySelector(".plus1j");
+  plus.addEventListener("click", () => {
+    date.setDate(date.getDate() + 1);
+    document.getElementById("entree").valueAsDate = date;
+  });
+};
+
+const moins1j = () => {
+  const date = new Date();
+  const moins = document.querySelector(".moins1j");
+  moins.addEventListener("click", () => {
+    date.setDate(date.getDate() - 1);
+    document.getElementById("entree").valueAsDate = date;
+  });
+};
+
+plus1j();
+moins1j();
