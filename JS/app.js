@@ -64,6 +64,9 @@ function affichage() {
   let nom = document.getElementById("nom").value;
   let prenom = document.getElementById("prenom").value;
   let remarques = document.getElementById("remarques").value;
+  let entree = document.getElementById("entree");
+  let civilite = document.getElementById("civilite").value;
+
   let nch = null; // numero de chambre
   let cote = null; // cote
   /* les chaines les plus longues de chaque rubrique expl: fonctionnelle */
@@ -100,8 +103,12 @@ function affichage() {
       bil += " L" + cote;
     }
   }
-  bil +=
-    rtl + "Entré(e) le " + frenchdate(document.getElementById("entree").value);
+  if (civilite === "Madame") {
+    bil += rtl + "Entrée le " + frenchdate(entree.value);
+  } else {
+    bil += rtl + "Entré le " + frenchdate(entree.value);
+  }
+  
   if (document.getElementById("anamnese").value !== "") {
     bil += rtl + rtl + `======= Anamnèse  =======`;
     bil += rtl + rtl + document.getElementById("anamnese").value;
