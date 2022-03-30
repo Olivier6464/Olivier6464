@@ -1,11 +1,4 @@
-1. lancer bash pour utiliser git
-2. aller dans le rep Olivier6464
-3. faire un git pull avant de coder
-4. git add, git commit -m"" git push
 
 site is published at https://olivier6464.github.io/Olivier6464/
 
-redefinir touche esc en return + une touche , qd focus textarea
-changement couleur label textarea qd focus
-caracteristiques a changer >>   ????
 
