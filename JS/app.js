@@ -456,90 +456,26 @@ function rmuglyspaces(id) {
   ch = ch.replace(/  +/g, " ");
   document.getElementById(id).value = ch;
 }
-//clients warnings
-// on store la chaine date d entree du haut
-// on prend la date courante du header
-// new Date("dateString") est browser-dependant
-// on parse la date et on verifie
+
 function parseDate(str) {
   var mdy = str.split("-");
   return new Date(mdy[0], mdy[1] - 1, mdy[2]); //ma version
   //return new Date(mdy[2], mdy[0] - 1, mdy[1]);
 }
 
-/***
-new Date(annee, mois, jour) // les mois commence à O decembre = 11
-*/
-
-// function datediff(first, second) {
-//   // Take the difference between the dates and divide by milliseconds per day.
-//   // Round to nearest whole number to deal with DST.
-//   return Math.round((second - first) / (1000 * 60 * 60 * 24));
-// }
-
-// function storeAndCheck() {
-//   //on recup les donnees du patient
-//   let nom = document.getElementById("nom").value;
-//   let prenom = document.getElementById("prenom").value;
-//   /**extraire la date du jour*/
-//   let StrDate = document.getElementById("laDate").innerHTML;
-//   let nowDate = StrDate.split("/");
-//   nowDate[2] = "20" + nowDate[2];
-//   nowDate.reverse();
-//   let strNowDate = nowDate.join("-");
-//   //let now = new Date(nowDate[0], nowDate[1] - 1, nowDate[2]);
-
-//   let strEntryDate = document.getElementById("entree").value;
-//   //let tabEntryDate = strEntryDate.split("/").reverse();
-//   let dateEntre = strEntryDate; // chaine de la date d'entrée
-
-//   //jours mois annees
-
-//   //on créer l'objet
-//   const patient = new Object();
-//   patient.name = nom;
-//   patient.prenom = prenom;
-//   patient.dateEntre = dateEntre;
-//   patient.aujourdhui = strNowDate;
-
-//   // cas ou rien est en place
-//   if (localStorage.getItem("liste") == null) {
-//     let patients = [];
-//     patients.push(patient);
-//     let chPatients = JSON.stringify(patients);
-//     localStorage.setItem("liste", chPatients);
-//   } else {
-//     let chPatients = localStorage.getItem("liste");
-//     let patients = JSON.parse(chPatients);
-//     patients.push(patient);
-
-//     patients = patients.map((elem) => {
-//       let dateEntree = elem.dateEntre;
-//       let days = datediff(parseDate(dateEntree), parseDate(strNowDate));
-//       elem.jourspresents = days;
-
-//       chPatients = JSON.stringify(patients);
-//       localStorage.setItem("liste", chPatients);
-//       let lesPatients = JSON.parse(localStorage.getItem("liste"));
-//       console.log(lesPatients);
-//     });
-//   }
-// }
-
-// storeAndCheck();
 const plus1j = () => {
-  const date = new Date();
   const plus = document.querySelector(".plus1j");
   plus.addEventListener("click", () => {
+    let date = document.getElementById("entree").valueAsDate;
     date.setDate(date.getDate() + 1);
     document.getElementById("entree").valueAsDate = date;
   });
 };
 
 const moins1j = () => {
-  const date = new Date();
   const moins = document.querySelector(".moins1j");
   moins.addEventListener("click", () => {
+    let date = document.getElementById("entree").valueAsDate;
     date.setDate(date.getDate() - 1);
     document.getElementById("entree").valueAsDate = date;
   });
