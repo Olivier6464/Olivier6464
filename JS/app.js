@@ -46,11 +46,18 @@ const spacer = {
   },
 };
 
-function rmNastyChars(ch){
+function rmNastyChars(ch) {
   ch = ch.replaceAll("'", " ");
-  ch = ch.replaceAll(/[:()"]/g, ""); 
+  ch = ch.replaceAll(/[:()"]/g, "");
+  ch = ch.replaceAll(/(^ +)/gm, '');
+  ch = ch.replaceAll(/^> +/gm, "- ");
+  ch = ch.replaceAll(/^>./gm, "- ");
+  ch = ch.replaceAll(/^(=> +)/gm, "- ");
+  ch = ch.replaceAll(/^(=>.)/gm, "- ");
+
+  ch = ch.replaceAll(/(?!^)-/gm, '_');
   // lignes vides en double
-  ch = ch.replaceAll(/\n\n+/g,"\n\n");     
+  ch = ch.replaceAll(/\n\n+/g, "\n\n");
   return ch;
 }
 
@@ -108,7 +115,7 @@ function affichage() {
   } else {
     bil += rtl + "Entré le " + frenchdate(entree.value);
   }
-  
+
   if (document.getElementById("anamnese").value !== "") {
     bil += rtl + rtl + `======= Anamnèse  =======`;
     bil += rtl + rtl + document.getElementById("anamnese").value;
