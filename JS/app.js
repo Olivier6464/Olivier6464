@@ -54,8 +54,6 @@ function rmNastyChars(ch) {
   ch = ch.replaceAll(/^>./gm, "- ");
   ch = ch.replaceAll(/^(=> +)/gm, "- ");
   ch = ch.replaceAll(/^(=>.)/gm, "- ");
-  ch = ch.replaceAll(/^(* +)/gm, "- ");
-  ch = ch.replaceAll(/^(*.)/gm, "- ");
 
   ch = ch.replaceAll(/(?!^)-/gm, '_');
   // lignes vides en double
