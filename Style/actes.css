@@ -78,8 +78,7 @@ em {
 }
 
 .copied {
-  background-color:#50FA7A;
-  color:darkorange;
+  color: rgb(228, 168, 18);
 }
 
 .member {
