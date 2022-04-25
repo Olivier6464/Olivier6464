@@ -78,6 +78,7 @@ em {
 }
 
 .copied {
+  background-color:#50FA7A;
   color:darkorange;
 }
 
