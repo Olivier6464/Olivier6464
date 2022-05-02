@@ -184,10 +184,37 @@ legend {
   /* background-color: rgb(15, 2, 27); */
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   padding-top: 10px;
   padding-bottom: 10px;
   list-style: none;
+}
+
+ul.menu0 li{
+  list-style: none;
+}
+
+ul.menu0 li{
+  margin-left: 0.5em;
+  list-style: none;
+}
+
+.menu0{
+  display: flex;
+  flex-direction: row;
+}
+
+.menu2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+  margin-right:0.5em;
+  background-color: #c50873;
+}
+
+.menu2 li:hover span{
+  color:rgba(17, 214, 83, 0.938)
 }
 
 .container-1 {

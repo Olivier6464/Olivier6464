@@ -10,6 +10,10 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css"
     />
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+   
+    
     <link rel="stylesheet" type="text/css" href="Style/style.css" />
     <link rel="icon" href="favicon.ico" />
     <script type="text/javascript" defer src="JS/app.js"></script>
@@ -23,8 +27,13 @@
 
     <nav class="nav" role="navigation">
       <ul class="menu">
-        <li id="laDate"></li>
-        <li id="temps"></li>
+        <li>
+          <ul class="menu0">
+            <li id="temps"></li>
+            <li id="laDate"></li>
+          </ul>
+        </li>
+        
         <!-- <li class="has-children"><a href="#">Catégories</a> -->
         <!-- sous menu-->
         <!-- <ul class="sous-menu">
@@ -50,9 +59,17 @@
         <li>
           <a href="Actes/index.html" target="_blank">Actes</a>
         </li>
-        <li><a href="#top">Haut</a></li>
-        <li><a href="#bas_de_page">Bas</a></li>
-        <li id="reinitialise">Réinitialiser</li>
+        <li>
+          <ul class="menu2">
+          <li><a href="#top"><span class="material-icons">
+              arrow_upward
+            </span></a></li>
+        <li><a href="#bas_de_page"><span class="material-icons">
+              arrow_downward
+            </span></a></li>
+        <li id="reinitialise"><span class="material-icons">
+              refresh
+            </span></li>
       </ul>
     </nav>
     <br /><br /><br /><br /><br /><br />
