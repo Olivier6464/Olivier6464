@@ -1,12 +1,13 @@
 function getSelectionsListe(id) {
   const liste = document.getElementById(id);
+  const rtl = "\n";
   let lsSelections = "";
   for (let i = 0; i < liste.options.length; i++) {
     if (liste.options[i].selected) {
-      lsSelections += liste.options[i].value + ", ";
+      lsSelections += liste.options[i].value + "," + rtl;
     }
   }
-  return lsSelections;
+  return `${lsSelections.substring(0, lsSelections.length - 2)}.`;
 }
 
 const spacer = {
@@ -157,11 +158,8 @@ function affichage() {
       document.getElementById("appui").value;
   }
   if (document.getElementById("immobilisation").value !== "") {
-    bil +=
-      rtl +
-      rtl +
-      "Immobilisation (plâtre/attelle...): " +
-      document.getElementById("immobilisation").value;
+    bil += rtl + spacer.box("Immobilisation", egal);
+    bil += rtl + rtl + getSelectionsListe("immobilisation");
   }
   bil += rtl + spacer.box(" Cotation de la Douleur EVS", egal);
   bil += rtl + "Échelle de 0 à 4.";
