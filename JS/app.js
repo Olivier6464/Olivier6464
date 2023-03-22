@@ -287,7 +287,7 @@ function affichage() {
     document.getElementById("priseEnChargePrev").value;
   bil = rmNastyChars(bil);
 
-  let toCopy = document.getElementById("to-copy");
+  const toCopy = document.getElementById("to-copy");
   toCopy.value = bil;
   toCopy.select();
   navigator.clipboard.writeText(toCopy.value);
@@ -298,8 +298,7 @@ function affichage() {
 
   function modalClosePerKey(e) {
     if (e.key === "Escape") {
-      const theCopy = document.getElementById("to-copy");
-      let toCopy = document.getElementById("to-copy");
+      const toCopy = document.getElementById("to-copy");
       toCopy.select();
       navigator.clipboard.writeText(toCopy.value);
 
@@ -398,7 +397,7 @@ function frenchdate(strDate) {
 }
 
 const efface = document.getElementById("reinitialise");
-efface.addEventListener("click", (e) => location.reload(true), false);
+efface.addEventListener("click", () => location.reload(true), false);
 
 // select on focus on deroule
 
