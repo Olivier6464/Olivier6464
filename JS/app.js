@@ -162,13 +162,12 @@ function affichage() {
     bil += rtl + rtl + getSelectionsListe("immobilisation");
   }
   bil += rtl + spacer.box(" Cotation de la Douleur EVS", egal);
-  bil += rtl + "Échelle de 0 à 4.";
   bil +=
     rtl +
     " 0 = pas de douleur, 1 = faible, 2 = moyenne, 3 = forte, 4 = très forte." +
-    rtl;
+    rtl + rtl + "====== Intensité ======";
   bil +=
-    rtl +
+    rtl + rtl +
     repos +
     spacer.line(lpldoul - repos.length + 3, ".") +
     " " +
@@ -180,8 +179,8 @@ function affichage() {
     " " +
     document.getElementById("douleurMob").value +
     "/4";
-  bil += rtl + "Type: " + getSelectionsListe("typeDouleur");
-  bil += rtl + "Localisation: " + document.getElementById("localisation").value;
+  bil += rtl + rtl + "====== Type ======" + rtl + rtl + getSelectionsListe("typeDouleur");
+  bil += rtl + rtl + "====== Localisation ======" + rtl + rtl + document.getElementById("localisation").value;
   bil += rtl + spacer.box("Fonctionnel", egal);
   bil +=
     rtl +

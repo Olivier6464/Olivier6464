@@ -104,10 +104,10 @@ option:nth-child(odd) {
   background-color: #efefef;
 }
 
-option:hover {
-  background: var(--main-option-bg-hover);
-  color: var(--main-option-color-hover);
-}
+/* option:hover { */
+  /* background: var(--main-option-bg-hover); */
+  /* color: var(--main-option-color-hover); */
+/* } */
 
 textarea,
 input,
