@@ -76,6 +76,10 @@ function affichage() {
   let remarques = document.getElementById("remarques").value;
   let entree = document.getElementById("entree");
   let civilite = document.getElementById("civilite").value;
+	let douleurRepos = document.getElementById("douleurRepos").value;
+	let douleurMob = document.getElementById("douleurMob").value;
+	let douleurTotal = parseInt(douleurRepos) + parseInt(douleurMob);
+	console.log(douleurTotal);
 
   let nch = null; // numero de chambre
   let cote = null; // cote
@@ -164,23 +168,39 @@ function affichage() {
   bil += rtl + spacer.box(" Cotation de la Douleur EVS", egal);
   bil +=
     rtl +
-    " 0 = pas de douleur, 1 = faible, 2 = moyenne, 3 = forte, 4 = très forte." +
-    rtl + rtl + "====== Intensité ======";
-  bil +=
-    rtl + rtl +
-    repos +
-    spacer.line(lpldoul - repos.length + 3, ".") +
-    " " +
-    document.getElementById("douleurRepos").value +
-    "/4";
-  bil +=
-    rtl +
-    mobilisation +
-    " " +
-    document.getElementById("douleurMob").value +
-    "/4";
-  bil += rtl + rtl + "====== Type ======" + rtl + rtl + getSelectionsListe("typeDouleur");
-  bil += rtl + rtl + "====== Localisation ======" + rtl + rtl + document.getElementById("localisation").value;
+    " 0 = pas de douleur, 1 = faible, 2 = moyenne, 3 = forte, 4 = très forte.";
+	if (douleurTotal > 0){
+		bil += rtl + rtl + "====== Intensité ======";
+		bil +=
+		rtl + rtl +
+			repos +
+			spacer.line(lpldoul - repos.length + 3, ".") +
+			" " + douleurRepos +
+			"/4";
+		bil +=
+		rtl +
+			mobilisation +
+			" " +
+			douleurMob +
+			"/4";
+		bil += rtl + rtl + "====== Type ======" + rtl + rtl + getSelectionsListe("typeDouleur");
+		bil += rtl + rtl + "====== Localisation ======" + rtl + rtl + document.getElementById("localisation").value;
+	} else {
+		let elleOUlui = civilite == "Madame" ? "elle":"lui"; 
+		const tablnodolor = [
+			"ne relate pas de douleur", 
+			"absence de douleur",
+			"ne ressent aucune douleur", 
+			"pas de douleur",
+			"aucune sensation de douleur",
+			"pas la moindre douleur",
+			"aucune douleur à signaler",
+			"aucune douleur à déclarer",
+			"est complétement indolent"
+		];
+		const randomPhrase = tablnodolor[Math.floor(Math.random() * tablnodolor.length)];
+		bil += rtl + rtl + `${randomPhrase} selon ${elleOUlui}.`;
+	}
   bil += rtl + spacer.box("Fonctionnel", egal);
   bil +=
     rtl +
