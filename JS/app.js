@@ -199,6 +199,9 @@ function affichage() {
 			"est complétement indolent"
 		];
 		const randomPhrase = tablnodolor[Math.floor(Math.random() * tablnodolor.length)];
+        bil += rtl + rtl + "====== Intensité ======" + rtl + rtl;
+        bil += "Au repos............. 0//4" + rtl;
+        bil += "A la mobilisation  0//4";
 		bil += rtl + rtl + `${randomPhrase} selon ${elleOUlui}.`;
 	}
   bil += rtl + spacer.box("Fonctionnel", egal);
